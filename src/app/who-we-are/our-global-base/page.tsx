@@ -24,7 +24,7 @@ export default function OfficeLocations() {
         <section className="relative overflow-visible mb-16">
           <div className="bg-primary min-h-[60vh] flex items-start px-4 md:px-8 py-8 md:py-16 ml-0 md:ml-4 lg:ml-8">
             <h1 className="text-3xl md:text-5xl font-bold text-white">
-              Office Locations
+              Our Global Base
             </h1>
           </div>
         </section>
@@ -32,13 +32,14 @@ export default function OfficeLocations() {
         {/* Title left with paragraph right */}
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary">
-              Global Presence
+            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+              Explore Our Headquarters
             </h2>
           </div>
           <div className="flex-1 md:pl-16">
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p className="text-[20px] leading-[28px] opacity-75 text-main">
+              Our firm is rooted in a city defined by opportunity, culture, and momentum, making it an
+              outstanding place to build a career.
             </p>
           </div>
         </section>
@@ -53,13 +54,25 @@ export default function OfficeLocations() {
         {/* Title left with paragraph right */}
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary">
-              Why These Locations
+            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+              Headquarters Presence
             </h2>
           </div>
           <div className="flex-1 md:pl-16">
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p className="text-[20px] leading-[28px] opacity-75 text-main mb-2">
+             United Arab Emirates
+            </p>
+            <p className="text-[20px] leading-[28px] opacity-75 text-main mb-2">
+             Dubai
+            </p>
+            <p className="text-[20px] leading-[28px] opacity-75 text-main mb-2">
+             DSO-IFZA, IFZA Properties <br />
+              Dubai Silicon Oasis <br />
+              Dubai, Dubayy (AE-DU) <br />
+              UAE
+            </p>
+            <p className="text-[20px] leading-[28px] opacity-75 text-main">
+             jculttrader.inquiry@gmail.com
             </p>
           </div>
         </section>
@@ -78,7 +91,7 @@ export default function OfficeLocations() {
         {/* Cards similar to culture route end */}
         <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8 md:mb-10 lg:mb-12">
               Explore Our Offices
             </h2>
             

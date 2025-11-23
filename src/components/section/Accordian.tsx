@@ -6,10 +6,9 @@ import Image from "next/image";
 
 interface City {
   name: string;
-  locationTitle: string;
   address: string[];
   phone: string;
-  buttonText: string;
+  buttonText?: string;
   image: string;
 }
 
@@ -77,9 +76,6 @@ export default function Accordion({ regions }: { regions: Region[] }) {
                     <p className="uppercase text-gray-500 tracking-wide text-sm">
                       Location
                     </p>
-                    <p className="font-semibold mt-1">
-                      {region.cities[selectedCityIndex].locationTitle}
-                    </p>
                     {region.cities[selectedCityIndex].address.map((line, l) => (
                       <p key={l} className="text-gray-700">{line}</p>
                     ))}
@@ -97,9 +93,12 @@ export default function Accordion({ regions }: { regions: Region[] }) {
                     </a>
                   </div>
 
+
+                  {region.cities[selectedCityIndex].buttonText &&
                   <button className="bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900 transition">
                     {region.cities[selectedCityIndex].buttonText}
                   </button>
+                  }
                 </div>
 
                 {/* RIGHT COLUMN — image */}

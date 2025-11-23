@@ -5,12 +5,12 @@ import Footer from '@/components/navigation/Footer';
 
 export default function LeadershipTeam() {
   const teamMembers = [
-    { name: "Sarah Chen", title: "Chief Executive Officer", image: "/images/office.webp" },
-    { name: "Michael Rodriguez", title: "Chief Technology Officer", image: "/images/office-collage.jpg" },
-    { name: "Emily Watson", title: "Chief Financial Officer", image: "/images/office.webp" },
-    { name: "David Kim", title: "Chief Operating Officer", image: "/images/office-collage.jpg" },
-    { name: "Lisa Thompson", title: "Chief Marketing Officer", image: "/images/office.webp" },
-    { name: "James Wilson", title: "Chief Human Resources Officer", image: "/images/office-collage.jpg" },
+    { name: "Jeyanandh Dhivaharan", title: "Founder, CEO", image: "/images/office.webp" },
+    { name: "Jeyanandh Dhivaharan", title: "Founder, CEO", image: "/images/office.webp" },
+    { name: "Jeyanandh Dhivaharan", title: "Founder, CEO", image: "/images/office.webp" },
+    { name: "Jeyanandh Dhivaharan", title: "Founder, CEO", image: "/images/office.webp" },
+    { name: "Jeyanandh Dhivaharan", title: "Founder, CEO", image: "/images/office.webp" },
+    { name: "Jeyanandh Dhivaharan", title: "Founder, CEO", image: "/images/office.webp" },
   ];
 
   return (
@@ -19,7 +19,7 @@ export default function LeadershipTeam() {
         <section className="relative overflow-visible mb-16">
           <div className="bg-primary min-h-[60vh] flex items-start px-4 md:px-8 py-8 md:py-16 ml-0 md:ml-4 lg:ml-8">
             <h1 className="text-3xl md:text-5xl font-bold text-white">
-              Leadership Team
+              Executive Leadership
             </h1>
           </div>
         </section>
@@ -28,14 +28,16 @@ export default function LeadershipTeam() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
-                  Our Leaders
+                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                  Defining Strategic Direction
                 </h2>
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                  Our executive leadership establishes the firm’s overarching mandate. They are responsible
+                  for synthesizing our ambition into a clear, actionable strategy, providing the governance
+                  required to align our exceptional talent with the firm's long-term trajectory.
                 </p>
               </div>
             </div>
@@ -44,7 +46,7 @@ export default function LeadershipTeam() {
         
         <section className="py-6 md:py-8 lg:py-16 bg-main">
           <div className="container-responsive">
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8 md:mb-10 lg:mb-12">
               Our Team
             </h2>
             
@@ -70,7 +72,7 @@ export default function LeadershipTeam() {
         
         <section className="py-6 md:py-8 lg:py-16 bg-main">
           <div className="container-responsive">
-            <div className="flex flex-col md:flex-row items-center">
+            <div className="flex flex-col md:flex-row items-start">
               <div className="w-full md:w-1/2 mb-4 md:mb-6 lg:mb-0">
                 <img 
                   src="/images/office.webp"
@@ -80,11 +82,11 @@ export default function LeadershipTeam() {
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary mb-4 md:mb-6">
-                  Join Our Leadership
+                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-4 md:mb-6">
+                  Driving Ideas Into Real Impact  
                 </h2>
                 <button className="btn-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
-                  Explore Opportunities
+                  Explore What We Do
                 </button>
               </div>
             </div>

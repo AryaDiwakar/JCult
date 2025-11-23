@@ -10,7 +10,7 @@ export default function OurCulture() {
   return (
     <div className="min-h-screen bg-main">
       <main className="pt-20">
-        <section className="relative overflow-visible mb-16">
+        <section className="relative overflow-visible mb-20">
           <div className="bg-primary flex flex-col md:flex-row min-h-[80vh] ml-0 md:ml-4 lg:ml-8">
             <div className="flex-1 px-4 md:px-8 py-8 md:py-16">
               <div className="flex flex-col justify-between h-full">
@@ -21,7 +21,7 @@ export default function OurCulture() {
                 </div>
                 <div className="mt-auto">
                   <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Powered by our most impactful ideas, we’re always pushing toward what’s next.
                   </p>
                 </div>
               </div>
@@ -37,24 +37,30 @@ export default function OurCulture() {
           </div>
         </section>
         
-        <section className="py-6 md:py-8 lg:py-16">
+        <section className="py-6 md:py-8 lg:py-16 mb-16">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
-                  Our Values
+                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                  Insight Over Hierarchy
                 </h2>
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16 space-y-4 md:space-y-6">
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                  From the moment you arrive, your thinking has influence. You are invited to share your
+ideas openly, and your contribution is valued regardless of your position or experience.
                 </p>
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                  We encourage one another to look beyond what is familiar and to search for the next
+breakthrough. A wide range of viewpoints strengthens our creativity and sharpens our
+position in the industry.
                 </p>
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                  We explore ideas through open dialogue, strengthening them through challenge and
+improvement, always aiming to exceed prior achievements. Those who bring energy and
+initiative find even greater opportunities ahead, creating a level of growth that few places
+can offer.
                 </p>
               </div>
             </div>
@@ -63,7 +69,7 @@ export default function OurCulture() {
         
         <CoreValuesSection />
         
-        <section className="py-6 md:py-8 lg:py-16">
+        {/* <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
@@ -288,26 +294,31 @@ export default function OurCulture() {
               },
             ],
           },
-        ]} />
+        ]} /> */}
         
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary">
-              Ready to Start?
+            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+              A Headquarters Built for Collaboration
             </h2>
           </div>
           
           <div className="flex-1 md:pl-16">
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
+              Our workspace is meticulously designed to foster real-time teamwork, rigorous discussion,
+and debate. We have created an environment where physical barriers are removed to
+ensure constant intellectual exchange.
             </p>
-            <button className="btn-primary px-8 py-4 text-lg">
-              View Open Positions
+            <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
+              Unified in our mission to achieve what no individual could alone.
+            </p>
+            <button className="bg-primary px-8 py-4 text-lg">
+             View Our Headquarters
             </button>
           </div>
         </section>
         
-        <section className="px-4 md:px-8 py-8 md:py-16 bg-tertiary">
+        {/* <section className="px-4 md:px-8 py-8 md:py-16 bg-tertiary">
           <div className="flex gap-6">
             <div className="w-3/4">
               <img 
@@ -351,10 +362,10 @@ export default function OurCulture() {
               className="w-full h-96 object-cover"
             />
           </div>
-        </section>
+        </section> */}
         
         <section className="px-4 md:px-8 py-8 md:py-16 bg-tertiary">
-          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-12">
+          <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-12">
             Explore More
           </h2>
           
@@ -363,7 +374,7 @@ export default function OurCulture() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Career Opportunities
               </h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
                 Discover exciting career paths and growth opportunities that align with your passion and expertise in our dynamic environment.
               </p>
               <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform">
@@ -383,7 +394,7 @@ export default function OurCulture() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Innovation Labs
               </h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
                 Step into our cutting-edge innovation labs where breakthrough ideas come to life through collaboration and advanced technology.
               </p>
               <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform">
@@ -403,7 +414,7 @@ export default function OurCulture() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Global Impact
               </h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
                 Join our mission to create positive change worldwide through sustainable practices and meaningful community engagement.
               </p>
               <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform">
@@ -420,8 +431,76 @@ export default function OurCulture() {
             </div>
           </div>
         </section>
+        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
+          <div className="container-responsive">
+            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8 md:mb-10 lg:mb-12">
+              Explore Our Offices
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              <div className="border-l border-secondary pl-4 md:pl-6">
+                <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
+                  Lorem Ipsum
+                </h3>
+                <p className="text-sm md:text-base text-secondary leading-relaxed mb-4 md:mb-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform text-sm md:text-base">
+                  Virtual Tour
+                  <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <img 
+                  src="/images/office.webp"
+                  alt="Office location"
+                  className="w-full h-40 md:h-48 object-cover mt-4 md:mt-6"
+                />
+              </div>
+              
+              <div className="border-l border-secondary pl-4 md:pl-6">
+                <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
+                  Lorem Ipsum
+                </h3>
+                <p className="text-sm md:text-base text-secondary leading-relaxed mb-4 md:mb-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform text-sm md:text-base">
+                  Learn More
+                  <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <img 
+                  src="/images/office-collage.jpg"
+                  alt="Office location"
+                  className="w-full h-40 md:h-48 object-cover mt-4 md:mt-6"
+                />
+              </div>
+              
+              <div className="border-l border-secondary pl-4 md:pl-6">
+                <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
+                  Lorem Ipsum
+                </h3>
+                <p className="text-sm md:text-base text-secondary leading-relaxed mb-4 md:mb-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform text-sm md:text-base">
+                  Contact Us
+                  <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <img 
+                  src="/images/office.webp"
+                  alt="Office location"
+                  className="w-full h-40 md:h-48 object-cover mt-4 md:mt-6"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -10,7 +10,7 @@ export default function Header() {
   const [mobileExpandedTabs, setMobileExpandedTabs] = useState<string[]>([]);
 
   const tabContent = {
-    'Who We Are': ['Our Culture','Leadership Team','Office Locations'],
+    'Who We Are': ['Our Culture','Executive Leadership','Our Global Base'],
     'What We Do': ['Commodities','Credit and Convertibles','Equities ','Fixed Income and Macro','Global Quantitative Strategies'],
     'News': ['In the Media','Policy Positions'],
     'Career': ['Investing ','Engineering ','Quantitative Research','Internships','Programs & Events ','Career Perspectives','Open Opportunities ']
