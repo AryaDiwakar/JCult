@@ -11,7 +11,7 @@ export default function Header() {
 
   const tabContent = {
     'Who We Are': ['Our Culture','Executive Leadership','Our Global Base'],
-    'What We Do': ['Commodities','Credit and Convertibles','Equities ','Fixed Income and Macro','Global Quantitative Strategies'],
+    'What We Do': ['Asset Management'],
     'News': ['In the Media','Policy Positions'],
     'Career': ['Investing ','Engineering ','Quantitative Research','Internships','Programs & Events ','Career Perspectives','Open Opportunities ']
   };

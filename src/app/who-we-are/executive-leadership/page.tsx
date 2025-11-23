@@ -70,7 +70,7 @@ export default function LeadershipTeam() {
           </div>
         </section>
         
-        <section className="py-6 md:py-8 lg:py-16 bg-main">
+        {/* <section className="py-6 md:py-8 lg:py-16 bg-main">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="w-full md:w-1/2 mb-4 md:mb-6 lg:mb-0">
@@ -89,6 +89,26 @@ export default function LeadershipTeam() {
                   Explore What We Do
                 </button>
               </div>
+            </div>
+          </div>
+        </section> */}
+
+         <section className="pt-6 md:pt-8 lg:pt-16">
+          <div className="flex flex-col md:flex-row items-start">
+            <div className="flex-1 mb-6 md:mb-0">
+              <img 
+                src="/images/office.webp"
+                alt="Join our team"
+                className="w-full h-64 md:h-80 lg:h-96 object-cover"
+              />
+            </div>
+            <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
+                Driving Ideas Into Real Impact 
+              </h2>
+              <button className="bg-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
+                 Explore What We Do
+              </button>
             </div>
           </div>
         </section>

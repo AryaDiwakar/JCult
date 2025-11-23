@@ -1,0 +1,70 @@
+'use client';
+
+import Header from '@/components/navigation/Header';
+import Footer from '@/components/navigation/Footer';
+import Stats from '@/components/section/Stats';
+import InvestmentTabs from '@/components/section/InvestmentTabs';
+
+export default function Commodities() {
+  return (
+    <div className="min-h-screen bg-main">
+      <main className="pt-20">
+        {/* Hero Section - Blue background sticking to right with gap on left */}
+        <section className="relative overflow-visible mb-8 md:mb-16">
+          <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 py-6 md:py-8 lg:py-16 ml-0 md:ml-4 lg:ml-8">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">
+              Asset Management
+            </h1>
+          </div>
+        </section>
+
+        {/* Title left, paragraph right */}
+        <section className="py-6 md:py-8 lg:py-16">
+          <div className="container-responsive">
+            <div className="flex flex-col md:flex-row items-start">
+              <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
+                <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
+                  Overview
+                </h2>
+              </div>
+              <div className="flex-1 md:pl-8 lg:pl-16">
+                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
+                  We are a newly established asset management firm built on disciplined insight and a
+                  structured approach to diversified portfolio management. Through both Discretionary and
+                  Non Discretionary PMS services, we aim to deliver well constructed strategies that reflect
+                  thorough analysis, measured decision making, and alignment with each client’s objectives.
+                  Our diversified investment framework enables us to navigate evolving market conditions
+                  with clarity and purpose, transforming informed perspectives into portfolios designed for
+                  stability, growth, and long term value creation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <InvestmentTabs />
+
+        {/* Image left attached to corner, title and button right aligned top */}
+        <section className="pt-6 md:pt-8 lg:pt-16">
+          <div className="flex flex-col md:flex-row items-start">
+            <div className="flex-1 mb-6 md:mb-0">
+              <img 
+                src="/images/office.webp"
+                alt="Join our team"
+                className="w-full h-64 md:h-80 lg:h-96 object-cover"
+              />
+            </div>
+            <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
+                In Pursuit of Minds That Redefine Possibility
+              </h2>
+              <button className="bg-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
+                Discover Available Positions
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}

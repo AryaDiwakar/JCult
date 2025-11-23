@@ -5,6 +5,7 @@ import Footer from '@/components/navigation/Footer';
 import Hero from '@/components/section/Hero';
 import Stats from '@/components/section/Stats';
 import NewsSection from '@/components/section/NewsSection';
+import InvestmentTabs from '@/components/section/InvestmentTabs';
 
 export default function Home() {
   return (
@@ -180,6 +181,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        
 
         <NewsSection 
           title="Insights & Perspectives"

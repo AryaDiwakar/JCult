@@ -1,7 +1,6 @@
 'use client';
 
 import Hero from '@/components/section/Hero';
-import { ArrowRight } from 'lucide-react';
 
 export default function WhatWeDo() {
   const cards = [
@@ -18,8 +17,10 @@ export default function WhatWeDo() {
         {/* Hero Section with Image */}
         <Hero 
           imageSrc="/images/office.webp"
-          title="What We Do"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="Capitalizing on Market Potential"
+          description="Guided by a perspective that sees beyond the obvious, we illuminate opportunities hidden
+                      in the deeper layers of the market and advance decisively, transforming early insights into
+                      meaningful outcomes."
         />
 
         {/* Small blue text left, para with border right */}
@@ -27,11 +28,13 @@ export default function WhatWeDo() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-0">
-                <p className="text-xs md:text-sm font-bold text-primary">Our Expertise</p>
+                <p className="text-xs text-primary">How We Move</p>
               </div>
-              <div className="flex-1 md:pl-8 lg:pl-16 md:border-l-2 border-primary">
+              <div className="flex-3 pl-4 md:border-l-1 border-gray-800">
                 <p className="text-base md:text-lg lg:text-xl text-primary leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  We channel capital toward the world’s most meaningful and high-impact opportunities,
+                  guided by a rare fusion of disciplined talent, intuitive technology, deep analytics, and a
+                  global presence that moves with quiet strength.
                 </p>
               </div>
             </div>
@@ -44,20 +47,26 @@ export default function WhatWeDo() {
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-0">
                 <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
-                  Our Approach
+                  Diversified Asset Management With a Singular Focus
                 </h2>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Our team explores the full spectrum of global markets, pursuing compelling ideas through
+                  innovative thinking and bold, disciplined execution.
                 </p>
+                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
+                 Across equities, macro, real assets, virtual assets, and private wealth solutions, we
+                  maintain one clear objective: generating superior, risk-adjusted returns.
+                </p>
+                <button className="mt-4 px-6 py-2 bg-primary text-white">Explore Diversification</button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Image left, title with 3 paras right */}
-        <section className="py-6 md:py-8 lg:py-16">
+        {/* <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-6 md:mb-0">
@@ -83,10 +92,10 @@ export default function WhatWeDo() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Title left, statement right */}
-        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
+        {/* <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-0">
@@ -101,10 +110,10 @@ export default function WhatWeDo() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* 5 Cards in 3 columns with grey left border */}
-        <section className="py-6 md:py-8 lg:py-16">
+        {/* <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {cards.map((card, i) => (
@@ -128,7 +137,7 @@ export default function WhatWeDo() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Blue background with image top left hanging out, title right, 3 columns */}
         <section className="bg-primary py-6 md:py-8 lg:py-16 relative overflow-visible">
@@ -143,40 +152,99 @@ export default function WhatWeDo() {
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
-                  Guided by Our Values
+                  Our Strategic Edge
                 </h2>
               </div>
             </div>
 
             {/* 3 Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pt-6 md:pt-10">
-              <div className="relative pr-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-6 md:pt-10">
+              <div className="relative px-6">
+                <div className="absolute top-0 left-0 h-full w-px bg-white/30 hidden md:block"></div>
                 <div className="absolute top-0 right-0 h-full w-px bg-white/30 hidden md:block"></div>
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
-                  Innovation
+                  World-Class Talent
                 </h4>
                 <p className="text-sm md:text-base leading-relaxed text-white/90">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  By uniting experts from the worlds of finance and technology, we foster a culture of
+                  unparalleled growth. Our collaborative environment and extensive resources empower our
+                  people to achieve their full potential and drive innovation.
                 </p>
               </div>
               <div className="relative pr-6">
                 <div className="absolute top-0 right-0 h-full w-px bg-white/30 hidden md:block"></div>
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
-                  Excellence
+                  Uncompromising Risk Standards
                 </h4>
                 <p className="text-sm md:text-base leading-relaxed text-white/90">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Our approach to risk is disciplined and independent. With a reporting line directly to the
+                CEO, our specialized risk managers monitor performance drivers and maintain strict
+                tolerance levels. We utilize advanced technology for continuous tracking and real-time
+                stress testing, ensuring robust protection for every position we hold.
                 </p>
               </div>
-              <div className="relative pr-6">
+              {/* <div className="relative pr-6">
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
                   Integrity
                 </h4>
                 <p className="text-sm md:text-base leading-relaxed text-white/90">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+              </div> */}
+            </div>
+          </div>
+        </section>
+
+        {/* <section className="py-6 md:py-8 lg:py-16 bg-main">
+          <div className="container-responsive">
+            <div className="flex flex-col md:flex-row items-start">
+              <div className="w-full md:w-1/2 mb-4 md:mb-6 lg:mb-0">
+                <img 
+                  src="/images/office.webp"
+                  alt="Join our team"
+                  className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                />
+              </div>
+              
+              <div className="flex-1 md:pl-8 lg:pl-16">
+                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-4 md:mb-6">
+                  In Pursuit of Minds That Redefine Possibility
+                </h2>
+                <button className="btn-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
+                  Discover Available Positions
+                </button>
               </div>
             </div>
+          </div>
+        </section> */}
+
+        <section className="py-6 md:py-8 lg:py-16">
+          <div className="flex flex-col md:flex-row items-start">
+            <div className="flex-1 mb-6 md:mb-0">
+              <img 
+                src="/images/office.webp"
+                alt="Join our team"
+                className="w-full h-64 md:h-80 lg:h-96 object-cover"
+              />
+            </div>
+            <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
+               In Pursuit of Minds That Redefine Possibility
+              </h2>
+              <button className="bg-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
+                 Discover Available Positions
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className='pb-16'>
+          <div className="container-responsive text-secondary">
+            JCULT TRADER’s risk management framework should not be interpreted as a guarantee
+            against losses. Certain risks may fall outside the scope of what JCULT TRADER monitors or
+            controls, and actual risks can exceed expectations, particularly during atypical or volatile
+            market conditions. Despite our risk practices and any information provided, substantial or
+            even total losses may still occur due to these or other unforeseen factors.
           </div>
         </section>
       </main>
