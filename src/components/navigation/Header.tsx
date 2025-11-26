@@ -13,7 +13,7 @@ export default function Header() {
     'Who We Are': ['Our Culture','Executive Leadership','Our Global Base'],
     'What We Do': ['Asset Management'],
     'News': ['In the Media','Policy Positions'],
-    'Career': ['Investing ','Engineering ','Quantitative Research','Internships','Programs & Events ','Career Perspectives','Open Opportunities ']
+    'Career': ['Open Opportunities']
   };
 
   return (

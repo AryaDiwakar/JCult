@@ -5,7 +5,10 @@ import Footer from '@/components/navigation/Footer';
 import Hero from '@/components/section/Hero';
 import Stats from '@/components/section/Stats';
 import NewsSection from '@/components/section/NewsSection';
-import InvestmentTabs from '@/components/section/InvestmentTabs';
+import FadeUp from '@/components/animation/FadeUp';
+import ImageReveal from '@/components/animation/ImageReveal';
+import LuxuryButton from '@/components/animation/LuxuryButton';
+import { newsArticles } from '@/data/newsData';
 
 export default function Home() {
   return (
@@ -49,16 +52,16 @@ export default function Home() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 flex flex-col items-start mb-4 md:mb-6 lg:mb-0">
-                <h3 className="text-xs md:text-sm text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
+                <h3 className="text-xs md:text-sm font-raleway font-semibold tracking-wider uppercase text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
               </div>
               <div className="flex-2 md:pl-4 lg:pl-8 md:border-l-2 border-grey-500">
-                <p className="text-primary font-signifier text-[32px] font-[400] leading-[30px] mb-4 md:mb-6 lg:mb-8">
+                <p className="text-primary font-lora text-2xl md:text-3xl lg:text-4xl font-normal leading-tight mb-6 md:mb-8 lg:mb-10">
                   We aspire to establish an unprecedented legacy as the premier investment entity in
                   history. Our mandate is to rigorously discern optimal capital allocation strategies,
                   thereby delivering exceptional, sustainable value to an elite clientele of private
                   capital stewards and global investors.
                 </p>
-                <button className="bg-primary text-xs md:text-sm px-4 md:px-6 lg:px-8 py-4">Explore Who We Are</button>
+                <LuxuryButton variant="primary">Explore Who We Are</LuxuryButton>
               </div>
             </div>
           </div>
@@ -87,15 +90,15 @@ export default function Home() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-[48px] leading-[53px] font-bold mb-3 md:mb-4 lg:mb-8 font-signifier">Pioneering the Future of Finance</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight mb-3 md:mb-4 lg:mb-8">Pioneering the Future of Finance</h2>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <p className="mb-4 md:mb-6 lg:mb-8 text-[20px] leading-[28px] opacity-75">
+                <p className="mb-4 md:mb-6 lg:mb-8 text-base md:text-lg lg:text-xl font-raleway leading-relaxed opacity-90">
                   Innovation is the core of our competitive advantage. We tirelessly reimagine our approach
                   to the markets, systematically enhancing our trading models and execution capabilities to
                   generate outsized returns in an ever-changing landscape.
                 </p>
-                <button className="bg-main text-primary px-4 md:px-6 lg:px-8 py-4 text-sm md:text-base">Explore What We Do</button>
+                <LuxuryButton variant="gold">Explore What We Do</LuxuryButton>
               </div>
             </div>
             <div className="flex justify-center relative z-10">
@@ -119,12 +122,12 @@ export default function Home() {
           <div className="container-responsive py-6 md:py-8">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight text-primary">
                   The Meritocratic Code That Shapes Our Collective
                 </h2>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                <p className="text-base md:text-lg lg:text-xl font-raleway leading-relaxed opacity-75 text-main">
                   A culture where every perspective strengthens our purpose. From seasoned experts to
                   rising talent, each member fuels the intelligence that drives our performance. United, we
                   achieve what others consider out of reach.
@@ -162,21 +165,21 @@ export default function Home() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-[48px] leading-[53px] font-signifier font-bold mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8 leading-relaxed text-main opacity-75">
+                <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed text-main opacity-75">
                   Here, the collective fuels your growth. People learn side by side, sharpening each other’s
                   skills and building extraordinary careers together.
                 </p>
-                <button className="bg-primary px-4 md:px-6 lg:px-8 py-4 text-sm md:text-base">Explore Career Possibilities</button>
+                <LuxuryButton variant="primary">Explore Career Possibilities</LuxuryButton>
               </div>
             </div>
             <div className="ml-0 md:ml-4 lg:ml-8">
-              <img 
+              <ImageReveal 
                 src="/office.webp" 
                 alt="Office" 
-                className="w-full h-auto object-cover"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -188,34 +191,13 @@ export default function Home() {
           title="Insights & Perspectives"
           description="Explore firm highlights, media coverage, and perspectives on what it means to join and
 grow within our organization."
-          items={[
-            {
-              category: "Press Release",
-              title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-              href: "#",
-              date: "Jan 15, 2024",
-              source: "Bloomberg"
-            },
-            {
-              category: "Company News",
-              title: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-              href: "#",
-              date: "Jan 10, 2024"
-            },
-            {
-              category: "Industry Update",
-              title: "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-              href: "#",
-              date: "Jan 5, 2024",
-              source: "Financial Times"
-            },
-            {
-              category: "Announcement",
-              title: "Duis aute irure dolor in reprehenderit in voluptate velit",
-              href: "#",
-              date: "Dec 28, 2023"
-            }
-          ]}
+          items={newsArticles.map(article => ({
+            category: article.category,
+            title: article.title,
+            href: `/news/${article.id}`,
+            date: article.date,
+            source: article.source
+          }))}
         />
       </main>
     </div>

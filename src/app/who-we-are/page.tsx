@@ -4,6 +4,9 @@ import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
 import Hero from '@/components/section/Hero';
 import Accordion from '@/components/section/Accordian';
+import FadeUp from '@/components/animation/FadeUp';
+import ImageReveal from '@/components/animation/ImageReveal';
+import LuxuryButton from '@/components/animation/LuxuryButton';
 
 export default function WhoWeAre() {
   const regions = [
@@ -32,27 +35,29 @@ export default function WhoWeAre() {
           description="To empower our clients with expert financial guidance, innovative investment strategies, and transparent wealth management services that build lasting prosperity and financial security"
         />
         
-        <section className="py-6 md:py-8 lg:py-16">
-          <div className="container-responsive">
-            <div className="flex flex-col md:flex-row items-start">
-              <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-3 md:mb-4 lg:mb-6">
-                  Pursuing Edge. Rewriting Markets.
-                </h2>
-              </div>
-              
-              <div className="flex-1 md:pl-8 lg:pl-16 space-y-4 md:space-y-6">
-                <p className="text-[20px] leading-[28px] opacity-75 text-main">
-                  As a diversified investment firm, we are engineered for outperformance. We converge
+        <FadeUp>
+          <section className="py-6 md:py-8 lg:py-16">
+            <div className="container-responsive">
+              <div className="flex flex-col md:flex-row items-start">
+                <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
+                  <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-3 md:mb-4 lg:mb-6">
+                    Pursuing Edge. Rewriting Markets.
+                  </h2>
+                </div>
+                
+                <div className="flex-1 md:pl-8 lg:pl-16 space-y-4 md:space-y-6">
+                  <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                    As a diversified investment firm, we are engineered for outperformance. We converge
 world-class intellect with disciplined risk management to execute on high-conviction
 insights. Our approach is precise: we direct capital toward its highest and best use, thereby
 fueling economic innovation and delivering superior, risk-adjusted returns to our elite
 clientele.
-                </p>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </FadeUp>
         
         <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
@@ -69,9 +74,9 @@ clientele.
                   connect, and how we show up for the world around us. It’s the shared pulse that moves us
                   forward, together.
                 </p>
-                <button className="bg-primary px-4 md:px-6 lg:px-8 py-3 text-sm md:text-base">
+                <LuxuryButton variant="primary">
                   Experience Our Culture
-                </button>
+                </LuxuryButton>
               </div>
             </div>
           </div>
@@ -81,10 +86,10 @@ clientele.
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-6 md:mb-0">
-                <img 
+                <ImageReveal 
                   src="/images/office-collage.jpg"
                   alt="Our team"
-                  className="w-full h-48 md:h-64 lg:h-80 object-cover"
+                  className="w-full h-48 md:h-64 lg:h-80"
                 />
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
@@ -95,9 +100,9 @@ clientele.
                   Most of our leaders grew from within—earning their place through grit and vision. Today,
                   they channel that same energy into building the leaders who will push us forward next.
                 </p>
-                <button className="bg-primary px-4 md:px-6 lg:px-8 py-3 text-sm md:text-base">
+                <LuxuryButton variant="primary">
                   View Executive Leadership
-                </button>
+                </LuxuryButton>
               </div>
             </div>
           </div>
@@ -118,9 +123,9 @@ clientele.
                   This city pushes us forward every day, giving us the energy, diversity, and edge to operate
                   on a global level.
                 </p>
-                <button className="bg-primary px-4 md:px-6 lg:px-8 py-3 text-sm md:text-base">
+                <LuxuryButton variant="primary">
                   View Our Global Base
-                </button>
+                </LuxuryButton>
               </div>
             </div>
           </div>
