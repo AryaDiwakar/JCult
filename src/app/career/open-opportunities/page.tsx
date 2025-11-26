@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { jobs } from '@/data/jobsData';
 import Link from 'next/link';
 
-export default function OpenOpportunities() {
+function OpenOpportunitiesContent() {
   const searchParams = useSearchParams();
   const [selectedExperience, setSelectedExperience] = useState<string[]>([]);
   const [selectedRoleType, setSelectedRoleType] = useState<string[]>([]);
@@ -182,5 +182,13 @@ export default function OpenOpportunities() {
         </section>
       </main>
     </div>
+  );
+}
+
+export default function OpenOpportunities() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-main pt-20">Loading...</div>}>
+      <OpenOpportunitiesContent />
+    </Suspense>
   );
 }
