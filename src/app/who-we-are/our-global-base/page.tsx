@@ -3,10 +3,13 @@
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
 import dynamic from 'next/dynamic';
+import FadeUp from '@/components/animation/FadeUp';
+import FadeLeft from '@/components/animation/FadeLeft';
+import ScaleIn from '@/components/animation/ScaleIn';
 
 const OfficeMap = dynamic(() => import('@/components/map/OfficeMap'), {
   ssr: false,
-  loading: () => <div className="h-96 bg-gray-200 rounded-lg flex items-center justify-center">Loading map...</div>
+  loading: () => <div className="h-96 rounded-lg flex items-center justify-center">Loading map...</div>
 });
 
 export default function OfficeLocations() {
@@ -22,43 +25,56 @@ export default function OfficeLocations() {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative overflow-visible mb-16">
-          <div className="bg-primary min-h-[60vh] flex items-start px-4 md:px-8 py-8 md:py-16 ml-0 md:ml-4 lg:ml-8">
-            <h1 className="text-3xl md:text-5xl font-bold text-white">
-              Our Global Base
-            </h1>
-          </div>
+          <FadeUp>
+            <div className="bg-primary min-h-[60vh] flex items-start px-4 md:px-8 py-8 md:py-16 ml-0 md:ml-4 lg:ml-8">
+              <FadeLeft>
+                <h1 className="text-3xl md:text-5xl font-bold text-white">
+                  Our Global Base
+                </h1>
+              </FadeLeft>
+            </div>
+          </FadeUp>
         </section>
         
         {/* Title left with paragraph right */}
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
-            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
-              Explore Our Headquarters
-            </h2>
+            <FadeLeft>
+              <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                Explore Our Headquarters
+              </h2>
+            </FadeLeft>
           </div>
           <div className="flex-1 md:pl-16">
+            <FadeLeft delay={200}>
             <p className="text-[20px] leading-[28px] opacity-75 text-main">
               Our firm is rooted in a city defined by opportunity, culture, and momentum, making it an
               outstanding place to build a career.
             </p>
+            </FadeLeft>
           </div>
         </section>
         
         {/* Interactive Map */}
-        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
+        <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
-            <OfficeMap locations={locations} />
+            <ScaleIn>
+              <OfficeMap locations={locations} />
+            </ScaleIn>
           </div>
         </section>
         
         {/* Title left with paragraph right */}
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
-            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
-              Headquarters Presence
-            </h2>
+            <FadeLeft>
+              <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                Headquarters Presence
+              </h2>
+            </FadeLeft>
           </div>
           <div className="flex-1 md:pl-16">
+            <FadeLeft delay={200}>
             <p className="text-[20px] leading-[28px] opacity-75 text-main mb-2">
              United Arab Emirates
             </p>
@@ -74,29 +90,35 @@ export default function OfficeLocations() {
             <p className="text-[20px] leading-[28px] opacity-75 text-main">
              jculttrader.inquiry@gmail.com
             </p>
+            </FadeLeft>
           </div>
         </section>
         
         {/* Full width image with margins */}
-        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
+        <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
-            <img 
-              src="/images/office-collage.jpg"
-              alt="Our global offices"
-              className="w-full h-48 md:h-64 lg:h-96 object-cover"
-            />
+            <ScaleIn>
+              <img 
+                src="/images/office-collage.jpg"
+                alt="Our global offices"
+                className="w-full h-48 md:h-64 lg:h-96 object-cover"
+              />
+            </ScaleIn>
           </div>
         </section>
         
         {/* Cards similar to culture route end */}
-        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
+        <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
-            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8 md:mb-10 lg:mb-12">
-              Explore Our Offices
-            </h2>
+            <FadeLeft>
+              <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8 md:mb-10 lg:mb-12">
+                Explore Our Offices
+              </h2>
+            </FadeLeft>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              <div className="border-l border-secondary pl-4 md:pl-6">
+              <FadeLeft delay={200}>
+                <div className="border-l border-secondary pl-4 md:pl-6 transition-transform hover:-translate-y-2">
                 <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
                   Lorem Ipsum
                 </h3>
@@ -114,9 +136,11 @@ export default function OfficeLocations() {
                   alt="Office location"
                   className="w-full h-40 md:h-48 object-cover mt-4 md:mt-6"
                 />
-              </div>
+                </div>
+              </FadeLeft>
               
-              <div className="border-l border-secondary pl-4 md:pl-6">
+              <FadeLeft delay={400}>
+                <div className="border-l border-secondary pl-4 md:pl-6 transition-transform hover:-translate-y-2">
                 <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
                   Lorem Ipsum
                 </h3>
@@ -134,9 +158,11 @@ export default function OfficeLocations() {
                   alt="Office location"
                   className="w-full h-40 md:h-48 object-cover mt-4 md:mt-6"
                 />
-              </div>
+                </div>
+              </FadeLeft>
               
-              <div className="border-l border-secondary pl-4 md:pl-6">
+              <FadeLeft delay={600}>
+                <div className="border-l border-secondary pl-4 md:pl-6 transition-transform hover:-translate-y-2">
                 <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
                   Lorem Ipsum
                 </h3>
@@ -154,7 +180,8 @@ export default function OfficeLocations() {
                   alt="Office location"
                   className="w-full h-40 md:h-48 object-cover mt-4 md:mt-6"
                 />
-              </div>
+                </div>
+              </FadeLeft>
             </div>
           </div>
         </section>

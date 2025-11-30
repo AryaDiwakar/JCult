@@ -1,6 +1,10 @@
 'use client';
 
+import LuxuryButton from '@/components/animation/LuxuryButton';
 import Hero from '@/components/section/Hero';
+import FadeLeft from '@/components/animation/FadeLeft';
+import FadeUp from '@/components/animation/FadeUp';
+import BorderReveal from '@/components/animation/BorderReveal';
 
 export default function WhatWeDo() {
   const cards = [
@@ -28,15 +32,17 @@ export default function WhatWeDo() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-0">
-                <p className="text-xs text-primary">How We Move</p>
+                <FadeLeft>
+                  <p className="text-xs text-primary">How We Move</p>
+                </FadeLeft>
               </div>
-              <div className="flex-3 pl-4 md:border-l-1 border-gray-800">
+              <BorderReveal>
                 <p className="text-base md:text-lg lg:text-xl text-primary leading-relaxed">
                   We channel capital toward the world’s most meaningful and high-impact opportunities,
                   guided by a rare fusion of disciplined talent, intuitive technology, deep analytics, and a
                   global presence that moves with quiet strength.
                 </p>
-              </div>
+              </BorderReveal>
             </div>
           </div>
         </section>
@@ -46,20 +52,26 @@ export default function WhatWeDo() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-0">
-                <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
-                  Diversified Asset Management With a Singular Focus
-                </h2>
+                <FadeLeft>
+                  <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
+                    Diversified Asset Management With a Singular Focus
+                  </h2>
+                </FadeLeft>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
+                <FadeLeft delay={200}>
+                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed mb-2">
                   Our team explores the full spectrum of global markets, pursuing compelling ideas through
                   innovative thinking and bold, disciplined execution.
                 </p>
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
+                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed mb-4">
                  Across equities, macro, real assets, virtual assets, and private wealth solutions, we
                   maintain one clear objective: generating superior, risk-adjusted returns.
                 </p>
-                <button className="mt-4 px-6 py-2 bg-primary text-white">Explore Diversification</button>
+                  <LuxuryButton variant='primary'>
+                    Explore Diversification
+                  </LuxuryButton>
+                </FadeLeft>
               </div>
             </div>
           </div>
@@ -144,22 +156,27 @@ export default function WhatWeDo() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start mb-8 md:mb-12">
               <div className="flex-1 mb-6 md:mb-0 relative -mt-12 md:-mt-16">
+                <FadeLeft>
                 <img 
                   src="/images/office.webp"
                   alt="Our values"
                   className="w-full h-64 md:h-80 object-cover"
                 />
+                </FadeLeft>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
+                <FadeLeft delay={200}>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
                   Our Strategic Edge
                 </h2>
+                </FadeLeft>
               </div>
             </div>
 
             {/* 3 Columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-6 md:pt-10">
-              <div className="relative px-6">
+              <FadeLeft delay={400}>
+                <div className="relative px-6">
                 <div className="absolute top-0 left-0 h-full w-px bg-white/30 hidden md:block"></div>
                 <div className="absolute top-0 right-0 h-full w-px bg-white/30 hidden md:block"></div>
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
@@ -170,8 +187,10 @@ export default function WhatWeDo() {
                   unparalleled growth. Our collaborative environment and extensive resources empower our
                   people to achieve their full potential and drive innovation.
                 </p>
-              </div>
-              <div className="relative pr-6">
+                </div>
+              </FadeLeft>
+              <FadeLeft delay={600}>
+                <div className="relative pr-6">
                 <div className="absolute top-0 right-0 h-full w-px bg-white/30 hidden md:block"></div>
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
                   Uncompromising Risk Standards
@@ -182,7 +201,8 @@ export default function WhatWeDo() {
                 tolerance levels. We utilize advanced technology for continuous tracking and real-time
                 stress testing, ensuring robust protection for every position we hold.
                 </p>
-              </div>
+                </div>
+              </FadeLeft>
               {/* <div className="relative pr-6">
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
                   Integrity
@@ -221,30 +241,36 @@ export default function WhatWeDo() {
         <section className="py-6 md:py-8 lg:py-16">
           <div className="flex flex-col md:flex-row items-start">
             <div className="flex-1 mb-6 md:mb-0">
-              <img 
-                src="/images/office.webp"
-                alt="Join our team"
-                className="w-full h-64 md:h-80 lg:h-96 object-cover"
-              />
+              <FadeLeft>
+                <img 
+                  src="/images/office.webp"
+                  alt="Join our team"
+                  className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                />
+              </FadeLeft>
             </div>
             <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
+              <FadeLeft delay={200}>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
                In Pursuit of Minds That Redefine Possibility
               </h2>
-              <button className="bg-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
-                 Discover Available Positions
-              </button>
+                <LuxuryButton variant="primary">
+                  Discover Available Positions
+                </LuxuryButton>
+              </FadeLeft>
             </div>
           </div>
         </section>
 
         <section className='pb-16'>
           <div className="container-responsive text-secondary">
+            <FadeUp>
             JCULT TRADER’s risk management framework should not be interpreted as a guarantee
             against losses. Certain risks may fall outside the scope of what JCULT TRADER monitors or
             controls, and actual risks can exceed expectations, particularly during atypical or volatile
             market conditions. Despite our risk practices and any information provided, substantial or
             even total losses may still occur due to these or other unforeseen factors.
+            </FadeUp>
           </div>
         </section>
       </main>

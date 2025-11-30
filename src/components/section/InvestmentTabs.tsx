@@ -1,9 +1,38 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function InvestmentTabs() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  useEffect(() => {
+    setIsVisible(false);
+    const timer = setTimeout(() => setIsVisible(true), 50);
+    return () => clearTimeout(timer);
+  }, [activeTab]);
+
+  useEffect(() => {
+    if (scrollContainerRef.current && tabRefs.current[activeTab]) {
+      const container = scrollContainerRef.current;
+      const activeButton = tabRefs.current[activeTab];
+      const containerWidth = container.offsetWidth;
+      const buttonLeft = activeButton.offsetLeft;
+      const buttonWidth = activeButton.offsetWidth;
+      const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
+      container.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+    }
+  }, [activeTab]);
+
+  const handlePrevTab = () => {
+    if (activeTab > 0) setActiveTab(activeTab - 1);
+  };
+
+  const handleNextTab = () => {
+    if (activeTab < tabs.length - 1) setActiveTab(activeTab + 1);
+  };
 
   const tabs = [
     {
@@ -51,25 +80,60 @@ export default function InvestmentTabs() {
   ];
 
   return (
-    <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
+    <section className="py-6 md:py-8 lg:py-16">
+      <div className="sticky top-20 z-20 bg-main pb-4 md:relative md:top-0 md:z-0 md:pb-0">
       <div className="container-responsive">
-        {/* Tab Bar */}
-        <div className="flex flex-wrap justify-center border-b border-gray-300 mb-8 md:mb-10">
-          {tabs.map((tab, i) => (
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Tab Bar - Horizontal on mobile, Vertical on desktop */}
+          <div className="relative w-full md:w-64">
+            {/* Left Arrow - Mobile only */}
             <button
-              key={i}
-              onClick={() => setActiveTab(i)}
-              className={`px-4 md:px-6 lg:px-8 py-3 text-xs md:text-sm font-medium border-r last:border-r-0 transition ${
-                activeTab === i ? 'bg-primary text-white' : 'text-main hover:bg-gray-100'
-              }`}
+              onClick={handlePrevTab}
+              disabled={activeTab === 0}
+              className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black to-transparent md:hidden flex items-center justify-start z-10 disabled:opacity-30"
             >
-              {tab.label}
+              <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
-          ))}
-        </div>
+            {/* Right Arrow - Mobile only */}
+            <button
+              onClick={handleNextTab}
+              disabled={activeTab === tabs.length - 1}
+              className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black to-transparent md:hidden flex items-center justify-end z-10 disabled:opacity-30"
+            >
+              <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div 
+              ref={scrollContainerRef}
+              className="flex flex-row md:flex-col w-full overflow-x-auto md:overflow-x-visible space-x-2 md:space-x-0 md:space-y-2 scrollbar-hide scroll-smooth"
+            >
+            {tabs.map((tab, i) => (
+              <button
+                key={i}
+                ref={(el) => (tabRefs.current[i] = el)}
+                onClick={() => setActiveTab(i)}
+                className={`px-4 py-3 text-left text-sm font-medium whitespace-nowrap border-b-4 md:border-b-0 md:border-l-4 transition ${
+                  activeTab === i ? 'border-gold bg-gold/10 text-gold' : 'border-transparent hover:border-gold/50 text-main'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+            </div>
+          </div>
 
-        {/* Tab Content */}
-        <div>
+          {/* Tab Content */}
+          <div
+            className="flex-1"
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translateX(0)' : 'translateX(-20px)',
+              transition: 'opacity 600ms cubic-bezier(0.25, 1, 0.5, 1), transform 600ms cubic-bezier(0.25, 1, 0.5, 1)'
+            }}
+          >
           {/* Overview */}
           <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed mb-8 md:mb-12">
             {tabs[activeTab].overview}
@@ -89,6 +153,8 @@ export default function InvestmentTabs() {
             ))}
           </div>
         </div>
+      </div>
+      </div>
       </div>
     </section>
   );

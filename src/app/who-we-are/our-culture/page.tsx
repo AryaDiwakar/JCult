@@ -5,48 +5,61 @@ import Footer from '@/components/navigation/Footer';
 import CoreValuesSection from '@/components/section/CoreValuesSection';
 import CultureCarousel from '@/components/section/CultureCarousel';
 import CultureTabs from '@/components/section/CultureTabs';
+import LuxuryButton from '@/components/animation/LuxuryButton';
+import FadeDown from '@/components/animation/FadeDown';
+import FadeLeft from '@/components/animation/FadeLeft';
+import FadeUp from '@/components/animation/FadeUp';
 
 export default function OurCulture() {
   return (
-    <div className="min-h-screen bg-main">
+    <div className="min-h-screen">
       <main className="pt-20">
         <section className="relative overflow-visible mb-20">
-          <div className="bg-primary flex flex-col md:flex-row min-h-[80vh] ml-0 md:ml-4 lg:ml-8">
-            <div className="flex-1 px-4 md:px-8 py-8 md:py-16">
-              <div className="flex flex-col justify-between h-full">
-                <div>
-                  <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                    Our Culture
-                  </h1>
-                </div>
-                <div className="mt-auto">
+          <FadeUp>
+            <div className="bg-primary flex flex-col md:flex-row min-h-[80vh] ml-0 md:ml-4 lg:ml-8">
+              <div className="flex-1 px-4 md:px-8 py-8 md:py-16">
+                <div className="flex flex-col justify-between h-full">
+                  <div>
+                  <FadeLeft>
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                      Our Culture
+                    </h1>
+                    </FadeLeft>
+                  </div>
+                  <div className="mt-auto">
+                  <FadeLeft delay={200}>
                   <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-md">
                    Powered by our most impactful ideas, we’re always pushing toward what’s next.
-                  </p>
+                    </p>
+                    </FadeLeft>
+                  </div>
                 </div>
               </div>
-            </div>
             
-            <div className="flex-1 relative">
-              <img 
-                src="/images/office.webp"
-                alt="Our Culture"
-                className="absolute top-0 right-0 w-full h-[calc(100%+6rem)] object-cover"
-              />
+              <div className="flex-1 relative">
+                <img 
+                  src="/images/office.webp"
+                  alt="Our Culture"
+                  className="absolute top-0 right-0 w-full h-[calc(100%+6rem)] object-cover"
+                />
+              </div>
             </div>
-          </div>
+          </FadeUp>
         </section>
         
         <section className="py-6 md:py-8 lg:py-16 mb-16">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
-                  Insight Over Hierarchy
-                </h2>
+                <FadeLeft>
+                  <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                    Insight Over Hierarchy
+                  </h2>
+                </FadeLeft>
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16 space-y-4 md:space-y-6">
+                <FadeLeft delay={200}>
                 <p className="text-[20px] leading-[28px] opacity-75 text-main">
                   From the moment you arrive, your thinking has influence. You are invited to share your
 ideas openly, and your contribution is valued regardless of your position or experience.
@@ -62,6 +75,7 @@ improvement, always aiming to exceed prior achievements. Those who bring energy 
 initiative find even greater opportunities ahead, creating a level of growth that few places
 can offer.
                 </p>
+                </FadeLeft>
               </div>
             </div>
           </div>
@@ -298,12 +312,15 @@ can offer.
         
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
-            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
-              A Headquarters Built for Collaboration
-            </h2>
+            <FadeLeft>
+              <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                A Headquarters Built for Collaboration
+              </h2>
+            </FadeLeft>
           </div>
           
           <div className="flex-1 md:pl-16">
+            <FadeLeft delay={200}>
             <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
               Our workspace is meticulously designed to foster real-time teamwork, rigorous discussion,
 and debate. We have created an environment where physical barriers are removed to
@@ -312,9 +329,10 @@ ensure constant intellectual exchange.
             <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
               Unified in our mission to achieve what no individual could alone.
             </p>
-            <button className="bg-primary px-8 py-4 text-lg">
-             View Our Headquarters
-            </button>
+              <LuxuryButton variant="primary">
+               View Our Headquarters
+              </LuxuryButton>
+            </FadeLeft>
           </div>
         </section>
         
@@ -364,14 +382,17 @@ ensure constant intellectual exchange.
           </div>
         </section> */}
         
-        <section className="px-4 md:px-8 py-8 md:py-16 bg-tertiary">
-          <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-12">
-            Explore More
-          </h2>
+        <section className="px-4 md:px-8 py-8 md:py-16">
+          <FadeLeft>
+            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-12">
+              Explore More
+            </h2>
+          </FadeLeft>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border-l border-gray-300 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <FadeLeft delay={200}>
+              <div className="border-l border-gray-300 pl-6 transition-transform hover:-translate-y-2">
+              <h3 className="text-xl font-bold mb-4">
                 Career Opportunities
               </h3>
               <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
@@ -388,10 +409,12 @@ ensure constant intellectual exchange.
                 alt="Career opportunities"
                 className="w-full h-48 object-cover mt-6"
               />
-            </div>
+              </div>
+            </FadeLeft>
             
-            <div className="border-l border-gray-300 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <FadeLeft delay={400}>
+              <div className="border-l border-gray-300 pl-6 transition-transform hover:-translate-y-2">
+              <h3 className="text-xl font-bold mb-4">
                 Innovation Labs
               </h3>
               <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
@@ -408,10 +431,12 @@ ensure constant intellectual exchange.
                 alt="Innovation labs"
                 className="w-full h-48 object-cover mt-6"
               />
-            </div>
+              </div>
+            </FadeLeft>
             
-            <div className="border-l border-gray-300 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <FadeLeft delay={600}>
+              <div className="border-l border-gray-300 pl-6 transition-transform hover:-translate-y-2">
+              <h3 className="text-xl font-bold mb-4">
                 Global Impact
               </h3>
               <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
@@ -428,10 +453,11 @@ ensure constant intellectual exchange.
                 alt="Global impact"
                 className="w-full h-48 object-cover mt-6"
               />
-            </div>
+              </div>
+            </FadeLeft>
           </div>
         </section>
-        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
+        {/* <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
             <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8 md:mb-10 lg:mb-12">
               Explore Our Offices
@@ -499,7 +525,7 @@ ensure constant intellectual exchange.
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );

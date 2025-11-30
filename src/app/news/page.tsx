@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
 import { ArrowRight } from 'lucide-react';
+import LuxuryButton from '@/components/animation/LuxuryButton';
 
 export default function News() {
   const [activeTab, setActiveTab] = useState(0);
@@ -63,9 +64,9 @@ export default function News() {
                 <p className="text-sm md:text-base text-secondary leading-relaxed mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <button className="btn-primary px-6 py-3 text-sm md:text-base">
-                  View All News
-                </button>
+                <LuxuryButton variant="primary">
+                   View All News  
+                </LuxuryButton>
               </div>
 
               <div className="w-full md:w-2/3 md:pl-8 lg:pl-16">

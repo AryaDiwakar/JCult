@@ -1,19 +1,43 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
 export default function Footer() {
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className="bg-primary text-tertiary px-16 pb-16">
+    <footer ref={footerRef} className="bg-primary text-tertiary px-16 pb-16">
       {/* Main Footer Content */}
       <div className="px-4 md:px-8 py-8 md:py-16">
         <div className="flex flex-col md:flex-row justify-between items-start">
           {/* Logo */}
-          <div className="text-xl md:text-2xl font-bold mb-6 md:mb-0">JCULT</div>
+          <div className={`text-xl md:text-2xl font-bold mb-6 md:mb-0 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>JCULT</div>
           
           {/* Navigation Links */}
           <nav className="flex flex-col space-y-2 md:space-y-4">
-            <a href="#" className="hover:underline text-sm md:text-base">Who We Are</a>
-            <a href="#" className="hover:underline text-sm md:text-base">What We Do</a>
-            <a href="#" className="hover:underline text-sm md:text-base">News</a>
-            <a href="#" className="hover:underline text-sm md:text-base">Career</a>
-            <a href="#" className="hover:underline text-sm md:text-base">Contact Us</a>
+            {['Who We Are', 'What We Do', 'News', 'Career', 'Contact Us'].map((link, i) => (
+              <a key={link} href="#" className={`hover:underline text-sm md:text-base transition-all duration-1000 ${
+                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+              }`} style={{ transitionDelay: `${300 + i * 100}ms` }}>{link}</a>
+            ))}
           </nav>
         </div>
       </div>
@@ -22,7 +46,9 @@ export default function Footer() {
       <div className="border-t border-b border-gray-400 px-4 md:px-8 py-4 md:py-6">
         <div className="flex flex-col md:grid md:grid-cols-3 items-center space-y-4 md:space-y-0">
           {/* Legal Links */}
-          <div className="flex flex-wrap justify-center md:justify-start space-x-3 md:space-x-6">
+          <div className={`flex flex-wrap justify-center md:justify-start space-x-3 md:space-x-6 transition-all duration-1000 delay-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             <a href="#" className="text-xs md:text-sm hover:underline">Privacy</a>
             <a href="#" className="text-xs md:text-sm hover:underline">Terms of Use</a>
             <a href="#" className="text-xs md:text-sm hover:underline">Notices</a>
@@ -30,12 +56,16 @@ export default function Footer() {
           </div>
           
           {/* Copyright */}
-          <div className="text-xs md:text-sm text-center">
+          <div className={`text-xs md:text-sm text-center transition-all duration-1000 delay-900 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             © 2024 JCULT. All rights reserved.
           </div>
           
           {/* Social Media Icons */}
-          <div className="flex space-x-3 md:space-x-4 justify-center md:justify-end">
+          <div className={`flex space-x-3 md:space-x-4 justify-center md:justify-end transition-all duration-1000 delay-1100 ${
+            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+          }`}>
             <a href="#" className="hover:opacity-80">
               <svg className="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>

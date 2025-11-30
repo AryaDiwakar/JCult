@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Raleway, Lora } from "next/font/google";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 
-const raleway = Raleway({
+const montserrat = Montserrat({
   variable: "--font-raleway",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const lora = Lora({
+const cormorant = Cormorant_Garamond({
   variable: "--font-lora",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.variable} ${lora.variable} antialiased`}
+        className={`${montserrat.variable} ${cormorant.variable} antialiased`}
       >
         <Header />
         {children}

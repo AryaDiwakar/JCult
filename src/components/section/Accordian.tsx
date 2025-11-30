@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { IoAdd, IoRemove } from "react-icons/io5";
 import Image from "next/image";
+import FadeUp from "@/components/animation/FadeUp";
 
 interface City {
   name: string;
@@ -22,24 +23,25 @@ export default function Accordion({ regions }: { regions: Region[] }) {
   const [selectedCityIndex, setSelectedCityIndex] = useState(0);
 
   return (
-    <div className="w-full max-w-7xl mx-auto mt-10 space-y-12">
+    <FadeUp>
+      <div className="w-full max-w-7xl mx-auto mt-10 space-y-12">
       {regions.map((region, i) => {
         const isOpen = openIndex === i;
 
         return (
-          <div key={i} className="border-b pb-6">
+          <div key={i} className="border-b border-primary pb-6">
             {/* Header */}
             <div className="flex items-center justify-between">
               <h2 className="text-4xl font-serif text-green-900">{region.title}</h2>
 
               <button
                 onClick={() => setOpenIndex(isOpen ? null : i)}
-                className="p-3 border rounded-full hover:bg-gray-100 transition"
+                className="p-3 border border-primary rounded-full hover:bg-primary hover:border-primary transition group"
               >
                 {isOpen ? (
-                  <IoRemove size={22} className="text-green-700" />
+                  <IoRemove size={22} className="text-gold group-hover:text-white" />
                 ) : (
-                  <IoAdd size={22} className="text-green-700" />
+                  <IoAdd size={22} className="text-gold group-hover:text-white" />
                 )}
               </button>
             </div>
@@ -117,6 +119,7 @@ export default function Accordion({ regions }: { regions: Region[] }) {
           </div>
         );
       })}
-    </div>
+      </div>
+    </FadeUp>
   );
 }

@@ -62,7 +62,7 @@ export default function NewsArticlePage() {
                 )}
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold text-primary mb-4 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold text-green-700 mb-4 leading-tight">
                 {article.title}
               </h1>
 

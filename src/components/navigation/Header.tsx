@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
@@ -8,6 +8,26 @@ export default function Header() {
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
   const [showDropdown, setShowDropdown] = useState(false);
   const [mobileExpandedTabs, setMobileExpandedTabs] = useState<string[]>([]);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [hasLoaded, setHasLoaded] = useState(false);
+
+  useEffect(() => {
+    setHasLoaded(true);
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const tabContent = {
     'Who We Are': ['Our Culture','Executive Leadership','Our Global Base'],
@@ -17,9 +37,11 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-tertiary fixed top-0 left-0 right-0 z-50" onClick={() => setHoveredTab(null)}>
+    <header className={`w-full bg-tertiary fixed left-0 right-0 z-50 transition-all duration-500 ${
+      hasLoaded ? (isVisible ? 'top-0 opacity-100' : '-top-24 opacity-0') : '-top-24 opacity-0'
+    }`} onClick={() => setHoveredTab(null)}>
       <div className="container-responsive py-2">
-        <div className="flex justify-between items-center h-16 my-2">
+        <div className="flex justify-between items-center h-16">
           {/* Brand Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-extrabold text-primary hover:opacity-80">

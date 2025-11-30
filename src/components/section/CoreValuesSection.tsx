@@ -1,4 +1,7 @@
+'use client';
+
 import Image from "next/image";
+import FadeLeft from '@/components/animation/FadeLeft';
 
 export default function CoreValuesSection() {
   const valuesTop = [
@@ -34,24 +37,28 @@ export default function CoreValuesSection() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         
         {/* Left image */}
-        <div className="relative w-full h-[320px] md:h-[360px] -mt-32">
+        <FadeLeft>
+          <div className="relative w-full h-[320px] md:h-[360px] -mt-32">
           <Image
             src="/images/office.webp"
             alt="Team walking"
             fill
             className="object-cover"
           />
-        </div>
+          </div>
+        </FadeLeft>
 
         {/* Right heading */}
-        <div>
+        <FadeLeft delay={200}>
+          <div>
           <h2 className="text-4xl md:text-5xl font-serif leading-tight">
             Led by
           </h2>
           <h3 className="text-4xl md:text-5xl font-serif text-green-300 mt-2">
             Our Foundational Principles
           </h3>
-        </div>
+          </div>
+        </FadeLeft>
       </div>
 
       {/* VALUES GRID */}
@@ -60,15 +67,14 @@ export default function CoreValuesSection() {
         {/* Top row: 3 columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-10">
           {valuesTop.map((value, i) => (
-            <div 
-              key={i} 
-              className="relative pr-6 border-l-1 border-white/20 pl-4"
-            >
-              {/* Vertical Divider */}
-              
-              <h4 className="font-serif text-2xl mb-4">{value.title}</h4>
-              <p className="text-sm leading-relaxed text-white/90">{value.text}</p>
-            </div>
+            <FadeLeft key={i} delay={i * 200}>
+              <div className="relative pr-6 border-l-1 border-white/20 pl-4">
+                {/* Vertical Divider */}
+                
+                <h4 className="font-serif text-2xl mb-4">{value.title}</h4>
+                <p className="text-sm leading-relaxed text-white/90">{value.text}</p>
+              </div>
+            </FadeLeft>
           ))}
         </div>
 
