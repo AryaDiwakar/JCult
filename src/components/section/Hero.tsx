@@ -46,7 +46,7 @@ export default function Hero({ videoSrc, imageSrc, title, description }: HeroPro
       {/* Title - aligned with navbar - Fade from left */}
       <div className="absolute top-4 md:top-6 lg:top-8 left-0 right-0 z-10">
         <div className="container-responsive">
-          <h1 className={`text-white max-w-[250px] md:max-w-[400px] lg:max-w-[600px] text-2xl md:text-4xl lg:text-[64px] font-[400] leading-tight md:leading-snug lg:leading-[70px] font-signifier transition-all duration-1000 ${
+          <h1 className={`text-white max-w-[250px] md:max-w-[400px] lg:max-w-[600px] text-2xl md:text-4xl lg:text-[64px] font-[400] leading-tight md:leading-snug lg:leading-[70px] font-signifier pl-4 md:pl-8 lg:pl-16 transition-all duration-1000 ${
             loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
           }`}>
             {title}

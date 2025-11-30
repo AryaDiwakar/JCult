@@ -54,15 +54,14 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Brand Logo */}
           <div className="flex-shrink-0 pl-2">
-            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+            <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
               <Image 
-                src="/Final Logos/Transparent/Base Logo/Icon/Transparent Icon.svg" 
+                src="/Final Logos/Transparent/Base Logo/Primary/Transparent Primary Single Line.png" 
                 alt="JCULT" 
-                width={32} 
+                width={120} 
                 height={32}
                 className="transition-all duration-300"
               />
-              <span className="text-white text-lg font-semibold tracking-wider">JCULT TRADER</span>
             </Link>
           </div>
 
