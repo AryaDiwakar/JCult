@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,15 +38,15 @@ export default function Header() {
   };
 
   return (
-    <header className={`w-full bg-tertiary fixed left-0 right-0 z-50 transition-all duration-500 ${
+    <header className={`w-full bg-black fixed left-0 right-0 z-50 transition-all duration-500 ${
       hasLoaded ? (isVisible ? 'top-0 opacity-100' : '-top-24 opacity-0') : '-top-24 opacity-0'
     }`} onClick={() => setHoveredTab(null)}>
-      <div className="container-responsive py-2">
-        <div className="flex justify-between items-center h-16">
+      <div className="container-responsive py-4">
+        <div className="flex justify-between items-center">
           {/* Brand Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-extrabold text-primary hover:opacity-80">
-              JCULT
+            <Link href="/" className="hover:opacity-80">
+              <Image src="/Final Logos/Transparent/Base Logo/Icon/Transparent Icon.svg" alt="JCULT" width={40} height={30} />
             </Link>
           </div>
 
@@ -183,27 +184,35 @@ export default function Header() {
               <div className="space-y-6 flex-1">
                 {Object.keys(tabContent).map((tab) => (
                   <div key={tab}>
-                    <div 
-                      className="flex items-center cursor-pointer"
-                      onClick={() => {
-                        if (mobileExpandedTabs.includes(tab)) {
-                          setMobileExpandedTabs(mobileExpandedTabs.filter(t => t !== tab));
-                        } else {
-                          setMobileExpandedTabs([...mobileExpandedTabs, tab]);
-                        }
-                      }}
-                    >
-                      <span className="text-2xl font-medium text-primary hover:underline">{tab}</span>
-                      <svg 
-                        className={`h-5 w-5 text-primary transform transition-transform ml-2 ${
-                          mobileExpandedTabs.includes(tab) ? 'rotate-180' : ''
-                        }`} 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
+                    <div className="flex items-center justify-between">
+                      <Link 
+                        href={`/${tab.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="text-2xl font-medium text-primary hover:underline flex-1"
+                        onClick={() => setIsMenuOpen(false)}
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
+                        {tab}
+                      </Link>
+                      <button
+                        onClick={() => {
+                          if (mobileExpandedTabs.includes(tab)) {
+                            setMobileExpandedTabs(mobileExpandedTabs.filter(t => t !== tab));
+                          } else {
+                            setMobileExpandedTabs([...mobileExpandedTabs, tab]);
+                          }
+                        }}
+                        className="ml-2"
+                      >
+                        <svg 
+                          className={`h-5 w-5 text-primary transform transition-transform ${
+                            mobileExpandedTabs.includes(tab) ? 'rotate-180' : ''
+                          }`} 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
                     </div>
                     {mobileExpandedTabs.includes(tab) && (
                       <div className="mt-3 ml-4 space-y-2">

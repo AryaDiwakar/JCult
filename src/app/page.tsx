@@ -198,16 +198,15 @@ function AnimatedSection() {
   return (
     <section ref={sectionRef} className="py-6 md:py-8 lg:py-16">
       <div className="container-responsive">
-        <div className="flex flex-col md:flex-row items-start relative">
-          {/* Animated vertical line */}
-          <div className="absolute left-0 md:left-[calc(33.333%-2rem)] top-0 w-0.5 bg-gold transition-all duration-1000 ease-out" 
-               style={{ height: isVisible ? '100%' : '0%' }}>
-          </div>
-          
-          <div className="flex-1 flex flex-col items-start mb-4 md:mb-6 lg:mb-0 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="flex-1 flex flex-col items-start mb-4 md:mb-6 lg:mb-0 overflow-hidden md:pr-8 lg:pr-12 relative">
             <h3 className={`text-xs md:text-sm font-raleway font-semibold tracking-wider uppercase text-primary mb-3 md:mb-4 lg:mb-8 transition-all duration-1000 delay-500 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
             }`}>Who We Are</h3>
+            {/* Animated vertical line */}
+            <div className="absolute right-0 top-0 w-0.5 bg-gold transition-all duration-1000 ease-out hidden md:block" 
+                 style={{ height: isVisible ? '100%' : '0%' }}>
+            </div>
           </div>
           <div className="flex-2 md:pl-8 lg:pl-12 overflow-hidden">
             <p className={`text-primary font-lora text-2xl md:text-3xl lg:text-4xl font-normal leading-tight mb-6 md:mb-8 lg:mb-10 transition-all duration-1000 delay-700 ${
