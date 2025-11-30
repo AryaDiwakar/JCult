@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,12 +13,14 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setHasLoaded(true);
     
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
@@ -38,46 +41,59 @@ export default function Header() {
   };
 
   return (
-    <header className={`w-full bg-black fixed left-0 right-0 z-50 transition-all duration-500 ${
-      hasLoaded ? (isVisible ? 'top-0 opacity-100' : '-top-24 opacity-0') : '-top-24 opacity-0'
-    }`} onClick={() => setHoveredTab(null)}>
-      <div className="container-responsive py-4">
+    <header 
+      className={`w-full fixed left-0 right-0 z-50 transition-all duration-500 ${
+        hasLoaded ? (isVisible ? 'top-0 opacity-100' : '-top-24 opacity-0') : '-top-24 opacity-0'
+      } ${isScrolled ? 'border-b border-white/10' : ''}`}
+      style={{
+        backgroundColor: '#000000'
+      }}
+      onClick={() => setHoveredTab(null)}
+    >
+      <div className={`container-responsive transition-all duration-300 ${isScrolled ? 'py-3' : 'py-5'}`}>
         <div className="flex justify-between items-center">
           {/* Brand Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="hover:opacity-80">
-              <Image src="/Final Logos/Transparent/Base Logo/Icon/Transparent Icon.svg" alt="JCULT" width={40} height={30} />
+          <div className="flex-shrink-0 pl-2">
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+              <Image 
+                src="/Final Logos/Transparent/Base Logo/Icon/Transparent Icon.svg" 
+                alt="JCULT" 
+                width={32} 
+                height={32}
+                className="transition-all duration-300"
+              />
+              <span className="text-white text-lg font-semibold tracking-wider">JCULT TRADER</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 relative" onMouseLeave={() => {
+          <nav className="hidden lg:flex space-x-6 relative" onMouseLeave={() => {
             setShowDropdown(false);
           }}>
             <Link 
               href="/who-we-are" 
-              className="text-primary hover:underline px-1 py-2 text-sm font-medium"
+              className={`text-white hover:text-[#d4af37] px-1 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${usePathname()?.startsWith('/who-we-are') ? 'underline' : ''}`}
               onMouseEnter={() => setHoveredTab('Who We Are')}
             >
               Who We Are
             </Link>
             <Link 
               href="/what-we-do" 
-              className="text-primary hover:underline px-1 py-2 text-sm font-medium"
+              className={`text-white hover:text-[#d4af37] px-1 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${usePathname()?.startsWith('/what-we-do') ? 'underline' : ''}`}
               onMouseEnter={() => setHoveredTab('What We Do')}
             >
               What We Do
             </Link>
             <Link 
               href="/news" 
-              className="text-primary hover:underline px-1 py-2 text-sm font-medium"
+              className={`text-white hover:text-[#d4af37] px-1 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${usePathname()?.startsWith('/news') ? 'underline' : ''}`}
               onMouseEnter={() => setHoveredTab('News')}
             >
               News
             </Link>
             <Link 
               href="/career" 
-              className="text-primary hover:underline px-1 py-2 text-sm font-medium"
+              className={`text-white hover:text-[#d4af37] px-1 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${usePathname()?.startsWith('/career') ? 'underline' : ''}`}
               onMouseEnter={() => setHoveredTab('Career')}
             >
               Career
@@ -85,14 +101,17 @@ export default function Header() {
           </nav>
 
           {/* Desktop Contact Us */}
-          <div className="hidden md:block" onMouseEnter={() => setHoveredTab(null)}>
-            <Link href="/contact" className="text-primary hover:underline px-3 py-2 text-sm font-medium">
+          <div className="hidden lg:block" onMouseEnter={() => setHoveredTab(null)}>
+            <Link 
+              href="/contact" 
+              className="bg-primary hover:bg-primary/80 text-white px-6 py-2 text-sm font-medium tracking-wide transition-all duration-300 inline-block"
+            >
               Contact Us
             </Link>
           </div>
 
           {/* Mobile Hamburger Menu */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-secondary hover:text-main focus:outline-none"
@@ -114,7 +133,7 @@ export default function Header() {
       {/* Desktop Dropdown - Outside header container */}
       {hoveredTab && (
         <div 
-          className="hidden md:block fixed left-0 right-0 bg-tertiary shadow-lg animate-slide-down"
+          className="hidden lg:block fixed left-0 right-0 bg-tertiary shadow-lg animate-slide-down"
           style={{ position: 'fixed', top: '72px', bottom: '0', zIndex: 40 }}
           onMouseEnter={() => setHoveredTab(hoveredTab)}
           onMouseLeave={() => setHoveredTab(null)}
@@ -166,7 +185,7 @@ export default function Header() {
       <div className="container-responsive py-2">
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-tertiary z-50">
+          <div className="lg:hidden fixed inset-0 bg-tertiary z-50">
             <div className="flex flex-col h-full p-3">
               {/* Close Button - Top Right */}
               <div className="flex justify-end mb-8">
