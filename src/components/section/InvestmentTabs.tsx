@@ -81,7 +81,7 @@ export default function InvestmentTabs() {
 
   return (
     <section className="py-6 md:py-8 lg:py-16">
-      <div className="sticky top-20 z-20 bg-main pb-4 md:relative md:top-0 md:z-0 md:pb-0">
+      <div className="sticky top-20 z-20  pb-4 md:relative md:top-0 md:z-0 md:pb-0">
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Tab Bar - Horizontal on mobile, Vertical on desktop */}
@@ -113,7 +113,7 @@ export default function InvestmentTabs() {
             {tabs.map((tab, i) => (
               <button
                 key={i}
-                ref={(el) => (tabRefs.current[i] = el)}
+                ref={(el) => { tabRefs.current[i] = el; }}
                 onClick={() => setActiveTab(i)}
                 className={`px-4 py-3 text-left text-sm font-medium whitespace-nowrap border-b-4 md:border-b-0 md:border-l-4 transition ${
                   activeTab === i ? 'border-gold bg-gold/10 text-gold' : 'border-transparent hover:border-gold/50 text-main'
