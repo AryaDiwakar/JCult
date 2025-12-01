@@ -107,9 +107,9 @@ export default function LeadershipTeam() {
           </div>
         </section> */}
 
-         <section className="pt-6 md:pt-8 lg:pt-16">
+         <section className="pt-6 md:pt-8 mb-4 md:mb-0 lg:pt-16">
           <div className="flex flex-col md:flex-row items-start">
-            <div className="flex-1 mb-6 md:mb-0">
+            <div className="flex-1 mb-6 md:mb-0 container-responsive">
               <FadeLeft>
                 <img 
                   src="/images/office.webp"

@@ -18,7 +18,7 @@ function AnimatedTalentSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
@@ -30,7 +30,7 @@ function AnimatedTalentSection() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
     <section ref={sectionRef} className="py-6 md:py-8 lg:py-16">
@@ -48,10 +48,10 @@ function AnimatedTalentSection() {
               Here, the collective fuels your growth. People learn side by side, sharpening each other's
               skills and building extraordinary careers together.
             </p>
-            <LuxuryButton variant="primary">Explore Career Possibilities</LuxuryButton>
+            <a href="/career"><LuxuryButton variant="primary">Explore Career Possibilities</LuxuryButton></a>
           </div>
         </div>
-        <div className={`ml-0 md:ml-4 lg:ml-8 transition-all duration-1000 delay-600 ${
+        <div className={`overflow-hidden transition-all duration-1000 delay-600 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
           <ImageReveal 
@@ -72,7 +72,7 @@ function AnimatedMeritocraticSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
@@ -84,10 +84,10 @@ function AnimatedMeritocraticSection() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
-    <section ref={sectionRef} style={{ paddingTop: '80px'}}>
+    <section ref={sectionRef}>
       <div className="container-responsive py-6 md:py-8">
         <div className="flex flex-col md:flex-row items-start">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
@@ -119,7 +119,7 @@ function AnimatedGreenSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
@@ -131,10 +131,10 @@ function AnimatedGreenSection() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-primary text-white py-6 md:py-8 lg:py-16 relative overflow-visible">
+    <section ref={sectionRef} className="bg-primary text-white py-6 md:py-8 lg:py-16 relative mb-4 md:mb-24 lg:mb-32">
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
@@ -150,15 +150,15 @@ function AnimatedGreenSection() {
               to the markets, systematically enhancing our trading models and execution capabilities to
               generate outsized returns in an ever-changing landscape.
             </p>
-            <LuxuryButton variant="gold">Explore What We Do</LuxuryButton>
+            <a href="/what-we-do"><LuxuryButton variant="gold">Explore What We Do</LuxuryButton></a>
           </div>
         </div>
-        <div className="flex justify-center relative z-10">
-          <div className={`relative transition-all duration-1000 delay-600 ${
+        <div className="flex justify-start md:justify-center relative z-10" style={{ marginBottom: '-10px' }}>
+          <div className={`relative transition-all duration-1000 delay-600 md:translate-y-20 ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-          }`} style={{ transform: 'translateY(60px)' }}>
+          }`}>
             <video 
-              className="w-full max-w-[300px] md:max-w-[500px] lg:max-w-[600px] h-48 md:h-72 lg:h-96 object-cover"
+              className="w-full max-w-[100%] md:max-w-[700px] lg:max-w-[1200px] h-48 md:h-80 lg:h-[400px] object-cover"
               autoPlay 
               muted 
               loop
@@ -181,7 +181,7 @@ function AnimatedSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
@@ -193,7 +193,7 @@ function AnimatedSection() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
     <section ref={sectionRef} className="py-6 md:py-8 lg:py-16">
@@ -220,7 +220,7 @@ function AnimatedSection() {
             <div className={`transition-all duration-1000 delay-1000 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
             }`}>
-              <LuxuryButton variant="primary">Explore Who We Are</LuxuryButton>
+              {/* <a href="/who-we-are"><LuxuryButton variant="primary">Explore Who We Are</LuxuryButton></a> */}
             </div>
           </div>
         </div>
@@ -278,7 +278,8 @@ export default function Home() {
               },
               {
                 number: "$10M",
-                description: "Assets Under Management As of January 2026"
+                description: "Assets Under Management",
+                subtitle:"As of January 2026"
               },
               {
                 number: "1000+",
@@ -293,7 +294,6 @@ export default function Home() {
         <AnimatedMeritocraticSection />
 
         <section className="py-6 md:py-8">
-          <div className="container-responsive">
             <Stats 
             stats={[
               {
@@ -313,7 +313,6 @@ export default function Home() {
               }
             ]}
             />
-          </div>
         </section>
 
         {/* <section className="py-6 md:py-8 lg:py-16">

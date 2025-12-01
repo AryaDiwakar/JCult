@@ -24,7 +24,7 @@ export default function InTheMedia() {
         <section className="relative overflow-visible mb-8 md:mb-16">
           <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 pt-12 md:pt-16 lg:pt-20 ml-0 md:ml-4 lg:ml-8">
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">
-              In The Media
+              Featured In
             </h1>
           </div>
         </section>

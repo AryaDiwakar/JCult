@@ -61,12 +61,14 @@ export default function News() {
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
                   Latest Updates
                 </h2>
-                <p className="text-sm md:text-base text-secondary leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-charcoal leading-relaxed mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <a href="/news/featured-in">
                 <LuxuryButton variant="primary">
                    View All News  
                 </LuxuryButton>
+                </a>
               </div>
 
               <div className="w-full md:w-2/3 md:pl-8 lg:pl-16">
@@ -78,11 +80,11 @@ export default function News() {
                       className="group flex justify-between py-4 md:py-6 items-start transition"
                     >
                       <div className="space-y-1 flex-1">
-                        <p className="text-xs md:text-sm text-secondary uppercase tracking-wide">
+                        <p className="text-xs md:text-sm text-charcoal uppercase tracking-wide">
                           {item.category}
                         </p>
                         {(item.date || item.source) && (
-                          <p className="text-xs text-secondary/70">
+                          <p className="text-xs text-charcoal/70">
                             {item.date}
                             {item.source && <> | {item.source}</>}
                           </p>
@@ -149,7 +151,7 @@ export default function News() {
                   key={i}
                   onClick={() => setActiveTab(i)}
                   className={`px-4 md:px-8 py-3 text-xs md:text-sm font-medium border-r last:border-r-0 transition ${
-                    activeTab === i ? "bg-primary text-white" : "text-main hover:bg-gray-100"
+                    activeTab === i ? "bg-primary text-white" : "text-charcoal hover:bg-tertiary"
                   }`}
                 >
                   {tab.label}
@@ -163,7 +165,7 @@ export default function News() {
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4">
                   {tabs[activeTab].title}
                 </h3>
-                <p className="text-sm md:text-base text-secondary leading-relaxed">
+                <p className="text-sm md:text-base text-charcoal leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>

@@ -62,7 +62,7 @@ export default function CoreValuesSection() {
       </div>
 
       {/* VALUES GRID */}
-      <div className="max-w-7xl mx-auto px-6 mt-20">
+      <div className="max-w-7xl mx-auto px-6 mt-12">
 
         {/* Top row: 3 columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-10">

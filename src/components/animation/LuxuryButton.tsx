@@ -16,8 +16,8 @@ export default function LuxuryButton({
   const baseClasses = 'btn-luxury px-6 py-3 font-medium relative z-10';
   
   const variantClasses = {
-    primary: 'bg-primary text-white',
-    gold: 'bg-gold text-charcoal',
+    primary: 'bg-primary text-white border-2 border-primary',
+    gold: 'bg-gold text-charcoal border-2 border-gold',
     outline: 'border-2 border-gold text-gold bg-transparent hover:bg-gold hover:text-charcoal'
   };
 

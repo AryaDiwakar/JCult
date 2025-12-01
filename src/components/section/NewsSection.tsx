@@ -47,7 +47,7 @@ export default function NewsSection({ title, description, items }: NewsSectionPr
             <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8">
               {title}
             </h2>
-            <p className="text-sm md:text-base text-secondary leading-relaxed">
+            <p className="text-sm md:text-base text-charcoal leading-relaxed">
               {description}
             </p>
           </div>
@@ -65,12 +65,12 @@ export default function NewsSection({ title, description, items }: NewsSectionPr
                   style={{ transitionDelay: `${300 + i * 150}ms` }}
                 >
                   <div className="space-y-1 flex-1">
-                    <p className="text-xs md:text-sm text-secondary uppercase tracking-wide">
+                    <p className="text-xs md:text-sm text-charcoal uppercase tracking-wide">
                       {item.category}
                     </p>
 
                     {(item.date || item.source) && (
-                      <p className="text-xs text-secondary/70">
+                      <p className="text-xs text-charcoal/70">
                         {item.date}
                         {item.source && <> | {item.source}</>}
                       </p>

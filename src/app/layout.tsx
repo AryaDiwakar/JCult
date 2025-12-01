@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Cormorant_Garamond, Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 
-const montserrat = Montserrat({
+const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const cormorant = Cormorant_Garamond({
-  variable: "--font-lora",
+  variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${cormorant.variable} antialiased`}
+        className={`${raleway.variable} ${cormorant.variable} antialiased`}
       >
         <Header />
         {children}

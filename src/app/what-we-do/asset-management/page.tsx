@@ -53,29 +53,33 @@ export default function Commodities() {
         <InvestmentTabs />
 
         {/* Image left attached to corner, title and button right aligned top */}
-        <section className="pt-6 md:pt-8 lg:pt-16">
-          <div className="flex flex-col md:flex-row items-start">
-            <div className="flex-1 mb-6 md:mb-0">
-              <FadeLeft>
-                <img 
-                  src="/images/office.webp"
-                  alt="Join our team"
-                  className="w-full h-64 md:h-80 lg:h-96 object-cover"
-                />
-              </FadeLeft>
-            </div>
-            <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
-              <FadeLeft delay={200}>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
-                In Pursuit of Minds That Redefine Possibility
-              </h2>
-                <LuxuryButton variant="primary">
-                  Discover Available Positions
-                </LuxuryButton>
-              </FadeLeft>
-            </div>
-          </div>
-        </section>
+        <section className="py-6 md:py-8 lg:py-16">
+                  <div className="container-responsive">
+                    <div className="flex flex-col md:flex-row items-start">
+                      <div className="flex-1 mb-6 md:mb-0 container-responsive">
+                        <FadeLeft>
+                          <img 
+                            src="/images/office.webp"
+                            alt="Join our team"
+                            className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                          />
+                        </FadeLeft>
+                      </div>
+                      <div className="flex-1 md:pl-8 lg:pl-16 text-center md:text-left">
+                        <FadeLeft delay={200}>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
+                         In Pursuit of Minds That Redefine Possibility
+                        </h2>
+                        <a href="/career">
+                          <LuxuryButton variant="primary">
+                            Discover Available Positions
+                          </LuxuryButton>
+                        </a>
+                        </FadeLeft>
+                      </div>
+                    </div>
+                  </div>
+                </section>
       </main>
     </div>
   );

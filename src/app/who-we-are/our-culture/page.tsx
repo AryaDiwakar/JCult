@@ -16,7 +16,7 @@ export default function OurCulture() {
       <main className="pt-20">
         <section className="relative overflow-visible mb-20">
           <FadeUp>
-            <div className="bg-primary flex flex-col md:flex-row min-h-[80vh] ml-0 md:ml-4 lg:ml-8">
+            <div className="bg-primary flex flex-col md:flex-row min-h-[80vh]">
               <div className="flex-1 px-4 md:px-8 py-8 md:py-16">
                 <div className="flex flex-col justify-between h-full">
                   <div>
@@ -36,11 +36,11 @@ export default function OurCulture() {
                 </div>
               </div>
             
-              <div className="flex-1 relative">
+              <div className="flex-1 relative min-h-[300px] md:min-h-0">
                 <img 
                   src="/images/office.webp"
                   alt="Our Culture"
-                  className="absolute top-0 right-0 w-full h-[calc(100%+6rem)] object-cover"
+                  className="absolute top-0 right-0 w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -329,9 +329,11 @@ ensure constant intellectual exchange.
             <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
               Unified in our mission to achieve what no individual could alone.
             </p>
+            <a href="/who-we-are/our-global-base">
               <LuxuryButton variant="primary">
                View Our Headquarters
               </LuxuryButton>
+            </a>
             </FadeLeft>
           </div>
         </section>

@@ -58,7 +58,7 @@ export default function WhatWeDo() {
                   </h2>
                 </FadeLeft>
               </div>
-              <div className="flex-1 md:pl-8 lg:pl-16">
+              <div className="flex-1 mb-4 md:mb-0 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
                 <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed mb-2">
                   Our team explores the full spectrum of global markets, pursuing compelling ideas through
@@ -68,9 +68,11 @@ export default function WhatWeDo() {
                  Across equities, macro, real assets, virtual assets, and private wealth solutions, we
                   maintain one clear objective: generating superior, risk-adjusted returns.
                 </p>
+                <a href="/what-we-do/asset-management">
                   <LuxuryButton variant='primary'>
                     Explore Diversification
                   </LuxuryButton>
+                </a>
                 </FadeLeft>
               </div>
             </div>
@@ -155,7 +157,7 @@ export default function WhatWeDo() {
         <section className="bg-primary py-6 md:py-8 lg:py-16 relative overflow-visible">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start mb-8 md:mb-12">
-              <div className="flex-1 mb-6 md:mb-0 relative -mt-12 md:-mt-16">
+              <div className="flex-1 mb-6 md:mb-0 relative md:-mt-24 lg:-mt-32">
                 <FadeLeft>
                 <img 
                   src="/images/office.webp"
@@ -239,31 +241,35 @@ export default function WhatWeDo() {
         </section> */}
 
         <section className="py-6 md:py-8 lg:py-16">
-          <div className="flex flex-col md:flex-row items-start">
-            <div className="flex-1 mb-6 md:mb-0">
-              <FadeLeft>
-                <img 
-                  src="/images/office.webp"
-                  alt="Join our team"
-                  className="w-full h-64 md:h-80 lg:h-96 object-cover"
-                />
-              </FadeLeft>
-            </div>
-            <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
-              <FadeLeft delay={200}>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
-               In Pursuit of Minds That Redefine Possibility
-              </h2>
-                <LuxuryButton variant="primary">
-                  Discover Available Positions
-                </LuxuryButton>
-              </FadeLeft>
+          <div className="container-responsive">
+            <div className="flex flex-col md:flex-row items-start">
+              <div className="flex-1 mb-6 md:mb-0 container-responsive">
+                <FadeLeft>
+                  <img 
+                    src="/images/office.webp"
+                    alt="Join our team"
+                    className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                  />
+                </FadeLeft>
+              </div>
+              <div className="flex-1 md:pl-8 lg:pl-16 text-center md:text-left">
+                <FadeLeft delay={200}>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
+                 In Pursuit of Minds That Redefine Possibility
+                </h2>
+                <a href="/career">
+                  <LuxuryButton variant="primary">
+                    Discover Available Positions
+                  </LuxuryButton>
+                </a>
+                </FadeLeft>
+              </div>
             </div>
           </div>
         </section>
 
         <section className='pb-16'>
-          <div className="container-responsive text-secondary">
+          <div className="container-responsive text-charcoal">
             <FadeUp>
             JCULT TRADER’s risk management framework should not be interpreted as a guarantee
             against losses. Certain risks may fall outside the scope of what JCULT TRADER monitors or

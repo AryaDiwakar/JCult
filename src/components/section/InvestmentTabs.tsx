@@ -142,11 +142,11 @@ export default function InvestmentTabs() {
           {/* Columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {tabs[activeTab].columns.map((column, i) => (
-              <div key={i} className="border-l-2 border-secondary pl-4 md:pl-6">
+              <div key={i} className="border-l-2 border-gold pl-4 md:pl-6">
                 <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">
                   {column.title}
                 </h3>
-                <p className="text-sm md:text-base text-secondary leading-relaxed">
+                <p className="text-sm md:text-base text-charcoal leading-relaxed">
                   {column.text}
                 </p>
               </div>

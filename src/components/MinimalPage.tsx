@@ -7,7 +7,7 @@ interface MinimalPageProps {
 
 export default function MinimalPage({ title }: MinimalPageProps) {
   return (
-    <div className="min-h-screen bg-tertiary">
+    <div className="min-h-screen bg-main">
       <Header />
       <main className="flex items-center justify-center min-h-[60vh]">
         <h1 className="text-4xl md:text-6xl font-bold text-primary text-center">

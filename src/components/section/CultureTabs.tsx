@@ -20,7 +20,7 @@ export default function CultureTabs({ tabs }: { tabs: TabItem[] }) {
     <section className="max-w-7xl mx-auto py-12 px-6">
 
       {/* TAB BAR */}
-      <div className="flex justify-center border-b border-gray-200 mb-10">
+      <div className="flex justify-center border-b border-tertiary mb-10">
         {tabs.map((tab, i) => {
           const active = activeIndex === i;
           return (
@@ -30,7 +30,7 @@ export default function CultureTabs({ tabs }: { tabs: TabItem[] }) {
               className={`
                 px-8 py-3 text-sm font-medium border-r last:border-r-0 
                 transition
-                ${active ? "bg-primary text-white" : "text-gray-700 hover:bg-gray-100"}
+                ${active ? "bg-primary text-white" : "text-charcoal hover:bg-tertiary"}
               `}
             >
               {tab.label}
@@ -62,8 +62,8 @@ export default function CultureTabs({ tabs }: { tabs: TabItem[] }) {
           <div className="space-y-6">
             {tabs[activeIndex].content.map((item, i) => (
               <div key={i}>
-                <p className="font-semibold text-gray-900">{item.heading}</p>
-                <p className="text-gray-700 leading-relaxed mt-1">{item.text}</p>
+                <p className="font-semibold text-primary">{item.heading}</p>
+                <p className="text-charcoal leading-relaxed mt-1">{item.text}</p>
               </div>
             ))}
           </div>

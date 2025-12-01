@@ -21,7 +21,9 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
       },
       { threshold: 0.2 }
     );
@@ -31,7 +33,7 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
     <section ref={sectionRef} className={`py-6 md:py-8 lg:py-16 mb-6 md:mb-8 ${className}`}>
@@ -55,12 +57,12 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
               }`} style={{ transitionDelay: `${500 + index * 200}ms` }}>
                 {stat.number}
               </div>
-              <p className={`text-secondary text-xs md:text-sm lg:text-base mb-2 md:mb-3 lg:mb-4 transition-all duration-1000 ${
+              <p className={`text-charcoal text-xs md:text-sm lg:text-base mb-2 md:mb-3 lg:mb-4 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
               }`} style={{ transitionDelay: `${700 + index * 200}ms` }}>
                 {stat.description}
               </p>
-              <p className={`text-secondary opacity-75 text-xs md:text-sm lg:text-base transition-all duration-1000 ${
+              <p className={`text-charcoal opacity-75 text-xs md:text-sm lg:text-base transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
               }`} style={{ transitionDelay: `${900 + index * 200}ms` }}>
                 {stat.subtitle}
