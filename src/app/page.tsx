@@ -33,7 +33,7 @@ function AnimatedTalentSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 lg:py-24">
+    <section ref={sectionRef} className="py-12 md:py-16 lg:py-24 bg-tertiary">
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
