@@ -53,7 +53,7 @@ export default function OurCulture() {
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                  <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
                     Insight Over Hierarchy
                   </h2>
                 </FadeLeft>
@@ -314,7 +314,7 @@ can offer.
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
             <FadeLeft>
-              <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+              <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
                 A Headquarters Built for Collaboration
               </h2>
             </FadeLeft>
@@ -388,7 +388,7 @@ ensure constant intellectual exchange.
         <ExploreMore />
         {/* <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
-            <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-8 md:mb-10 lg:mb-12">
               Explore Our Offices
             </h2>
             

@@ -43,7 +43,7 @@ export default function WhoWeAre() {
               <div className="flex flex-col md:flex-row items-start">
                 <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                   <FadeLeft>
-                    <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-3 md:mb-4 lg:mb-6">
+                    <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-3 md:mb-4 lg:mb-6">
                       Pursuing Edge. Rewriting Markets.
                     </h2>
                   </FadeLeft>
@@ -70,7 +70,7 @@ clientele.
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                  <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
                     Bound by Culture. Driven by Purpose.
                   </h2>
                 </FadeLeft>
@@ -106,7 +106,7 @@ clientele.
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                  <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-4 md:mb-6">
+                  <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-4 md:mb-6">
                   Rise. Lead. Elevate.
                 </h2>
                 <p className="text-[20px] leading-[28px] opacity-75 text-main mb-4 md:mb-6 lg:mb-8">
@@ -127,7 +127,7 @@ clientele.
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+                  <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
                     Work Across Global Cities.
                   </h2>
                 </FadeLeft>

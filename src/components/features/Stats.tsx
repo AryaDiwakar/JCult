@@ -41,7 +41,7 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
         {title && (
           <div className="flex flex-col md:flex-row mb-6 md:mb-8 lg:mb-16">
             <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-              <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">{title}</h2>
+              <h2 className="text-[46px] md:text-[66px] lg:text-[75px] font-bold text-primary">{title}</h2>
             </div>
           </div>
         )}
@@ -49,22 +49,24 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
           {stats.map((stat, index) => (
             <div key={index} className="stat-item relative pl-3 md:pl-4 lg:pl-6 overflow-hidden">
               {/* Animated border line for each stat */}
-              <div className="absolute left-0 top-0 w-0.5 bg-gold transition-all duration-1000 ease-out" 
-                   style={{ height: isVisible ? '100%' : '0%', transitionDelay: `${index * 200}ms` }}>
+              <div className="absolute left-0 top-0 bg-grey transition-all duration-1000 ease-out" 
+                   style={{ width: '0.25px', height: isVisible ? '100%' : '0%', transitionDelay: `${index * 200}ms` }}>
               </div>
-              <div className={`text-3xl md:text-4xl lg:text-6xl font-bold text-primary mb-4 md:mb-5 lg:mb-10 font-signifier transition-all duration-1000 ${
+              <div className={`text-3xl lg:text-[75px] font-bold text-primary mb-4 md:mb-5 lg:mb-10 font-primary transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
               }`} style={{ transitionDelay: `${500 + index * 200}ms` }}>
-                {stat.number}
+                {stat.number.split('').map((char, i) => 
+                  (char === '$' || char === '+') ? <sup key={i}>{char}</sup> : char
+                )}
               </div>
-              <p className={`text-charcoal text-xs md:text-sm lg:text-base mb-2 md:mb-3 lg:mb-4 transition-all duration-1000 ${
+              <p className={`text-xs md:text-sm lg:text-base mb-1 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-              }`} style={{ transitionDelay: `${700 + index * 200}ms` }}>
+              }`} style={{ color: '#68717a', transitionDelay: `${700 + index * 200}ms` }}>
                 {stat.description}
               </p>
-              <p className={`text-charcoal opacity-75 text-xs md:text-sm lg:text-base transition-all duration-1000 ${
+              <p className={`text-base lg:text-lg transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-              }`} style={{ transitionDelay: `${900 + index * 200}ms` }}>
+              }`} style={{ color: '#68717a', transitionDelay: `${900 + index * 200}ms` }}>
                 {stat.subtitle}
               </p>
             </div>

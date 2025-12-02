@@ -96,7 +96,7 @@ export default function LeadershipTeam() {
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary mb-4 md:mb-6">
+                <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-4 md:mb-6">
                   Driving Ideas Into Real Impact  
                 </h2>
                 <button className="btn-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">

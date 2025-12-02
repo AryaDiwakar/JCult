@@ -41,7 +41,7 @@ export default function OfficeLocations() {
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
             <FadeLeft>
-              <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+              <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
                 Explore Our Headquarters
               </h2>
             </FadeLeft>
@@ -69,7 +69,7 @@ export default function OfficeLocations() {
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
             <FadeLeft>
-              <h2 className="text-[48px] leading-[53px] font-signifier font-bold text-primary">
+              <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
                 Headquarters Presence
               </h2>
             </FadeLeft>

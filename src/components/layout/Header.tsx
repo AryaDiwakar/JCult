@@ -21,11 +21,7 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsScrolled(currentScrollY > 50);
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
+      setIsVisible(currentScrollY < 100);
       setLastScrollY(currentScrollY);
     };
 
@@ -43,7 +39,7 @@ export default function Header() {
   return (
     <header 
       className={`w-full fixed left-0 right-0 z-50 transition-all duration-500 ${
-        hasLoaded ? (isVisible ? 'top-0 opacity-100' : '-top-24 opacity-0') : '-top-24 opacity-0'
+        isVisible ? 'top-0' : '-top-32'
       } ${isScrolled ? 'border-b border-white/10' : ''}`}
       style={{
         backgroundColor: '#FFFFFF',
@@ -51,11 +47,11 @@ export default function Header() {
       }}
       onClick={() => setHoveredTab(null)}
     >
-      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${isScrolled ? 'py-3' : 'py-4'}`}>
-        <div className="flex justify-between items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 lg:h-[120px] overflow-hidden">
+        <div className="flex justify-between items-center h-full">
           {/* Brand Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
+          <div className="flex-shrink-0" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
+            <Link href="/">
               <Image 
                 src="/Final Logos/Transparent/Base Logo/Primary/Transparent Primary.svg" 
                 alt="JCULT" 
@@ -67,67 +63,50 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
             <Link 
               href="/who-we-are" 
-              className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/who-we-are') ? 'text-gold' : ''}`}
-              onMouseEnter={(e) => {
-                setHoveredTab('Who We Are');
-                e.currentTarget.style.color = '#1B5E20';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#000';
-              }}
+              className="text-charcoal py-2 text-sm font-medium transition-colors duration-200 no-underline"
+              style={{ color: usePathname()?.startsWith('/who-we-are') ? '#127749' : '#000' }}
+              onMouseEnter={(e) => { setHoveredTab('Who We Are'); e.currentTarget.style.color = '#127749'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
             >
               Who We Are
             </Link>
             <Link 
               href="/what-we-do" 
-              className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/what-we-do') ? 'text-gold' : ''}`}
-               onMouseEnter={(e) => {
-                setHoveredTab('What We Do');
-                e.currentTarget.style.color = '#1B5E20';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#000';
-              }}
+              className="text-charcoal py-2 text-sm font-medium transition-colors duration-200 no-underline"
+              style={{ color: usePathname()?.startsWith('/what-we-do') ? '#127749' : '#000' }}
+              onMouseEnter={(e) => { setHoveredTab('What We Do'); e.currentTarget.style.color = '#127749'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
             >
               What We Do
             </Link>
             <Link 
               href="/news" 
-              className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/news') ? 'text-gold' : ''}`}
-              onMouseEnter={(e) => {
-                 setHoveredTab('News');
-                e.currentTarget.style.color = '#1B5E20';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#000';
-              }}
+              className="text-charcoal py-2 text-sm font-medium transition-colors duration-200 no-underline"
+              style={{ color: usePathname()?.startsWith('/news') ? '#127749' : '#000' }}
+              onMouseEnter={(e) => { setHoveredTab('News'); e.currentTarget.style.color = '#127749'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
             >
               News
             </Link>
             <Link 
               href="/career" 
-              className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/career') ? 'text-gold' : ''}`}
-              onMouseEnter={(e) => {
-                 setHoveredTab('Career');
-                e.currentTarget.style.color = '#1B5E20';
-                e.currentTarget.style.textDecoration
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#000';
-              }}
+              className="text-charcoal py-2 text-sm font-medium transition-colors duration-200 no-underline"
+              style={{ color: usePathname()?.startsWith('/career') ? '#127749' : '#000' }}
+              onMouseEnter={(e) => { setHoveredTab('Career'); e.currentTarget.style.color = '#127749'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
             >
               Career
             </Link>
           </nav>
 
           {/* Desktop Contact Us */}
-          <div className="hidden lg:block" onMouseEnter={() => setHoveredTab(null)}>
+          <div className="hidden lg:block" onMouseEnter={() => setHoveredTab(null)} style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
             <Link 
               href="/contact" 
-              className="px-6 py-2.5 text-sm font-medium transition-all duration-200 inline-block border-1 border-primary text-white rounded-sm"
+              className="px-6 py-2.5 text-sm font-medium transition-all duration-200 inline-block border-1 border-primary text-white"
               style={{
                 backgroundColor: '#1B5E20'
               }}
@@ -167,53 +146,86 @@ export default function Header() {
 
       </div>
       
+      {/* Overlay */}
+      {hoveredTab && (
+        <div 
+          className="hidden lg:block fixed inset-0 bg-black/30 z-0"
+          style={{ top: isScrolled ? '96px' : '120px' }}
+          onClick={() => setHoveredTab(null)}
+        />
+      )}
+      
       {/* Desktop Dropdown */}
       {hoveredTab && (
         <div 
-          className="hidden lg:block fixed left-0 right-0 inset-0 bg-main shadow-lg z-0"
+          className="hidden lg:block fixed left-0 right-0 bg-main shadow-lg z-10"
           style={{ 
-            top: isScrolled ? '64px' : '72px',
-            height: '420px',
-            animation: 'slideDown 0.3s ease-out'
+            top: isScrolled ? '96px' : '120px',
+            height: '300px',
+            animation: 'fadeInFromTop 0.3s ease-out'
           }}
           onMouseEnter={() => setHoveredTab(hoveredTab)}
           onMouseLeave={() => setHoveredTab(null)}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="flex justify-end mb-8">
-              <button
-                onClick={() => setHoveredTab(null)}
-                className="text-charcoal hover:text-gold transition-colors duration-200"
-                aria-label="Close menu"
-              >
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-8">
-              <div>
-                <h2 className="text-3xl col-span-1 font-bold text-charcoal">{hoveredTab}</h2>
+          <div className="h-full overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex gap-4">
+              <div className="flex-shrink-0 flex flex-col items-start pt-8 w-84">
+                <h2 className="text-3xl font-bold text-charcoal mb-6">{hoveredTab}</h2>
+                <Link
+                  href={`/${hoveredTab?.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-4 py-2 text-sm font-medium transition-all duration-200 inline-block border border-primary bg-primary text-white"
+                  onClick={() => setHoveredTab(null)}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#1B5E20';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#1B5E20';
+                    e.currentTarget.style.color = '#FFFFFF';
+                  }}
+                >
+                  Learn More
+                </Link>
               </div>
               
-              <div className="space-y-4 col-span-2 pl-2 bg-[#F8F9F9] rounded-sm w-full">
-                {tabContent[hoveredTab as keyof typeof tabContent]?.map((item, index) => {
-                  const slug = item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-                  const basePath = hoveredTab?.toLowerCase().replace(/\s+/g, '-');
-                  return (
-                    <Link 
-                      key={`${hoveredTab}-${index}`} 
-                      href={`/${basePath}/${slug}`}
-                      className="block text-charcoal hover:text-gold text-lg transition-colors duration-200"
-                      onClick={() => setHoveredTab(null)}
-                    >
-                      {item}
-                    </Link>
-                  );
-                })}
-              </div>
+              <div className="w-px bg-tertiary"></div>
               
+              <div className="flex-1 bg-tertiary p-6 h-full relative">
+                <button
+                  onClick={() => setHoveredTab(null)}
+                  className="absolute top-4 right-4 text-charcoal transition-colors duration-200"
+                  onMouseEnter={(e) => { e.currentTarget.style.color = '#127749'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
+                  aria-label="Close menu"
+                >
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                
+                <div className="space-y-4">
+                  {tabContent[hoveredTab as keyof typeof tabContent]?.map((item, index) => {
+                    const slug = item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                    const basePath = hoveredTab?.toLowerCase().replace(/\s+/g, '-');
+                    return (
+                      <Link 
+                        key={`${hoveredTab}-${index}`} 
+                        href={`/${basePath}/${slug}`}
+                        className="block text-charcoal text-lg transition-colors duration-200 no-underline"
+                        onMouseEnter={(e) => { e.currentTarget.style.color = '#127749'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
+                        style={{ 
+                          animation: `slideInFromLeft 0.3s ease-out ${index * 0.1}s both`,
+                          opacity: 0
+                        }}
+                        onClick={() => setHoveredTab(null)}
+                      >
+                        {item}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -18,35 +18,13 @@ export default function Hero({ videoSrc, imageSrc, title, description }: HeroPro
 
   return (
     <section className="relative h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden mb-6 md:mb-8">
-      {/* Background Video/Image - Fade from right */}
-      {videoSrc ? (
-        <video 
-          className={`absolute inset-0 w-full h-full object-cover ml-4 md:ml-8 transition-all duration-1000 ${
-            loaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
-          }`}
-          autoPlay 
-          muted 
-          loop
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      ) : (
-        <img 
-          src={imageSrc}
-          alt="Hero background"
-          className={`absolute inset-0 w-full h-full object-cover ml-4 md:ml-8 transition-all duration-1000 ${
-            loaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
-          }`}
-        />
-      )}
-      
-      {/* Overlay shade */}
-      <div className="absolute inset-0 bg-black/50 ml-4 md:ml-8"></div>
+      {/* Background Grey */}
+      <div className="absolute inset-0 bg-grey ml-4 md:ml-8"></div>
       
       {/* Title - aligned with navbar - Fade from left */}
       <div className="absolute top-4 md:top-6 lg:top-12 left-0 right-0 z-10">
         <div className="container-responsive">
-          <h1 className={`text-white max-w-[250px] md:max-w-[400px] lg:max-w-[700px] text-2xl md:text-4xl lg:text-[55px] font-[500] leading-tight md:leading-snug lg:leading-[70px] font-signifier pl-4 md:pl-8 lg:pl-16 transition-all duration-1000 drop-shadow-lg ${
+          <h1 className={`text-white max-w-[250px] md:max-w-[500px] lg:max-w-[700px] text-[20px] md:text-[48px] lg:text-[64px] font-[500] leading-tight md:leading-snug lg:leading-[70px] font-primary pl-4 md:pl-8 lg:pl-16 transition-all duration-1000 drop-shadow-lg ${
             loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
           }`}>
             {title}

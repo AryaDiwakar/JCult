@@ -33,7 +33,7 @@ function AnimatedTalentSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-6 md:py-8 lg:py-16">
+    <section ref={sectionRef} className="py-12 md:py-16 lg:py-24">
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
@@ -54,11 +54,7 @@ function AnimatedTalentSection() {
         <div className={`overflow-hidden transition-all duration-1000 delay-600 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
-          <ImageReveal 
-            src="/images/group disscusion.JPG" 
-            alt="Team collaboration" 
-            className="w-full h-auto"
-          />
+          <div className="bg-grey w-full h-48 md:h-80 lg:h-96"></div>
         </div>
       </div>
     </section>
@@ -87,8 +83,8 @@ function AnimatedMeritocraticSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef}>
-      <div className="container-responsive py-6 md:py-8">
+    <section ref={sectionRef} className="bg-tertiary py-12 md:py-16 lg:py-24">
+      <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-10'
@@ -134,45 +130,31 @@ function AnimatedGreenSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-primary text-white py-6 md:py-8 lg:py-16 relative mb-4 md:mb-24 lg:mb-32">
+    <section ref={sectionRef} className="bg-primary py-12 md:py-16 lg:py-24" style={{ color: '#d6e0f6' }}>
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight mb-3 md:mb-4 lg:mb-8">Pioneering the Future of Finance</h2>
+            <h2 className="font-primary text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 lg:mb-8">Pioneering the Future of Finance</h2>
           </div>
           <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <p className="mb-4 md:mb-6 lg:mb-8 text-base md:text-lg lg:text-xl font-raleway leading-relaxed opacity-90">
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed mb-4 md:mb-6 lg:mb-8">
               Innovation is the core of our competitive advantage. We tirelessly reimagine our approach
               to the markets, systematically enhancing our trading models and execution capabilities to
               generate outsized returns in an ever-changing landscape.
             </p>
-            <a href="/what-we-do"><LuxuryButton variant="gold">Explore What We Do</LuxuryButton></a>
+            <a href="/what-we-do"><LuxuryButton variant="white">Explore What We Do</LuxuryButton></a>
           </div>
         </div>
-        <div className="flex justify-start md:justify-center relative z-10" style={{ marginBottom: '-10px' }}>
-          <div className={`relative transition-all duration-1000 delay-600 md:translate-y-20 ${
-            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-          }`}>
-            <img 
-              src="/images/cabin.webp"
-              alt="Trading innovation"
-              className="w-full max-w-[100%] md:max-w-[700px] lg:max-w-[2200px] h-48 md:h-80 lg:h-[400px] object-cover"
-            />
-            {/* <video 
-              className="w-full max-w-[100%] md:max-w-[700px] lg:max-w-[1200px] h-48 md:h-80 lg:h-[400px] object-cover"
-              autoPlay 
-              muted 
-              loop
-              playsInline
-              controls={false}
-            >
-              <source src="/business.mp4" type="video/mp4" />
-            </video> */}
-          </div>
+      </div>
+      <div className="container-responsive">
+        <div className={`relative transition-all duration-1000 delay-600 ${
+          isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+        }`}>
+          <div className="bg-grey w-full h-48 md:h-80 lg:h-[400px]"></div>
         </div>
       </div>
     </section>
@@ -180,53 +162,21 @@ function AnimatedGreenSection() {
 }
 
 function AnimatedSection() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [isVisible]);
-
   return (
-    <section ref={sectionRef} className="py-6 md:py-8 lg:py-16">
+    <section className="py-12 md:py-16 lg:py-24 bg-tertiary">
       <div className="container-responsive">
-        <div className="flex flex-col md:flex-row items-start">
-          <div className="flex-1 flex flex-col items-start mb-4 md:mb-6 lg:mb-0 overflow-hidden md:pr-8 lg:pr-12 relative">
-            <h3 className={`text-xs md:text-sm font-raleway font-semibold tracking-wider uppercase text-primary mb-3 md:mb-4 lg:mb-8 transition-all duration-1000 delay-500 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
-            }`}>Who We Are</h3>
-            {/* Animated vertical line */}
-            <div className="absolute right-0 top-0 w-0.5 bg-gold transition-all duration-1000 ease-out hidden md:block" 
-                 style={{ height: isVisible ? '100%' : '0%' }}>
-            </div>
+        <div className="flex flex-col lg:flex-row items-stretch">
+          <div className="flex-1 flex flex-col items-start mb-2 md:mb-4 lg:mb-0 md:pr-8 lg:pr-12 relative">
+            <h3 className="text-[16px] lg:text-[18px] tracking-wider uppercase text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
           </div>
-          <div className="flex-2 md:pl-8 lg:pl-12 overflow-hidden">
-            <p className={`text-primary font-lora text-2xl md:text-3xl lg:text-4xl font-normal leading-tight mb-6 md:mb-8 lg:mb-10 transition-all duration-1000 delay-700 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-            }`}>
+          <div className="flex-3 pl-2 relative">
+            <div className="absolute left-0 top-0 bottom-0 w-[0.25px] bg-grey"></div>
+            <p className="text-primary text-[24px] lg:text-[32px] font-primary leading-tight pl-4 lg:pl-8">
               We aspire to establish an unprecedented legacy as the premier investment entity in
               history. Our mandate is to rigorously discern optimal capital allocation strategies,
               thereby delivering exceptional, sustainable value to an elite clientele of private
               capital stewards and global investors.
             </p>
-            <div className={`transition-all duration-1000 delay-1000 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-            }`}>
-              {/* <a href="/who-we-are"><LuxuryButton variant="primary">Explore Who We Are</LuxuryButton></a> */}
-            </div>
           </div>
         </div>
       </div>
@@ -240,10 +190,9 @@ export default function Home() {
       <main>
         <div className="pt-24">
           <Hero 
-            imageSrc="/images/trading office.JPG"
-            // videoSrc="/business.mp4"
             title="United, we convert aspiration into strategic execution"
-            description="Built on the pursuit of identifying under-recognised market opportunities and empowering"
+            description="Built on the pursuit of identifying under-recognised market opportunities and empowering
+talented individuals to execute their boldest, highest-conviction ideas with precision."
           />
         </div>
 
@@ -299,7 +248,7 @@ export default function Home() {
         
         <AnimatedMeritocraticSection />
 
-        <section className="py-6 md:py-8">
+        <section className="py-12 md:py-16 lg:py-24">
             <Stats 
             stats={[
               {

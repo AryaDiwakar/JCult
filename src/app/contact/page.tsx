@@ -10,7 +10,7 @@ export default function Contact() {
         <section className="py-16 md:py-24">
           <div className="container-responsive">
             <FadeUp>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-signifier font-bold text-primary mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-primary font-bold text-primary mb-6">
                 Get in Touch
               </h1>
               <p className="text-lg md:text-xl text-main opacity-75 max-w-2xl mb-16">

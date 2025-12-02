@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Raleway } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const ttCommons = Inter({
+  variable: "--font-tt-commons",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.variable} ${cormorant.variable} antialiased`}
+        className={`${ttCommons.variable} ${raleway.variable} antialiased`}
       >
         <Header />
         {children}

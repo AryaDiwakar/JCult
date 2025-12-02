@@ -17,10 +17,11 @@
   --color-text: #000000;
   --color-secondary: #1B5E20;
   --color-tertiary: #F5F5F5;
+  --color-grey: #BEC2C5;
   
   /* Font Families - Change these to update fonts globally */
+  --font-tt-commons: var(--font-tt-commons);
   --font-raleway: var(--font-raleway);
-  --font-cormorant: var(--font-cormorant);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,7 +39,7 @@ body {
   background: #FFFFFF;
   background-attachment: fixed;
   color: #000000;
-  font-family: var(--font-raleway), sans-serif;
+  font-family: var(--font-tt-commons), sans-serif;
 }
 
 /* Theme Classes */
@@ -60,6 +61,8 @@ body {
 .border-secondary { border-color: #1B5E20; }
 .border-tertiary { border-color: #E0E0E0; }
 .border-gold { border-color: #D4AF37; }
+
+.bg-grey { background-color: #BEC2C5; }
 
 /* Responsive Container */
 .container-responsive {
@@ -129,20 +132,11 @@ body {
 }
 
 /* Font Family Classes - Only font families, use Tailwind for sizes/weights */
-.font-raleway {
-  font-family: var(--font-raleway), sans-serif;
+.font-tt-commons {
+  font-family: var(--font-tt-commons), sans-serif;
 }
 
-.font-cormorant {
-  font-family: var(--font-raleway), sans-serif;
-}
-
-/* Legacy font class mappings */
-.font-lora {
-  font-family: var(--font-raleway), sans-serif;
-}
-
-.font-signifier {
+.font-primary {
   font-family: var(--font-raleway), sans-serif;
 }
 
@@ -257,6 +251,68 @@ body {
   from {
     opacity: 0;
     transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUpContent {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftContent {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -431,14 +487,13 @@ body {
 
 /* Hover States */
 .hover\:text-primary:hover {
-  color: #D4AF37;
-  text-decoration: underline;
+  color: #1B5E20;
 }
 .hover\:bg-primary:hover {
-  background: #145018;
+  background: #165018;
 }
 .hover\:bg-secondary:hover {
-  background-color: #145018;
+  background-color: #165018;
 }
 .hover\:bg-tertiary:hover {
   background-color: #E0E0E0;
