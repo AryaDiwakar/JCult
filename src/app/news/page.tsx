@@ -1,22 +1,22 @@
 'use client';
 
 import { useState } from 'react';
-import Header from '@/components/navigation/Header';
-import Footer from '@/components/navigation/Footer';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { ArrowRight } from 'lucide-react';
-import LuxuryButton from '@/components/animation/LuxuryButton';
+import LuxuryButton from '@/components/ui/LuxuryButton';
+import { newsArticles } from '@/data/newsData';
 
 export default function News() {
   const [activeTab, setActiveTab] = useState(0);
 
-  const newsItems = [
-    { category: "Press Release", title: "Lorem ipsum dolor sit amet consectetur", href: "#", date: "Jan 15, 2024", source: "Bloomberg" },
-    { category: "Company News", title: "Sed do eiusmod tempor incididunt ut labore", href: "#", date: "Jan 10, 2024" },
-    { category: "Industry Update", title: "Ut enim ad minim veniam quis nostrud", href: "#", date: "Jan 5, 2024", source: "Financial Times" },
-    { category: "Announcement", title: "Duis aute irure dolor in reprehenderit", href: "#", date: "Dec 28, 2023" },
-    { category: "Press Release", title: "Excepteur sint occaecat cupidatat non proident", href: "#", date: "Dec 20, 2023" },
-    { category: "Company News", title: "Sunt in culpa qui officia deserunt mollit", href: "#", date: "Dec 15, 2023", source: "Reuters" }
-  ];
+  const newsItems = newsArticles.map(article => ({
+    category: article.category,
+    title: article.title,
+    href: `/news/${article.id}`,
+    date: article.date,
+    source: article.source
+  }));
 
   const tabs = [
     {
@@ -73,7 +73,7 @@ export default function News() {
 
               <div className="w-full md:w-2/3 md:pl-8 lg:pl-16">
                 <div className="divide-y border-t border-b">
-                  {newsItems.map((item, i) => (
+                  {newsItems.slice(0, 6).map((item, i) => (
                     <a
                       key={i}
                       href={item.href}

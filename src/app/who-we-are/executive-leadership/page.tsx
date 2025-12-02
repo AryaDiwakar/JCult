@@ -1,7 +1,7 @@
 'use client';
 
-import Header from '@/components/navigation/Header';
-import Footer from '@/components/navigation/Footer';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import FadeUp from '@/components/animation/FadeUp';
 import FadeLeft from '@/components/animation/FadeLeft';
 
@@ -112,8 +112,8 @@ export default function LeadershipTeam() {
             <div className="flex-1 mb-6 md:mb-0 container-responsive">
               <FadeLeft>
                 <img 
-                  src="/images/office.webp"
-                  alt="Join our team"
+                  src="/images/woman smiling and handshake.JPG"
+                  alt="Leadership impact"
                   className="w-full h-64 md:h-80 lg:h-96 object-cover"
                 />
               </FadeLeft>

@@ -51,36 +51,36 @@ export default function Contact() {
               </FadeLeft>
 
               <FadeLeft delay={200}>
-                <div className="bg-gray-50 p-8 md:p-10">
-                  <h3 className="text-2xl font-bold text-primary mb-6">Send us a message</h3>
+                <div className="p-8 md:p-10 bg-primary">
+                  <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
                   <form className="space-y-6">
                     <div>
-                      <label className="block text-sm font-medium text-main mb-2">Name</label>
+                      <label className="block text-sm font-medium text-white mb-2">Name</label>
                       <input 
                         type="text" 
-                        className="w-full px-4 py-3 bg-main border-2 border-transparent focus:border-primary outline-none transition"
+                        className="w-full px-4 py-3 bg-white border-2 border-transparent focus:border-primary outline-none transition"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-main mb-2">Email</label>
+                      <label className="block text-sm font-medium text-white mb-2">Email</label>
                       <input 
                         type="email" 
-                        className="w-full px-4 py-3 bg-main border-2 border-transparent focus:border-primary outline-none transition"
+                        className="w-full px-4 py-3 bg-white border-2 border-transparent focus:border-primary outline-none transition"
                         placeholder="your@email.com"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-main mb-2">Message</label>
+                      <label className="block text-sm font-medium text-white mb-2">Message</label>
                       <textarea 
                         rows={5}
-                        className="w-full px-4 py-3 bg-main border-2 border-transparent focus:border-primary outline-none transition resize-none"
+                        className="w-full px-4 py-3 bg-white border-2 border-transparent focus:border-primary outline-none transition resize-none"
                         placeholder="Your message"
                       />
                     </div>
                     <button 
                       type="submit"
-                      className="w-full bg-primary text-white px-6 py-3 border-2 border-primary hover:bg-gold hover:border-gold hover:text-charcoal transition font-medium"
+                      className="w-full bg-gold text-white px-6 py-3 hover:shadow-md/30 hover:shadow-gold transition font-medium"
                     >
                       Send Message
                     </button>

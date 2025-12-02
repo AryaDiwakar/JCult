@@ -2,47 +2,19 @@
 
 import FadeUp from '@/components/animation/FadeUp';
 import ImageReveal from '@/components/animation/ImageReveal';
-import LuxuryButton from '@/components/animation/LuxuryButton';
+import LuxuryButton from '@/components/ui/LuxuryButton';
+import Hero from '@/components/features/Hero';
 import Link from 'next/link';
 
 export default function Career() {
   return (
     <div className="min-h-screen bg-main">
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden mb-6 md:mb-8">
-          <img 
-            src="/images/office.webp"
-            alt="Career opportunities"
-            className="absolute inset-0 w-full h-full object-cover ml-4 md:ml-8"
-          />
-          
-          <div className="absolute inset-0 bg-black/30 ml-4 md:ml-8"></div>
-          
-          <div className="absolute top-4 md:top-6 lg:top-8 left-0 right-0 z-10">
-            <div className="container-responsive">
-              <h1 className="text-gold max-w-[250px] md:max-w-[400px] lg:max-w-[600px] text-2xl md:text-4xl lg:text-[64px] font-[400] leading-tight md:leading-snug lg:leading-[70px] font-lora">
-                Career
-              </h1>
-            </div>
-          </div>
-          
-          <div className="absolute bottom-0 left-0 right-0 z-10 ml-4 mr-4 md:ml-8 md:mr-8">
-            <div className="bg-primary px-4 md:px-8 lg:px-16 py-4 md:py-6 lg:py-8">
-              <div className="container-responsive flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
-                <p className="text-white text-sm md:text-base lg:text-lg font-raleway leading-relaxed max-w-[250px] md:max-w-[400px] lg:max-w-[500px]">
-                  Join our team of exceptional professionals and shape the future of finance. We offer challenging opportunities and a culture of excellence.
-                </p>
-                <a href="/career/open-opportunities">
-                  
-                <LuxuryButton variant="gold">
-                  View Open Positions
-                </LuxuryButton>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero 
+          imageSrc="/images/group table conference.JPG"
+          title="Career"
+          description="Join our team of exceptional professionals and shape the future of finance. We offer challenging opportunities and a culture of excellence."
+        />
 
         {/* Image Left, Title & Para Right */}
         <FadeUp>
@@ -51,7 +23,7 @@ export default function Career() {
               <div className="flex flex-col md:flex-row items-start">
                 <div className="flex-1 mb-6 md:mb-0">
                   <ImageReveal 
-                    src="/images/office.webp"
+                    src="/images/group disscusion.JPG"
                     alt="Our workplace"
                     className="w-full h-64 md:h-80 lg:h-96"
                   />

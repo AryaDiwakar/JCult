@@ -1,10 +1,10 @@
 'use client';
 
-import Header from '@/components/navigation/Header';
-import Footer from '@/components/navigation/Footer';
-import Stats from '@/components/section/Stats';
-import InvestmentTabs from '@/components/section/InvestmentTabs';
-import LuxuryButton from '@/components/animation/LuxuryButton';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Stats from '@/components/features/Stats';
+import InvestmentTabs from '@/components/features/InvestmentTabs';
+import LuxuryButton from '@/components/ui/LuxuryButton';
 import FadeLeft from '@/components/animation/FadeLeft';
 
 export default function Commodities() {
@@ -59,7 +59,7 @@ export default function Commodities() {
                       <div className="flex-1 mb-6 md:mb-0 container-responsive">
                         <FadeLeft>
                           <img 
-                            src="/images/office.webp"
+                            src="/images/woman working.JPG"
                             alt="Join our team"
                             className="w-full h-64 md:h-80 lg:h-96 object-cover"
                           />

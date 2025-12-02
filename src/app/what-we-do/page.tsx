@@ -1,7 +1,7 @@
 'use client';
 
-import LuxuryButton from '@/components/animation/LuxuryButton';
-import Hero from '@/components/section/Hero';
+import LuxuryButton from '@/components/ui/LuxuryButton';
+import Hero from '@/components/features/Hero';
 import FadeLeft from '@/components/animation/FadeLeft';
 import FadeUp from '@/components/animation/FadeUp';
 import BorderReveal from '@/components/animation/BorderReveal';
@@ -20,7 +20,7 @@ export default function WhatWeDo() {
       <main className="pt-20">
         {/* Hero Section with Image */}
         <Hero 
-          imageSrc="/images/office.webp"
+          imageSrc="/images/group disscusion.JPG"
           title="Capitalizing on Market Potential"
           description="Guided by a perspective that sees beyond the obvious, we illuminate opportunities hidden
                       in the deeper layers of the market and advance decisively, transforming early insights into
@@ -160,7 +160,7 @@ export default function WhatWeDo() {
               <div className="flex-1 mb-6 md:mb-0 relative md:-mt-24 lg:-mt-32">
                 <FadeLeft>
                 <img 
-                  src="/images/office.webp"
+                  src="/images/empty office.JPG"
                   alt="Our values"
                   className="w-full h-64 md:h-80 object-cover"
                 />
@@ -246,7 +246,7 @@ export default function WhatWeDo() {
               <div className="flex-1 mb-6 md:mb-0 container-responsive">
                 <FadeLeft>
                   <img 
-                    src="/images/office.webp"
+                    src="/images/two men standing and handshake.JPG"
                     alt="Join our team"
                     className="w-full h-64 md:h-80 lg:h-96 object-cover"
                   />

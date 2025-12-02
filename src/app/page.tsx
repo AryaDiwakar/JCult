@@ -1,13 +1,13 @@
 'use client';
 
-import Header from '@/components/navigation/Header';
-import Footer from '@/components/navigation/Footer';
-import Hero from '@/components/section/Hero';
-import Stats from '@/components/section/Stats';
-import NewsSection from '@/components/section/NewsSection';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Hero from '@/components/features/Hero';
+import Stats from '@/components/features/Stats';
+import NewsSection from '@/components/features/NewsSection';
 import FadeUp from '@/components/animation/FadeUp';
 import ImageReveal from '@/components/animation/ImageReveal';
-import LuxuryButton from '@/components/animation/LuxuryButton';
+import LuxuryButton from '@/components/ui/LuxuryButton';
 import { newsArticles } from '@/data/newsData';
 import { useEffect, useRef, useState } from 'react';
 
@@ -55,8 +55,8 @@ function AnimatedTalentSection() {
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
           <ImageReveal 
-            src="images/office.webp" 
-            alt="Office" 
+            src="/images/group disscusion.JPG" 
+            alt="Team collaboration" 
             className="w-full h-auto"
           />
         </div>
@@ -157,7 +157,12 @@ function AnimatedGreenSection() {
           <div className={`relative transition-all duration-1000 delay-600 md:translate-y-20 ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}>
-            <video 
+            <img 
+              src="/images/cabin.webp"
+              alt="Trading innovation"
+              className="w-full max-w-[100%] md:max-w-[700px] lg:max-w-[2200px] h-48 md:h-80 lg:h-[400px] object-cover"
+            />
+            {/* <video 
               className="w-full max-w-[100%] md:max-w-[700px] lg:max-w-[1200px] h-48 md:h-80 lg:h-[400px] object-cover"
               autoPlay 
               muted 
@@ -166,7 +171,7 @@ function AnimatedGreenSection() {
               controls={false}
             >
               <source src="/business.mp4" type="video/mp4" />
-            </video>
+            </video> */}
           </div>
         </div>
       </div>
@@ -235,7 +240,8 @@ export default function Home() {
       <main>
         <div className="pt-24">
           <Hero 
-            videoSrc="/business.mp4"
+            imageSrc="/images/trading office.JPG"
+            // videoSrc="/business.mp4"
             title="United, we convert aspiration into strategic execution"
             description="Built on the pursuit of identifying under-recognised market opportunities and empowering"
           />

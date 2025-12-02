@@ -18,9 +18,9 @@ function OpenOpportunitiesContent() {
     }
   }, [searchParams]);
 
-  const experienceLevels = ['Experienced Professionals', 'Internship', 'Graduates'];
+  const experienceLevels = ['Internship', 'Graduates'];
   const roleTypes = ['Trading', 'Technology', 'Operations', 'Research', 'Risk Management'];
-  const locations = ['Dubai', 'London', 'New York', 'Singapore', 'Hong Kong'];
+  const locations = ['Dubai'];
 
   const toggleFilter = (value: string, selected: string[], setter: (val: string[]) => void) => {
     if (selected.includes(value)) {
@@ -74,7 +74,7 @@ function OpenOpportunitiesContent() {
                 </div>
 
                 {/* Role Type */}
-                <div>
+                {/* <div>
                   <h3 className="text-lg font-lora font-bold text-primary mb-4">Role Type</h3>
                   <div className="space-y-2">
                     {roleTypes.map(role => (
@@ -89,7 +89,7 @@ function OpenOpportunitiesContent() {
                       </label>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Office Location */}
                 <div>
