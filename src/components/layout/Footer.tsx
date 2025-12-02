@@ -28,7 +28,7 @@ export default function Footer() {
         {/* Single Line Layout */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 mb-8">
           {/* Logo */}
-          <div className={`transition-all duration-1000 ${
+          <div className={`transition-all duration-500 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0'
           }`}>
             <Image 
@@ -49,14 +49,14 @@ export default function Footer() {
               { label: 'Career', href: '/career' },
               { label: 'Contact Us', href: '/contact' }
             ].map((link, i) => (
-              <a key={link.label} href={link.href} className={`hover:text-gold hover:underline text-sm transition-all duration-1000 ${
+              <a key={link.label} href={link.href} className={`hover:text-gold hover:underline text-sm transition-all duration-500 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
-              }`} style={{ transitionDelay: `${300 + i * 100}ms` }}>{link.label}</a>
+              }`} style={{ transitionDelay: `${100 + i * 50}ms` }}>{link.label}</a>
             ))}
           </nav>
           
           {/* Social Media Icons */}
-          <div className={`flex gap-4 transition-all duration-1000 delay-1100 ${
+          <div className={`flex gap-4 transition-all duration-500 delay-500 ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
           }`}>
             <a href="#" className="hover:text-gold transition-colors duration-300" aria-label="YouTube">
@@ -91,7 +91,7 @@ export default function Footer() {
         <div className="border-t border-white/30 pt-6">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             {/* Legal Links */}
-            <div className={`flex flex-wrap justify-center gap-4 transition-all duration-1000 delay-700 ${
+            <div className={`flex flex-wrap justify-center gap-4 transition-all duration-500 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0'
             }`}>
               <a href="/privacy" className="text-xs hover:text-gold hover:underline">Privacy</a>
@@ -101,7 +101,7 @@ export default function Footer() {
             </div>
             
             {/* Copyright */}
-            <div className={`text-xs transition-all duration-1000 delay-900 ${
+            <div className={`text-xs transition-all duration-500 delay-400 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0'
             }`}>
               © 2024 JCULT. All rights reserved.

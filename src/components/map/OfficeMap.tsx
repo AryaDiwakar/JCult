@@ -36,29 +36,35 @@ interface OfficeMapProps {
 export default function OfficeMap({ locations }: OfficeMapProps) {
   return (
     <MapContainer
-      center={[20, 0]}
-      zoom={2}
+      center={[25.1772, 55.3753]}
+      zoom={12}
       style={{ height: '400px', width: '100%' }}
       className="rounded-lg"
+      worldCopyJump={false}
+      minZoom={2}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        noWrap={true}
+        bounds={[[-90, -180], [90, 180]]}
       />
-      {locations.map((location, index) => (
-        <Marker
-          key={index}
-          position={[location.lat, location.lng]}
-          icon={greenIcon}
-        >
-          <Popup>
-            <div className="text-center">
-              <h3 className="font-bold text-lg mb-2">{location.name}</h3>
-              <p className="text-sm text-gray-600">{location.address}</p>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
+      <Marker
+        position={[25.1772, 55.3753]}
+        icon={greenIcon}
+      >
+        <Popup autoClose={false} closeOnClick={false}>
+          <div className="p-2">
+            <h3 className="font-bold text-base mb-2 text-primary">Dubai</h3>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              DSO-IFZA, IFZA Properties<br />
+              Dubai Silicon Oasis<br />
+              Dubai, Dubayy (AE-DU)<br />
+              UAE
+            </p>
+          </div>
+        </Popup>
+      </Marker>
     </MapContainer>
   );
 }

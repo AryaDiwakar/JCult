@@ -134,16 +134,16 @@ body {
 }
 
 .font-cormorant {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-raleway), sans-serif;
 }
 
 /* Legacy font class mappings */
 .font-lora {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-raleway), sans-serif;
 }
 
 .font-signifier {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-raleway), sans-serif;
 }
 
 /* Button Classes */

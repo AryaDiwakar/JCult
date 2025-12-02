@@ -51,7 +51,7 @@ export default function Header() {
       }}
       onClick={() => setHoveredTab(null)}
     >
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${isScrolled ? 'py-3' : 'py-4'}`}>
+      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${isScrolled ? 'py-3' : 'py-4'}`}>
         <div className="flex justify-between items-center">
           {/* Brand Logo */}
           <div className="flex-shrink-0">
@@ -71,28 +71,53 @@ export default function Header() {
             <Link 
               href="/who-we-are" 
               className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/who-we-are') ? 'text-gold' : ''}`}
-              onMouseEnter={() => setHoveredTab('Who We Are')}
+              onMouseEnter={(e) => {
+                setHoveredTab('Who We Are');
+                e.currentTarget.style.color = '#1B5E20';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#000';
+              }}
             >
               Who We Are
             </Link>
             <Link 
               href="/what-we-do" 
               className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/what-we-do') ? 'text-gold' : ''}`}
-              onMouseEnter={() => setHoveredTab('What We Do')}
+               onMouseEnter={(e) => {
+                setHoveredTab('What We Do');
+                e.currentTarget.style.color = '#1B5E20';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#000';
+              }}
             >
               What We Do
             </Link>
             <Link 
               href="/news" 
               className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/news') ? 'text-gold' : ''}`}
-              onMouseEnter={() => setHoveredTab('News')}
+              onMouseEnter={(e) => {
+                 setHoveredTab('News');
+                e.currentTarget.style.color = '#1B5E20';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#000';
+              }}
             >
               News
             </Link>
             <Link 
               href="/career" 
               className={`text-charcoal hover:text-gold py-2 text-sm font-medium transition-colors duration-200 ${usePathname()?.startsWith('/career') ? 'text-gold' : ''}`}
-              onMouseEnter={() => setHoveredTab('Career')}
+              onMouseEnter={(e) => {
+                 setHoveredTab('Career');
+                e.currentTarget.style.color = '#1B5E20';
+                e.currentTarget.style.textDecoration
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#000';
+              }}
             >
               Career
             </Link>
@@ -102,14 +127,14 @@ export default function Header() {
           <div className="hidden lg:block" onMouseEnter={() => setHoveredTab(null)}>
             <Link 
               href="/contact" 
-              className="px-6 py-2.5 text-sm font-medium transition-all duration-200 inline-block border-2 border-primary text-white"
+              className="px-6 py-2.5 text-sm font-medium transition-all duration-200 inline-block border-1 border-primary text-white rounded-sm"
               style={{
                 backgroundColor: '#1B5E20'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#D4AF37';
-                e.currentTarget.style.borderColor = '#D4AF37';
-                e.currentTarget.style.color = '#000000';
+                e.currentTarget.style.backgroundColor = '#FFFFFF';
+                e.currentTarget.style.borderColor = '#1B5E20';
+                e.currentTarget.style.color = '#1B5E20';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = '#1B5E20';
@@ -145,9 +170,10 @@ export default function Header() {
       {/* Desktop Dropdown */}
       {hoveredTab && (
         <div 
-          className="hidden lg:block fixed inset-0 bg-main shadow-lg"
+          className="hidden lg:block fixed left-0 right-0 inset-0 bg-main shadow-lg z-0"
           style={{ 
             top: isScrolled ? '64px' : '72px',
+            height: '420px',
             animation: 'slideDown 0.3s ease-out'
           }}
           onMouseEnter={() => setHoveredTab(hoveredTab)}
@@ -168,10 +194,10 @@ export default function Header() {
             
             <div className="grid grid-cols-3 gap-8">
               <div>
-                <h2 className="text-3xl font-bold text-charcoal">{hoveredTab}</h2>
+                <h2 className="text-3xl col-span-1 font-bold text-charcoal">{hoveredTab}</h2>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-4 col-span-2 pl-2 bg-[#F8F9F9] rounded-sm w-full">
                 {tabContent[hoveredTab as keyof typeof tabContent]?.map((item, index) => {
                   const slug = item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
                   const basePath = hoveredTab?.toLowerCase().replace(/\s+/g, '-');
@@ -188,7 +214,6 @@ export default function Header() {
                 })}
               </div>
               
-              <div></div>
             </div>
           </div>
         </div>
