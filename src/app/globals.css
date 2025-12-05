@@ -1,153 +1,93 @@
 @import "tailwindcss";
 
+/* ========================================
+   CSS VARIABLES
+======================================== */
 :root {
-  --background: #FFFFFF;
-  --foreground: #000000;
+  --brand-green: #1B5E20;
+  --white: #FFFFFF;
+  --white-alt: #F5F5F5;
+  --black: #212121;
+  --grey-text: #68717a;
+  --grey-bg: #BEC2C5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  
-  /* Elite Brand Colors */
-  --color-main: #FFFFFF;
-  --color-primary: #1B5E20;
-  --color-gold: #D4AF37;
-  --color-charcoal: #000000;
-  --color-text: #000000;
-  --color-secondary: #1B5E20;
-  --color-tertiary: #F5F5F5;
-  --color-grey: #BEC2C5;
-  
-  /* Font Families - Change these to update fonts globally */
-  --font-tt-commons: var(--font-tt-commons);
-  --font-raleway: var(--font-raleway);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #FFFFFF;
-    --foreground: #000000;
-  }
-}
-
+/* ========================================
+   BASE STYLES
+======================================== */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #FFFFFF;
-  background-attachment: fixed;
-  color: #000000;
+  background: var(--white);
+  color: var(--black);
   font-family: var(--font-tt-commons), sans-serif;
 }
 
-/* Theme Classes */
-.text-primary { color: #1B5E20; }
-.text-gold { color: #D4AF37; }
-.text-charcoal { color: #000000; }
-.text-main { color: #000000; }
-.text-secondary { color: #1B5E20; }
-.text-tertiary { color: #666666; }
+/* ========================================
+   COLOR CLASSES
+======================================== */
+.color-brand { color: var(--brand-green); }
+.color-white { color: var(--white); }
+.color-white-alt { color: var(--white-alt); }
+.color-black { color: var(--black); }
+.color-grey { color: var(--grey-text); }
 
-.bg-main { background: #FFFFFF; }
-.bg-primary { background: #1B5E20; }
-.bg-gold { background-color: #D4AF37; }
-.bg-charcoal { background-color: #000000; }
-.bg-secondary { background-color: #1B5E20; }
-.bg-tertiary { background: #F5F5F5; }
+.bg-white { background: var(--white); }
+.bg-white-alt { background: var(--white-alt); }
+.bg-brand { background: var(--brand-green); }
+.bg-black { background: var(--black); }
+.bg-grey { background: var(--grey-bg); }
 
-.border-primary { border-color: #1B5E20; }
-.border-secondary { border-color: #1B5E20; }
-.border-tertiary { border-color: #E0E0E0; }
-.border-gold { border-color: #D4AF37; }
+/* Legacy aliases for existing code */
+.text-primary { color: var(--brand-green); }
+.text-main { color: var(--black); }
+.bg-main { background: var(--white); }
+.bg-primary { background: var(--brand-green); }
+.bg-tertiary { background: var(--white-alt); }
 
-.bg-grey { background-color: #BEC2C5; }
-
-/* Responsive Container */
-.container-responsive {
-  width: 100%;
-  max-width: 1204px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+/* ========================================
+   BUTTON CLASSES
+======================================== */
+.btn-green {
+  background: var(--brand-green);
+  color: var(--white-alt);
+  border: 2px solid var(--brand-green);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 400ms ease;
 }
 
-@media (min-width: 768px) {
-  .container-responsive {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+.btn-green:hover {
+  background: transparent;
+  color: var(--brand-green);
+  border-color: var(--brand-green);
 }
 
-/* Responsive Hero Height */
-.hero-responsive {
-  height: 50vh;
+.btn-white {
+  background: var(--white-alt);
+  color: var(--black);
+  border: 2px solid var(--white-alt);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 400ms ease;
 }
 
-@media (min-width: 768px) {
-  .hero-responsive {
-    height: 70vh;
-  }
+.btn-white:hover {
+  background: transparent;
+  color: var(--white-alt);
+  border-color: var(--white-alt);
 }
 
-@media (min-width: 1024px) {
-  .hero-responsive {
-    height: 80vh;
-  }
-}
-
-/* Hero Expanded Layout */
-.hero-expanded {
-  margin-left: 1rem;
-}
-
-@media (min-width: 768px) {
-  .hero-expanded {
-    margin-left: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-expanded {
-    margin-left: 4rem;
-  }
-}
-
-/* Hero Content Alignment */
-.hero-content-align {
-  left: 1rem;
-}
-
-@media (min-width: 768px) {
-  .hero-content-align {
-    left: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-content-align {
-    left: calc(50vw - 512px + 4rem);
-  }
-}
-
-/* Font Family Classes - Only font families, use Tailwind for sizes/weights */
-.font-tt-commons {
-  font-family: var(--font-tt-commons), sans-serif;
-}
-
-.font-primary {
-  font-family: var(--font-raleway), sans-serif;
-}
-
-/* Button Classes */
+/* Legacy button aliases */
 .btn-primary {
-  background: #1B5E20;
+  background: var(--brand-green);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0;
   font-weight: 500;
-  border: 2px solid #1B5E20;
+  border: 2px solid var(--brand-green);
   cursor: pointer;
   transition: all 400ms ease;
 }
@@ -167,8 +107,8 @@ body {
   cursor: pointer;
 }
 .btn-secondary:hover {
-  background-color: #1B5E20;
-  border-color: #1B5E20;
+  background-color: var(--brand-green);
+  border-color: var(--brand-green);
   color: white;
 }
 
@@ -187,18 +127,17 @@ body {
   color: #000000;
 }
 
-/* Button Outline Classes */
 .btn-outline-primary {
   background-color: transparent;
-  color: #1B5E20;
+  color: var(--brand-green);
   padding: 0.5rem 1rem;
   border-radius: 0;
   font-weight: 500;
-  border: 2px solid #1B5E20;
+  border: 2px solid var(--brand-green);
   cursor: pointer;
 }
 .btn-outline-primary:hover {
-  background-color: #1B5E20;
+  background-color: var(--brand-green);
   color: white;
 }
 
@@ -230,7 +169,112 @@ body {
   color: white;
 }
 
-/* Luxury Animation System */
+/* ========================================
+   FONT FAMILY CLASSES
+======================================== */
+.font-normal {
+  font-family: var(--font-tt-commons), sans-serif;
+}
+
+.font-brand {
+  font-family: var(--font-raleway), sans-serif;
+}
+
+/* Legacy font aliases */
+.font-tt-commons {
+  font-family: var(--font-tt-commons), sans-serif;
+}
+
+.font-primary {
+  font-family: var(--font-raleway), sans-serif;
+}
+
+/* ========================================
+   FONT WEIGHT CLASSES
+======================================== */
+.fw-light { font-weight: 300; }
+.fw-normal { font-weight: 400; }
+.fw-medium { font-weight: 500; }
+.fw-semibold { font-weight: 600; }
+.fw-bold { font-weight: 700; }
+
+/* ========================================
+   FONT SIZE CLASSES
+======================================== */
+.fs-16 { font-size: 16px; }
+.fs-18 { font-size: 18px; }
+.fs-24 { font-size: 24px; }
+.fs-32 { font-size: 32px; }
+
+/* ========================================
+   RESPONSIVE LAYOUT CLASSES
+======================================== */
+.container-responsive {
+  width: 100%;
+  max-width: 1204px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.hero-responsive {
+  height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .hero-responsive {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-responsive {
+    height: 80vh;
+  }
+}
+
+.hero-expanded {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-expanded {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-expanded {
+    margin-left: 4rem;
+  }
+}
+
+.hero-content-align {
+  left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-content-align {
+    left: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content-align {
+    left: calc(50vw - 512px + 4rem);
+  }
+}
+
+/* ========================================
+   ANIMATION SYSTEM (PRESERVED)
+======================================== */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -487,14 +531,11 @@ body {
 
 /* Hover States */
 .hover\:text-primary:hover {
-  color: #1B5E20;
+  color: var(--brand-green);
 }
 .hover\:bg-primary:hover {
   background: #165018;
 }
 .hover\:bg-secondary:hover {
   background-color: #165018;
-}
-.hover\:bg-tertiary:hover {
-  background-color: #E0E0E0;
 }

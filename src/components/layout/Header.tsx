@@ -39,7 +39,7 @@ export default function Header() {
   return (
     <header 
       className={`w-full fixed left-0 right-0 z-50 transition-all duration-500 ${
-        isVisible ? 'top-0' : '-top-32'
+        hoveredTab ? 'top-0' : (isVisible ? 'top-0' : '-top-32')
       } ${isScrolled ? 'border-b border-white/10' : ''}`}
       style={{
         backgroundColor: '#FFFFFF',
@@ -188,7 +188,6 @@ export default function Header() {
                 </Link>
               </div>
               
-              <div className="w-px bg-tertiary"></div>
               
               <div className="flex-1 bg-tertiary p-6 h-full relative">
                 <button

@@ -130,7 +130,7 @@ function AnimatedGreenSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-primary py-12 md:py-16 lg:py-24" style={{ color: '#d6e0f6' }}>
+    <section ref={sectionRef} className="bg-primary py-12 md:py-16 lg:py-24" style={{ color: '#f5f5f5' }}>
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
@@ -234,7 +234,6 @@ talented individuals to execute their boldest, highest-conviction ideas with pre
               {
                 number: "$10M",
                 description: "Assets Under Management",
-                subtitle:"As of January 2026"
               },
               {
                 number: "1000+",
@@ -254,17 +253,14 @@ talented individuals to execute their boldest, highest-conviction ideas with pre
               {
                 number: "60%+",
                 description: "Professionals with cross-market trading exposure",
-                subtitle: "As of January 2026"
               },
               {
                 number: "15+",
                 description: "Years of Collective Expertise The combined market proficiency of our founding team, refined into a contemporary investment approach.",
-                subtitle: "As of January 2026"
               },
               {
                 number: "100%",
                 description: "Capital Commitment Our conviction is unequivocal — the founding partners invest alongside the portfolio, fully aligned with its performance.",
-                subtitle: "As of January 2026"
               }
             ]}
             />

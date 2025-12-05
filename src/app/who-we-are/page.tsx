@@ -38,7 +38,7 @@ export default function WhoWeAre() {
         />
         
         <FadeUp>
-          <section className="py-6 md:py-8 lg:py-16">
+          <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
             <div className="container-responsive">
               <div className="flex flex-col md:flex-row items-start">
                 <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
@@ -92,7 +92,7 @@ clientele.
           </div>
         </section>
 
-        <section className="py-6 md:py-8 lg:py-16">
+        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-6 md:mb-0 w-full md:w-auto">
@@ -155,7 +155,7 @@ clientele.
           </div>
         </section>
 
-        <ExploreMore />
+        {/* <ExploreMore /> */}
       </main>
     </div>
   );

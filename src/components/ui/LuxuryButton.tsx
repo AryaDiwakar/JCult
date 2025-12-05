@@ -13,7 +13,7 @@ export default function LuxuryButton({
   children, 
   onClick, 
   variant = 'primary',
-  className = '' 
+  className = 'border-1' 
 }: LuxuryButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -23,7 +23,6 @@ export default function LuxuryButton({
       fontWeight: 500,
       position: 'relative' as const,
       zIndex: 10,
-      border: '2px solid',
       cursor: 'pointer',
       transition: 'all 400ms ease'
     };

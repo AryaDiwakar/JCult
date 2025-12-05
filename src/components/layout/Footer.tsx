@@ -26,7 +26,7 @@ export default function Footer() {
               { label: 'Career', href: '/career' },
               { label: 'Contact Us', href: '/contact' }
             ].map((link) => (
-              <a key={link.label} href={link.href} className="hover:text-primary text-sm">{link.label}</a>
+              <a key={link.label} href={link.href} className="hover:text-primary text-sm font-medium">{link.label}</a>
             ))}
           </nav>
           
