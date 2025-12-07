@@ -203,6 +203,9 @@ body {
 @media (min-width: 1024px) {
   .text-hero-title { font-size: 64px; }
 }
+@media (min-width: 1440px) {
+  .text-hero-title { font-size: 74px; }
+}
 
 /* Hero Subtitle */
 .text-hero-subtitle {
@@ -237,7 +240,7 @@ body {
 /* Stats Number */
 .text-stats-number {
   font-size: 46px;
-  font-weight: 400;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .text-stats-number { font-size: 66px; }
@@ -292,7 +295,7 @@ body {
 ======================================== */
 .container-responsive {
   width: 100%;
-  max-width: 1204px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
