@@ -204,12 +204,12 @@ body {
   .text-hero-title { font-size: 64px; }
 }
 @media (min-width: 1440px) {
-  .text-hero-title { font-size: 72px; }
+  .text-hero-title { font-size: 70px; }
 }
 
 /* Hero Subtitle */
 .text-hero-subtitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -222,7 +222,7 @@ body {
   .text-section-label { font-size: 16px; }
 }
 @media (min-width: 1024px) {
-  .text-section-label { font-size: 16px; }
+  .text-section-label { font-size: 14px; }
 }
 
 /* Section Paragraph */
@@ -234,7 +234,7 @@ body {
   .text-section-para { font-size: 24px; }
 }
 @media (min-width: 1024px) {
-  .text-section-para { font-size: 32px; }
+  .text-section-para { font-size: 28px; }
 }
 
 /* Stats Number */
@@ -249,7 +249,7 @@ body {
   .text-stats-number { font-size: 75px; }
 }
 @media (min-width: 1440px) {
-  .text-stats-number { font-size: 96px; }
+  .text-stats-number { font-size: 92px; }
 }
 
 /* Stats Text */
@@ -261,27 +261,27 @@ body {
   .text-stats-desc { font-size: 16px; }
 }
 @media (min-width: 1024px) {
-  .text-stats-desc { font-size: 18px; }
+  .text-stats-desc { font-size: 16px; }
 }
 
 /* Section Title (Pioneering) */
 .text-section-title {
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .text-section-title { font-size: 40px; }
 }
 @media (min-width: 1024px) {
-  .text-section-title { font-size: 48px; }
+  .text-section-title { font-size: 46px; }
 }
 @media (min-width: 1440px) {
-  .text-section-title { font-size: 56px; }
+  .text-section-title { font-size: 48px; }
 }
 
 /* Section Content */
 .text-section-content {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 /* Button Text */
@@ -292,7 +292,7 @@ body {
 
 /* Navigation Text (Header & Footer) */
 .text-nav {
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-weight: 400 !important;
 }
 
@@ -336,7 +336,7 @@ body {
 @media (min-width: 1024px) {
   .hero-responsive {
     min-height: 600px;
-    height: 80vh;
+    height: 780px;
   }
 }
 

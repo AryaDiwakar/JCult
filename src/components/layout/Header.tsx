@@ -47,7 +47,7 @@ export default function Header() {
       }}
       onClick={() => setHoveredTab(null)}
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 lg:h-[120px] overflow-hidden">
+      <div className="relative z-10 max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-8 h-24 lg:h-[140px] overflow-hidden">
         <div className="flex justify-between items-center h-full">
           {/* Brand Logo */}
           <div className="flex-shrink-0" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
@@ -63,7 +63,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
+          <nav className="hidden lg:flex items-center space-x-8 pt-2 md:pt-4 lg:pt-6" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
             <Link 
               href="/who-we-are" 
               className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
@@ -103,7 +103,7 @@ export default function Header() {
           </nav>
 
           {/* Desktop Contact Us */}
-          <div className="hidden lg:block" onMouseEnter={() => setHoveredTab(null)} style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
+          <div className="hidden lg:block pt-2 md:pt-4 lg:pt-6" onMouseEnter={() => setHoveredTab(null)} style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
             <Link 
               href="/contact" 
               className="px-6 py-2.5 text-sm m transition-all duration-200 inline-block border-1 border-primary text-white"
@@ -161,7 +161,7 @@ export default function Header() {
           className="hidden lg:block fixed left-0 right-0 bg-main shadow-lg z-10"
           style={{ 
             top: isScrolled ? '96px' : '120px',
-            height: '300px',
+            height: '470px',
             animation: 'fadeInFromTop 0.3s ease-out'
           }}
           onMouseEnter={() => setHoveredTab(hoveredTab)}
@@ -169,14 +169,14 @@ export default function Header() {
         >
           <div className="h-full overflow-hidden relative">
             {/* Grey background extending to right edge - starts from subtabs section */}
-            <div className="absolute top-0 bottom-0 bg-tertiary" style={{ left: 'calc(50% - 640px + 336px + 2rem + 1px + 1rem)', right: 0 }}></div>
+            <div className="absolute top-0 bottom-0 bg-tertiary" style={{ left: 'calc(50% - 600px + 336px + 2rem + 1px + 1rem)', right: 0 }}></div>
             
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex gap-4 relative z-10">
+            <div className="max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex gap-4 relative z-10">
               <div className="flex-shrink-0 flex flex-col items-start pt-8 w-84">
-                <h2 className="text-3xl text-charcoal mb-6">{hoveredTab}</h2>
+                <h2 className="text-4xl text-charcoal mb-6">{hoveredTab}</h2>
                 <Link
                   href={`/${hoveredTab?.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="px-4 py-2 text-sm m transition-all duration-200 inline-block border border-primary bg-primary text-white"
+                  className="px-6 py-4 text-sm m transition-all duration-200 inline-block border border-primary bg-primary text-white"
                   onClick={() => setHoveredTab(null)}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = 'transparent';
@@ -191,9 +191,8 @@ export default function Header() {
                 </Link>
               </div>
               
-              <div className="w-px bg-tertiary"></div>
               
-              <div className="flex-1 p-6 h-full relative">
+              <div className="flex-1 p-7 h-full relative">
                 <button
                   onClick={() => setHoveredTab(null)}
                   className="absolute top-4 right-4 text-charcoal transition-colors duration-200"

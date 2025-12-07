@@ -35,16 +35,16 @@ function AnimatedTalentSection() {
   return (
     <section ref={sectionRef} className="py-12 md:py-16 lg:py-24 bg-tertiary">
       <div className="container-responsive">
-        <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
-          <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
+        <div className="flex flex-col md:flex-row items-start mb-6 md:mb-14">
+          <div className={`flex-2 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <h2 className="text-section-title leading-tight mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
           </div>
-          <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
+          <div className={`flex-3 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed color-grey opacity-75 text-section-content">
+            <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed opacity-75 text-section-content">
               Here, the collective fuels your growth. People learn side by side, sharpening each other's
               skills and building extraordinary careers together.
             </p>
@@ -54,7 +54,7 @@ function AnimatedTalentSection() {
         <div className={`overflow-hidden transition-all duration-1000 delay-600 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
-          <div className="bg-grey w-full h-48 md:h-80 lg:h-96"></div>
+          <div className="bg-grey w-full h-48 md:h-80 lg:h-130"></div>
         </div>
       </div>
     </section>
@@ -89,7 +89,7 @@ function AnimatedMeritocraticSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-10'
           }`}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora  leading-tight text-primary text-section-title">
+            <h2 className="leading-tight text-primary text-section-title">
               The Meritocratic Code That Shapes Our Collective
             </h2>
           </div>
@@ -130,16 +130,16 @@ function AnimatedGreenSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-primary py-12 md:py-16 lg:py-24" style={{ color: '#f5f5f5' }}>
+    <section ref={sectionRef} className="bg-primary py-12 md:py-16 lg:py-24 mb-30" style={{ color: '#f5f5f5' }}>
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
-          <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
+          <div className={`flex-2 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <h2 className="font-brand text-section-title  leading-tight">Pioneering the</h2>
             <h2 className="font-brand text-section-title  leading-tight mb-3 md:mb-4 lg:mb-8 text-green-500">Future of Finance</h2>
           </div>
-          <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
+          <div className={`flex-3 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <p className="text-section-content leading-relaxed mb-4 md:mb-6 lg:mb-8">
@@ -155,7 +155,7 @@ function AnimatedGreenSection() {
         <div className={`relative transition-all duration-1000 delay-600 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
-          <div className="bg-grey w-full h-48 md:h-80 lg:h-[600px]"></div>
+          <div className="bg-grey w-full h-48 md:h-80 lg:h-[650px] mb-[-230px]"></div>
         </div>
       </div>
     </section>
@@ -168,7 +168,7 @@ function AnimatedSection() {
       <div className="container-responsive">
         <div className="flex flex-col lg:flex-row items-stretch">
           <div className="flex-1 flex flex-col items-start mb-2 md:mb-4 lg:mb-0 md:pr-8 lg:pr-12 relative">
-            <h3 className="text-section-label tracking-wider uppercase text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
+            <h3 className="text-section-label tracking-wider text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
           </div>
           <div className="flex-3 pl-2 relative">
             <div className="absolute left-0 top-0 bottom-0 w-[0.25px] bg-grey"></div>
@@ -248,7 +248,6 @@ talented individuals to execute their boldest, highest-conviction ideas with pre
         
         <AnimatedMeritocraticSection />
 
-        <section className="py-12 md:py-16 lg:py-24">
             <Stats 
             stats={[
               {
@@ -265,7 +264,6 @@ talented individuals to execute their boldest, highest-conviction ideas with pre
               }
             ]}
             />
-        </section>
 
         {/* <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
