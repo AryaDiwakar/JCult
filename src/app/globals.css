@@ -204,7 +204,7 @@ body {
   .text-hero-title { font-size: 64px; }
 }
 @media (min-width: 1440px) {
-  .text-hero-title { font-size: 74px; }
+  .text-hero-title { font-size: 72px; }
 }
 
 /* Hero Subtitle */
@@ -248,6 +248,9 @@ body {
 @media (min-width: 1024px) {
   .text-stats-number { font-size: 75px; }
 }
+@media (min-width: 1440px) {
+  .text-stats-number { font-size: 96px; }
+}
 
 /* Stats Text */
 .text-stats-desc {
@@ -271,6 +274,9 @@ body {
 }
 @media (min-width: 1024px) {
   .text-section-title { font-size: 48px; }
+}
+@media (min-width: 1440px) {
+  .text-section-title { font-size: 56px; }
 }
 
 /* Section Content */
