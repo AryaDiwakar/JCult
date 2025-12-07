@@ -195,7 +195,7 @@ body {
 /* Hero Title */
 .text-hero-title {
   font-size: 40px;
-  font-weight: 500;
+  font-weight:400;
 }
 @media (min-width: 768px) {
   .text-hero-title { font-size: 48px; }
@@ -237,7 +237,7 @@ body {
 /* Stats Number */
 .text-stats-number {
   font-size: 46px;
-  font-weight: 400;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .text-stats-number { font-size: 66px; }
