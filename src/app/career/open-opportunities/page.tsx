@@ -42,10 +42,14 @@ function OpenOpportunitiesContent() {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative overflow-visible mb-8 md:mb-16">
-          <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 pt-12 md:pt-16 lg:pt-20 ml-0 md:ml-4 lg:ml-8">
-            <h1 className="text-section-title font-brand text-white">
-              Open Opportunities
-            </h1>
+          <div className="bg-primary">
+            <div className="container-responsive">
+              <div className="min-h-[60vh] md:min-h-[70vh] flex items-start pt-12 md:pt-16 lg:pt-20">
+                <h1 className="text-section-title font-brand text-white">
+                  Open Opportunities
+                </h1>
+              </div>
+            </div>
           </div>
         </section>
 

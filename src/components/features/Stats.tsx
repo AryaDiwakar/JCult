@@ -52,7 +52,7 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
               <div className="absolute left-0 top-0 bg-grey transition-all duration-1000 ease-out" 
                    style={{ width: '0.25px', height: isVisible ? '100%' : '0%', transitionDelay: `${index * 200}ms` }}>
               </div>
-              <div className={`text-stats-number  text-primary mb-4 md:mb-5 lg:mb-10 font-brand transition-all duration-1000 ${
+              <div className={`text-stats-number text-primary mb-4 md:mb-5 lg:mb-10 font-brand transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
               }`} style={{ transitionDelay: `${500 + index * 200}ms` }}>
                 {stat.number.split('').map((char, i) => 

@@ -13,12 +13,16 @@ export default function Commodities() {
       <main className="pt-20">
         {/* Hero Section - Blue background sticking to right with gap on left */}
         <section className="relative overflow-visible mb-8 md:mb-16">
-          <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 py-6 md:py-8 lg:py-16 ml-0 md:ml-4">
-            <FadeLeft>
-              <h1 className="font-brand text-hero-title text-white">
-                Asset Management
-              </h1>
-            </FadeLeft>
+          <div className="bg-primary">
+            <div className="container-responsive">
+              <div className="min-h-[60vh] md:min-h-[70vh] flex items-start py-6 md:py-8 lg:py-16">
+                <FadeLeft>
+                  <h1 className="font-brand text-hero-title text-white">
+                    Asset Management
+                  </h1>
+                </FadeLeft>
+              </div>
+            </div>
           </div>
         </section>
 

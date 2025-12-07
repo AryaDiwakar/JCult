@@ -43,7 +43,7 @@ export default function WhoWeAre() {
               <div className="flex flex-col md:flex-row items-start">
                 <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                   <FadeLeft>
-                    <h2 className="text-[48px] leading-[53px] font-primary  font-brand text-primary mb-3 md:mb-4 lg:mb-6 text-section-title">
+                    <h2 className="leading-[53px] font-primary font-brand text-primary mb-3 md:mb-4 lg:mb-6 text-section-title">
                       Pursuing Edge. Rewriting Markets.
                     </h2>
                   </FadeLeft>
@@ -51,7 +51,7 @@ export default function WhoWeAre() {
                 
                 <div className="flex-1 md:pl-8 lg:pl-16 space-y-4 md:space-y-6">
                   <FadeLeft delay={200}>
-                    <p className="text-[20px] leading-[28px] opacity-75 text-gray text-section-content">
+                    <p className="leading-[28px] opacity-75 text-gray text-section-content">
                     As a diversified investment firm, we are engineered for outperformance. We converge
 world-class intellect with disciplined risk management to execute on high-conviction
 insights. Our approach is precise: we direct capital toward its highest and best use, thereby
@@ -70,7 +70,7 @@ clientele.
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-[48px] leading-[53px] font-primary  font-brand text-primary text-section-title">
+                  <h2 className="leading-[53px] font-primary  font-brand text-primary text-section-title">
                     Bound by Culture. Driven by Purpose.
                   </h2>
                 </FadeLeft>
@@ -78,7 +78,7 @@ clientele.
               
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                  <p className="text-[20px] leading-[28px] text-gray text-section-content mb-4 md:mb-6 lg:mb-8">
+                  <p className="leading-[28px] text-gray text-section-content mb-4 md:mb-6 lg:mb-8">
                   We’ve crafted a culture that’s unmistakably ours—one that fuels how we work, how we
                   connect, and how we show up for the world around us. It’s the shared pulse that moves us
                   forward, together.
@@ -108,10 +108,10 @@ clientele.
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                  <h2 className="text-[48px] leading-[53px] font-primary  font-brand text-primary text-section-title mb-4 md:mb-6">
+                  <h2 className="leading-[53px] font-primary  font-brand text-primary text-section-title mb-4 md:mb-6">
                   Rise. Lead. Elevate.
                 </h2>
-                <p className="text-[20px] leading-[28px] opacity-75 text-gray text-section-content mb-4 md:mb-6 lg:mb-8">
+                <p className="leading-[28px] opacity-75 text-gray text-section-content mb-4 md:mb-6 lg:mb-8">
                   Most of our leaders grew from within—earning their place through grit and vision. Today,
                   they channel that same energy into building the leaders who will push us forward next.
                   </p>
@@ -131,14 +131,14 @@ clientele.
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-[48px] leading-[53px] font-primary  font-brand text-primary text-section-title">
+                  <h2 className="leading-[53px] font-primary  font-brand text-primary text-section-title">
                     Work Across Global Cities.
                   </h2>
                 </FadeLeft>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                  <p className="text-[20px] leading-[28px] opacity-75 text-gray text-section-content mb-4 md:mb-6 lg:mb-8">
+                  <p className="leading-[28px] opacity-75 text-gray text-section-content mb-4 md:mb-6 lg:mb-8">
                   Our base is one of the world’s most vibrant financial hubs—a place where opportunity,
                   culture, and ambition converge. It’s where we move fast, think big, and build with intention.
                   This city pushes us forward every day, giving us the energy, diversity, and edge to operate

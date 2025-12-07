@@ -322,17 +322,20 @@ body {
 }
 
 .hero-responsive {
-  height: 50vh;
+  min-height: 480px;
+  height: 60vh;
 }
 
 @media (min-width: 768px) {
   .hero-responsive {
+    min-height: 500px;
     height: 70vh;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-responsive {
+    min-height: 600px;
     height: 80vh;
   }
 }

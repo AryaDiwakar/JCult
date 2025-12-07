@@ -17,9 +17,11 @@ export default function OurCulture() {
       <main className="pt-20">
         <section className="relative overflow-visible mb-20">
           <FadeUp>
-            <div className="bg-primary flex flex-col md:flex-row min-h-[80vh]">
-              <div className="flex-1 px-4 md:px-8 py-8 md:py-16">
-                <div className="flex flex-col justify-between h-full">
+            <div className="bg-primary">
+              <div className="container-responsive">
+                <div className="flex flex-col md:flex-row min-h-[80vh]">
+                  <div className="flex-1 py-8 md:py-16">
+                    <div className="flex flex-col justify-between h-full">
                   <div>
                   <FadeLeft>
                     <h1 className="text-hero-title font-brand  text-white mb-4">
@@ -34,15 +36,17 @@ export default function OurCulture() {
                     </p>
                     </FadeLeft>
                   </div>
+                    </div>
+                  </div>
+                
+                  <div className="flex-1 relative min-h-[300px] md:min-h-0 md:mb-[-5rem] lg:mb-[-8rem]">
+                    <img 
+                      src="/images/group disscusion 2.JPG"
+                      alt="Our Culture"
+                      className="absolute top-0 right-0 w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
-            
-              <div className="flex-1 relative min-h-[300px] md:min-h-0 md:mb-[-5rem] lg:mb-[-8rem]">
-                <img 
-                  src="/images/group disscusion 2.JPG"
-                  alt="Our Culture"
-                  className="absolute top-0 right-0 w-full h-full object-cover"
-                />
               </div>
             </div>
           </FadeUp>
@@ -311,10 +315,10 @@ can offer.
           },
         ]} /> */}
         
-        <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
+        <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16 container-responsive">
           <div className="flex-1 mb-6 md:mb-0">
             <FadeLeft>
-              <h2 className="text-[48px] leading-[53px]  font-brand text-primary">
+              <h2 className="text-section-title leading-[53px]  font-brand text-primary">
                 A Headquarters Built for Collaboration
               </h2>
             </FadeLeft>
@@ -322,12 +326,12 @@ can offer.
           
           <div className="flex-1 md:pl-16">
             <FadeLeft delay={200}>
-            <p className="text-[20px] leading-[28px] color-grey text-section-content mb-6">
+            <p className="leading-[28px] color-grey text-section-content mb-6">
               Our workspace is meticulously designed to foster real-time teamwork, rigorous discussion,
 and debate. We have created an environment where physical barriers are removed to
 ensure constant intellectual exchange.
             </p>
-            <p className="text-[20px] leading-[28px] color-grey text-section-content mb-6">
+            <p className="leading-[28px] color-grey text-section-content mb-6">
               Unified in our mission to achieve what no individual could alone.
             </p>
             <a href="/who-we-are/our-global-base">
@@ -388,7 +392,7 @@ ensure constant intellectual exchange.
         {/* <ExploreMore /> */}
         {/* <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
-            <h2 className="text-[48px] leading-[53px] font-primary  text-primary mb-8 md:mb-10 lg:mb-12">
+            <h2 text-section-title leading-[53px] font-primary  text-primary mb-8 md:mb-10 lg:mb-12">
               Explore Our Offices
             </h2>
             

@@ -21,12 +21,16 @@ export default function LeadershipTeam() {
       <main className="pt-20">
         <section className="relative overflow-visible mb-8 md:mb-16">
           <FadeUp>
-            <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 pt-12 md:pt-16 lg:pt-20 ml-0 md:ml-4 lg:ml-8">
-              <FadeLeft>
-                <h1 className="text-hero-title font-brand text-white">
-                  Executive Leadership
-                </h1>
-              </FadeLeft>
+            <div className="bg-primary">
+              <div className="container-responsive">
+                <div className="min-h-[60vh] md:min-h-[70vh] flex items-start pt-12 md:pt-16 lg:pt-20">
+                  <FadeLeft>
+                    <h1 className="text-hero-title font-brand text-white">
+                      Executive Leadership
+                    </h1>
+                  </FadeLeft>
+                </div>
+              </div>
             </div>
           </FadeUp>
         </section>
@@ -109,27 +113,29 @@ export default function LeadershipTeam() {
         </section> */}
 
          <section className="pt-6 md:pt-8 mb-4 md:mb-0 lg:pt-16">
-          <div className="flex flex-col md:flex-row items-start">
-            <div className="flex-1 mb-6 md:mb-0 container-responsive">
-              <FadeLeft>
-                <img 
-                  src="/images/woman smiling and handshake.JPG"
-                  alt="Leadership impact"
-                  className="w-full h-64 md:h-80 lg:h-96 object-cover"
-                />
-              </FadeLeft>
-            </div>
-            <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
-              <FadeLeft delay={200}>
-              <h2 className="text-section-title font-brand text-primary mb-4 md:mb-6">
-                Driving Ideas Into Real Impact 
-              </h2>
-                <a href="/what-we-do">
-                <LuxuryButton>
-                    Explore What We Do
-                </LuxuryButton>
-                  </a>
-              </FadeLeft>
+          <div className="container-responsive">
+            <div className="flex flex-col md:flex-row items-start">
+              <div className="flex-1 mb-6 md:mb-0">
+                <FadeLeft>
+                  <img 
+                    src="/images/woman smiling and handshake.JPG"
+                    alt="Leadership impact"
+                    className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                  />
+                </FadeLeft>
+              </div>
+              <div className="flex-1 md:pl-8 lg:pl-16">
+                <FadeLeft delay={200}>
+                <h2 className="text-section-title font-brand text-primary mb-4 md:mb-6">
+                  Driving Ideas Into Real Impact 
+                </h2>
+                  <a href="/what-we-do">
+                  <LuxuryButton>
+                      Explore What We Do
+                  </LuxuryButton>
+                    </a>
+                </FadeLeft>
+              </div>
             </div>
           </div>
         </section>

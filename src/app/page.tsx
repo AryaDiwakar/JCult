@@ -39,7 +39,7 @@ function AnimatedTalentSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora  leading-tight mb-3 md:mb-4 lg:mb-8 text-primary text-section-title">Engage With Elite Talent</h2>
+            <h2 className="text-section-title leading-tight mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
           </div>
           <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -155,7 +155,7 @@ function AnimatedGreenSection() {
         <div className={`relative transition-all duration-1000 delay-600 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
-          <div className="bg-grey w-full h-48 md:h-80 lg:h-[400px]"></div>
+          <div className="bg-grey w-full h-48 md:h-80 lg:h-[600px]"></div>
         </div>
       </div>
     </section>

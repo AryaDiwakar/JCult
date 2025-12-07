@@ -43,7 +43,7 @@ export default function ExploreMore({ items }: ExploreMoreProps) {
   return (
     <section className="px-4 md:px-8 py-8 md:py-16">
       <FadeLeft>
-        <h2 className="text-[48px] leading-[53px] font-primary  text-primary mb-12">
+        <h2 className="text-section-title leading-[53px] font-primary text-primary mb-12">
           Explore More
         </h2>
       </FadeLeft>
@@ -55,7 +55,7 @@ export default function ExploreMore({ items }: ExploreMoreProps) {
               <h3 className="text-xl  mb-4">
                 {item.title}
               </h3>
-              <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
+              <p className="color-gray leading-[28px] text-main mb-6">
                 {item.description}
               </p>
               <a href={item.link} className="inline-flex items-center text-primary m hover:translate-x-2 transition-transform">
