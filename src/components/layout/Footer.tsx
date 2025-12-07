@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-tertiary text-black py-8">
+    <footer className="bg-tertiary text-black py-8 lg:py-18 xl:p-20">
       <div className="container-responsive">
         {/* Top Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-8">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8 lg:mb-16 xl:mb-20">
           {/* Logo */}
           <div>
             <Image 
@@ -32,10 +32,10 @@ export default function Footer() {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-black/30 pt-6">
-          <div className="flex flex-col lg:flex-row justify-between items-center">
+        <div className="border-t border-b border-black/30 py-6">
+          <div className="flex flex-col gap-6 md:gap-10 lg:gap-0 lg:flex-row justify-between items-start md:items-center">
             {/* Legal Links - Left */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-col gap-4 md:flex-wrap md:gap-2">
               <a href="/privacy" className="text-xs hover:text-primary text-[14px]">Privacy</a>
               <a href="/terms-of-use" className="text-xs hover:text-primary text-[14px]">Terms of Use</a>
               <a href="/notices" className="text-xs hover:text-primary text-[14px]">Notices</a>
@@ -43,13 +43,13 @@ export default function Footer() {
             </div>
             
             {/* Copyright - Center */}
-            <div className="text-xs text-center text-[14px] color-grey">
+            <div className="text-xs flex justify-center text-[14px] color-grey">
               © 2024 JCULT. All rights reserved.
             </div>
             
             {/* Social Media Icons - Right */}
             <div className="flex gap-4">
-              <a href="#" className="hover:text-primary transition-colors duration-300" aria-label="YouTube">
+              <a href="#" className="hover:text-primary transition-colors duration-300"aria-label="YouTube">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                 </svg>

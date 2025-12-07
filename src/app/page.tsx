@@ -33,18 +33,18 @@ function AnimatedTalentSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 lg:py-24 bg-tertiary">
+    <section ref={sectionRef} className="py-12 md:py-16 lg:py-10 xl:py-24 bg-tertiary">
       <div className="container-responsive">
-        <div className="flex flex-col md:flex-row items-start mb-6 md:mb-14">
-          <div className={`flex-2 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
+        <div className="flex flex-col lg:flex-row items-start mb-10 mb:mb-20 lg:mb-14 xl:mb-28">
+          <div className={`flex-2 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <h2 className="text-section-title leading-tight mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
           </div>
-          <div className={`flex-3 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
+          <div className={`flex-3 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed opacity-75 text-section-content">
+            <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed text-section-content color-grey">
               Here, the collective fuels your growth. People learn side by side, sharpening each other's
               skills and building extraordinary careers together.
             </p>
@@ -54,7 +54,7 @@ function AnimatedTalentSection() {
         <div className={`overflow-hidden transition-all duration-1000 delay-600 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
-          <div className="bg-grey w-full h-48 md:h-80 lg:h-130"></div>
+          <div className="bg-grey w-full h-[200px] mb:h-[400px] lg:h-[500px] xl:h-[700px]"></div>
         </div>
       </div>
     </section>
@@ -83,7 +83,7 @@ function AnimatedMeritocraticSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-tertiary py-12 md:py-16 lg:py-24">
+    <section ref={sectionRef} className="pt-12 md:pt-16 lg:pt-24">
       <div className="container-responsive">
         <div className="flex flex-col md:flex-row items-start">
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
@@ -130,16 +130,18 @@ function AnimatedGreenSection() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-primary py-12 md:py-16 lg:py-24 mb-30" style={{ color: '#f5f5f5' }}>
+    <section ref={sectionRef} className="bg-primary py-12 md:py-16 lg:py-24 lg:mb-30 xl:h-[1180px]" style={{ color: '#f5f5f5' }}>
       <div className="container-responsive">
-        <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
-          <div className={`flex-2 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
+        <div className="flex flex-col lg:flex-row items-start mb-6 md:mb-8">
+          <div className={`flex-2 mb-2 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
+            <div className='flex flex-row gap-2 lg:flex-col'>
             <h2 className="font-brand text-section-title  leading-tight">Pioneering the</h2>
-            <h2 className="font-brand text-section-title  leading-tight mb-3 md:mb-4 lg:mb-8 text-green-500">Future of Finance</h2>
+            <h2 className="font-brand text-section-title  leading-tight mb-1 lg:mb-8 text-green-500">Future of Finance</h2>
+            </div>
           </div>
-          <div className={`flex-3 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
+          <div className={`flex-3 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <p className="text-section-content leading-relaxed mb-4 md:mb-6 lg:mb-8">
@@ -155,7 +157,7 @@ function AnimatedGreenSection() {
         <div className={`relative transition-all duration-1000 delay-600 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}>
-          <div className="bg-grey w-full h-48 md:h-80 lg:h-[650px] mb-[-230px]"></div>
+          <div className="bg-grey w-full h-[380px] md:h-[480px] md:mb-0 lg:h-[650px] xl:mt-28 xl:h-[890px] lg:mb-[-200px] xl:mb-[-230px]"></div>
         </div>
       </div>
     </section>
@@ -164,13 +166,13 @@ function AnimatedGreenSection() {
 
 function AnimatedSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-tertiary">
+    <section className="py-12 md:py-30 lg:py-34 xl:py-32 bg-tertiary">
       <div className="container-responsive">
         <div className="flex flex-col lg:flex-row items-stretch">
           <div className="flex-1 flex flex-col items-start mb-2 md:mb-4 lg:mb-0 md:pr-8 lg:pr-12 relative">
             <h3 className="text-section-label tracking-wider text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
           </div>
-          <div className="flex-3 pl-2 relative">
+          <div className="flex-4 pl-2 relative">
             <div className="absolute left-0 top-0 bottom-0 w-[0.25px] bg-grey"></div>
             <p className="text-primary text-section-para font-brand leading-tight pl-4 lg:pl-8">
               We aspire to establish an unprecedented legacy as the premier investment entity in

@@ -47,7 +47,8 @@ export default function Header() {
       }}
       onClick={() => setHoveredTab(null)}
     >
-      <div className="relative z-10 max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-8 h-24 lg:h-[140px] overflow-hidden">
+      {/* <div className="text-red-500 sm:text-orange-500 md:text-yellow-500 lg:text-blue-500 xl:text-green-500">hello</div> */}
+      <div className="relative z-10 max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8 h-22 lg:h-[140px] overflow-hidden">
         <div className="flex justify-between items-center h-full">
           {/* Brand Logo */}
           <div className="flex-shrink-0" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
@@ -169,9 +170,9 @@ export default function Header() {
         >
           <div className="h-full overflow-hidden relative">
             {/* Grey background extending to right edge - starts from subtabs section */}
-            <div className="absolute top-0 bottom-0 bg-tertiary" style={{ left: 'calc(50% - 600px + 336px + 2rem + 1px + 1rem)', right: 0 }}></div>
+            <div className="absolute top-0 bottom-0 bg-tertiary" style={{ left: 'calc(50% - 770px + 336px + 2rem + 1px + 1rem)', right: 0 }}></div>
             
-            <div className="max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex gap-4 relative z-10">
+            <div className="max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex gap-4 relative z-10">
               <div className="flex-shrink-0 flex flex-col items-start pt-8 w-84">
                 <h2 className="text-4xl text-charcoal mb-6">{hoveredTab}</h2>
                 <Link
@@ -213,7 +214,7 @@ export default function Header() {
                       <Link 
                         key={`${hoveredTab}-${index}`} 
                         href={`/${basePath}/${slug}`}
-                        className="block text-charcoal text-lg transition-colors duration-200 no-underline"
+                        className="block text-charcoal text-nav transition-colors duration-200 no-underline"
                         onMouseEnter={(e) => { e.currentTarget.style.color = '#127749'; }}
                         onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
                         style={{ 

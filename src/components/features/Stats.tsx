@@ -36,7 +36,7 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`py-6 md:py-8 lg:py-16 mb-6 md:mb-8 ${className}`}>
+    <section ref={sectionRef} className={`py-6 md:py-8 lg:py-28 xl:py-30 mb-6 md:mb-8 ${className}`}>
       <div className="container-responsive">
         {title && (
           <div className="flex flex-col md:flex-row mb-6 md:mb-8 lg:mb-16">
@@ -45,7 +45,7 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
             </div>
           </div>
         )}
-        <div className="md:ml-32 lg:ml-48 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="lg:ml-52 xl:ml-70 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="stat-item relative pl-3 md:pl-4 lg:pl-6 overflow-hidden">
               {/* Animated border line for each stat */}
