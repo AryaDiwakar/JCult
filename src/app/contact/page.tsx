@@ -10,7 +10,7 @@ export default function Contact() {
         <section className="py-16 md:py-24">
           <div className="container-responsive">
             <FadeUp>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-primary font-bold text-primary mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-primary  text-primary mb-6">
                 Get in Touch
               </h1>
               <p className="text-lg md:text-xl text-main opacity-75 max-w-2xl mb-16">
@@ -22,14 +22,14 @@ export default function Contact() {
               <FadeLeft>
                 <div className="space-y-8">
                   <div className="border-l-2 border-primary pl-6">
-                    <h3 className="text-xl font-bold text-primary mb-2">Email</h3>
+                    <h3 className="text-xl  text-primary mb-2">Email</h3>
                     <a href="mailto:jculttrader.inquiry@gmail.com" className="text-lg text-main hover:text-primary transition">
                       jculttrader.inquiry@gmail.com
                     </a>
                   </div>
 
                   <div className="border-l-2 border-primary pl-6">
-                    <h3 className="text-xl font-bold text-primary mb-2">Location</h3>
+                    <h3 className="text-xl  text-primary mb-2">Location</h3>
                     <p className="text-lg text-main">
                       DSO-IFZA, IFZA Properties<br />
                       Dubai Silicon Oasis<br />
@@ -39,7 +39,7 @@ export default function Contact() {
                   </div>
 
                   <div className="border-l-2 border-primary pl-6">
-                    <h3 className="text-xl font-bold text-primary mb-2">Career Inquiries</h3>
+                    <h3 className="text-xl  text-primary mb-2">Career Inquiries</h3>
                     <a href="/career" className="text-lg text-primary hover:text-gold transition inline-flex items-center">
                       View Open Positions
                       <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,10 +52,10 @@ export default function Contact() {
 
               <FadeLeft delay={200}>
                 <div className="p-8 md:p-10 bg-primary">
-                  <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
+                  <h3 className="text-2xl  text-white mb-6">Send us a message</h3>
                   <form className="space-y-6">
                     <div>
-                      <label className="block text-sm font-medium text-white mb-2">Name</label>
+                      <label className="block text-sm m text-white mb-2">Name</label>
                       <input 
                         type="text" 
                         className="w-full px-4 py-3 bg-white border-2 border-transparent focus:border-primary outline-none transition"
@@ -63,7 +63,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-white mb-2">Email</label>
+                      <label className="block text-sm m text-white mb-2">Email</label>
                       <input 
                         type="email" 
                         className="w-full px-4 py-3 bg-white border-2 border-transparent focus:border-primary outline-none transition"
@@ -71,7 +71,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-white mb-2">Message</label>
+                      <label className="block text-sm m text-white mb-2">Message</label>
                       <textarea 
                         rows={5}
                         className="w-full px-4 py-3 bg-white border-2 border-transparent focus:border-primary outline-none transition resize-none"
@@ -80,7 +80,7 @@ export default function Contact() {
                     </div>
                     <button 
                       type="submit"
-                      className="w-full bg-gold text-white px-6 py-3 hover:shadow-md/30 hover:shadow-gold transition font-medium"
+                      className="w-full bg-gold text-white px-6 py-3 hover:shadow-md/30 hover:shadow-gold transition m"
                     >
                       Send Message
                     </button>

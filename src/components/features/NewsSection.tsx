@@ -44,7 +44,7 @@ export default function NewsSection({ title, description, items }: NewsSectionPr
           <div className={`w-2/3 md:mb-0 pr-2 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
           }`}>
-            <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-8 text-section-title">
+            <h2 className="text-[48px] leading-[53px] font-primary  text-primary mb-8 text-section-title">
               {title}
             </h2>
             <p className="text-sm md:text-base color-grey leading-relaxed text-section-content">
@@ -76,7 +76,7 @@ export default function NewsSection({ title, description, items }: NewsSectionPr
                       </p>
                     )}
 
-                    <h3 className="text-base md:text-lg font-bold text-primary group-hover:underline font-primary">
+                    <h3 className="text-base md:text-lg  text-primary group-hover:underline font-primary">
                       {item.title}
                     </h3>
                   </div>

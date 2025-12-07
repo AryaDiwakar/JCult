@@ -29,10 +29,10 @@ export default function Career() {
                   />
                 </div>
                 <div className="flex-1 md:pl-8 lg:pl-16">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold text-primary mb-4 md:mb-6">
+                  <h2 className="text-section-title leading-tight text-primary mb-4 md:mb-6">
                     Build Your Career With Us
                   </h2>
-                  <p className="text-base md:text-lg lg:text-xl font-raleway text-main leading-relaxed opacity-75">
+                  <p className="text-section-content color-grey leading-relaxed">
                     We believe in nurturing talent and providing opportunities for growth. Our team members work on challenging projects that shape the future of financial markets.
                   </p>
                 </div>
@@ -47,10 +47,10 @@ export default function Career() {
             <div className="container-responsive">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div className="border-l-2 border-gold pl-4 md:pl-6">
-                  <h3 className="text-xl md:text-2xl font-lora font-bold text-primary mb-4">
+                  <h3 className="text-section-content leading-tight text-primary mb-4">
                     Internship
                   </h3>
-                  <p className="text-base md:text-lg font-raleway text-main leading-relaxed mb-4 opacity-75">
+                  <p className="text-section-content color-grey leading-relaxed mb-4">
                     Gain hands-on experience and work alongside industry experts. Our internship programs offer real-world projects and mentorship opportunities.
                   </p>
                   <Link href="/career/open-opportunities?experience=Internship" className="text-primary hover:text-gold font-raleway font-semibold hover:underline inline-flex items-center">
@@ -61,10 +61,10 @@ export default function Career() {
                   </Link>
                 </div>
                 <div className="border-l-2 border-gold pl-4 md:pl-6">
-                  <h3 className="text-xl md:text-2xl font-lora font-bold text-primary mb-4">
+                  <h3 className="text-section-content leading-tight text-primary mb-4">
                     Full Time
                   </h3>
-                  <p className="text-base md:text-lg font-raleway text-main leading-relaxed mb-4 opacity-75">
+                  <p className="text-section-content color-grey leading-relaxed mb-4">
                     Join our team of exceptional professionals. We offer challenging roles across trading, technology, research, and operations with competitive benefits.
                   </p>
                   <Link href="/career/open-opportunities?experience=Experienced Professionals,Graduates" className="text-primary hover:text-gold font-raleway font-semibold hover:underline inline-flex items-center">

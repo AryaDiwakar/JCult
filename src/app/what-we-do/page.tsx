@@ -37,7 +37,7 @@ export default function WhatWeDo() {
                 </FadeLeft>
               </div>
               <BorderReveal>
-                <p className="text-base md:text-lg lg:text-xl text-primary leading-relaxed">
+                <p className="text-section-content color-grey">
                   We channel capital toward the world’s most meaningful and high-impact opportunities,
                   guided by a rare fusion of disciplined talent, intuitive technology, deep analytics, and a
                   global presence that moves with quiet strength.
@@ -53,18 +53,18 @@ export default function WhatWeDo() {
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-0">
                 <FadeLeft>
-                  <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
+                  <h2 className="text-section-title font-brand text-primary">
                     Diversified Asset Management With a Singular Focus
                   </h2>
                 </FadeLeft>
               </div>
               <div className="flex-1 mb-4 md:mb-0 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed mb-2">
+                <p className="text-section-content color-grey mb-2">
                   Our team explores the full spectrum of global markets, pursuing compelling ideas through
                   innovative thinking and bold, disciplined execution.
                 </p>
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed mb-4">
+                <p className="text-section-content color-grey mb-4">
                  Across equities, macro, real assets, virtual assets, and private wealth solutions, we
                   maintain one clear objective: generating superior, risk-adjusted returns.
                 </p>
@@ -91,7 +91,7 @@ export default function WhatWeDo() {
                 />
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16 space-y-4 md:space-y-6">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl  text-primary">
                   Strategic Excellence
                 </h2>
                 <p className="text-sm md:text-base text-main leading-relaxed">
@@ -113,12 +113,12 @@ export default function WhatWeDo() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-0">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl  text-primary">
                   Our Mission
                 </h2>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <p className="text-lg md:text-xl lg:text-2xl text-primary font-medium leading-relaxed">
+                <p className="text-lg md:text-xl lg:text-2xl text-primary m leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                 </p>
               </div>
@@ -132,13 +132,13 @@ export default function WhatWeDo() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {cards.map((card, i) => (
                 <div key={i} className="border-l-2 border-gray-300 pl-4 md:pl-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">
+                  <h3 className="text-xl md:text-2xl  text-primary mb-3 md:mb-4">
                     {card.title}
                   </h3>
                   <p className="text-sm md:text-base text-secondary leading-relaxed mb-4">
                     {card.description}
                   </p>
-                  <a href={card.link} className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform mb-4 md:mb-6">
+                  <a href={card.link} className="inline-flex items-center text-primary m hover:translate-x-2 transition-transform mb-4 md:mb-6">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
@@ -168,7 +168,7 @@ export default function WhatWeDo() {
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+                <h2 className="text-section-title font-brand text-white">
                   Our Strategic Edge
                 </h2>
                 </FadeLeft>
@@ -181,10 +181,10 @@ export default function WhatWeDo() {
                 <div className="relative px-6">
                 <div className="absolute top-0 left-0 h-full w-px bg-white/30 hidden md:block"></div>
                 <div className="absolute top-0 right-0 h-full w-px bg-white/30 hidden md:block"></div>
-                <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
+                <h4 className="text-section-content font-brand text-white mb-4">
                   World-Class Talent
                 </h4>
-                <p className="text-sm md:text-base leading-relaxed text-white/90">
+                <p className="text-button text-white/90">
                   By uniting experts from the worlds of finance and technology, we foster a culture of
                   unparalleled growth. Our collaborative environment and extensive resources empower our
                   people to achieve their full potential and drive innovation.
@@ -194,10 +194,10 @@ export default function WhatWeDo() {
               <FadeLeft delay={600}>
                 <div className="relative pr-6">
                 <div className="absolute top-0 right-0 h-full w-px bg-white/30 hidden md:block"></div>
-                <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
+                <h4 className="text-section-content font-brand text-white mb-4">
                   Uncompromising Risk Standards
                 </h4>
-                <p className="text-sm md:text-base leading-relaxed text-white/90">
+                <p className="text-button text-white/90">
                 Our approach to risk is disciplined and independent. With a reporting line directly to the
                 CEO, our specialized risk managers monitor performance drivers and maintain strict
                 tolerance levels. We utilize advanced technology for continuous tracking and real-time
@@ -206,7 +206,7 @@ export default function WhatWeDo() {
                 </div>
               </FadeLeft>
               {/* <div className="relative pr-6">
-                <h4 className="text-xl md:text-2xl font-bold text-white mb-4">
+                <h4 className="text-xl md:text-2xl  text-white mb-4">
                   Integrity
                 </h4>
                 <p className="text-sm md:text-base leading-relaxed text-white/90">
@@ -229,7 +229,7 @@ export default function WhatWeDo() {
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-4 md:mb-6">
+                <h2 className="text-[48px] leading-[53px] font-primary  text-primary mb-4 md:mb-6">
                   In Pursuit of Minds That Redefine Possibility
                 </h2>
                 <button className="btn-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
@@ -254,7 +254,7 @@ export default function WhatWeDo() {
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16 text-center md:text-left">
                 <FadeLeft delay={200}>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
+                <h2 className="text-section-title font-brand text-primary mb-4 md:mb-6">
                  In Pursuit of Minds That Redefine Possibility
                 </h2>
                 <a href="/career">
@@ -269,7 +269,7 @@ export default function WhatWeDo() {
         </section>
 
         <section className='pb-16'>
-          <div className="container-responsive text-charcoal">
+          <div className="container-responsive text-charcoal color-grey">
             <FadeUp>
             JCULT TRADER’s risk management framework should not be interpreted as a guarantee
             against losses. Certain risks may fall outside the scope of what JCULT TRADER monitors or

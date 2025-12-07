@@ -39,7 +39,7 @@ function AnimatedTalentSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight mb-3 md:mb-4 lg:mb-8 text-primary text-section-title">Engage With Elite Talent</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora  leading-tight mb-3 md:mb-4 lg:mb-8 text-primary text-section-title">Engage With Elite Talent</h2>
           </div>
           <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -89,7 +89,7 @@ function AnimatedMeritocraticSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-10'
           }`}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight text-primary text-section-title">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora  leading-tight text-primary text-section-title">
               The Meritocratic Code That Shapes Our Collective
             </h2>
           </div>
@@ -136,8 +136,8 @@ function AnimatedGreenSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <h2 className="font-brand text-section-title font-bold leading-tight">Pioneering the</h2>
-            <h2 className="font-brand text-section-title font-bold leading-tight mb-3 md:mb-4 lg:mb-8 text-green-500">Future of Finance</h2>
+            <h2 className="font-brand text-section-title  leading-tight">Pioneering the</h2>
+            <h2 className="font-brand text-section-title  leading-tight mb-3 md:mb-4 lg:mb-8 text-green-500">Future of Finance</h2>
           </div>
           <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -209,7 +209,7 @@ talented individuals to execute their boldest, highest-conviction ideas with pre
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <h2 className="text-xl md:text-2xl lg:text-4xl font-bold text-primary mb-3 md:mb-4 lg:mb-6">
+                <h2 className="text-xl md:text-2xl lg:text-4xl  text-primary mb-3 md:mb-4 lg:mb-6">
                   Our Workspace
                 </h2>
                 <p className="text-sm md:text-base lg:text-lg text-main mb-4 md:mb-6 lg:mb-8 leading-relaxed">
@@ -271,7 +271,7 @@ talented individuals to execute their boldest, highest-conviction ideas with pre
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start mb-6 md:mb-8">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora  leading-tight mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed text-main opacity-75">

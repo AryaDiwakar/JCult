@@ -43,7 +43,7 @@ function OpenOpportunitiesContent() {
         {/* Hero Section */}
         <section className="relative overflow-visible mb-8 md:mb-16">
           <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 pt-12 md:pt-16 lg:pt-20 ml-0 md:ml-4 lg:ml-8">
-            <h1 className="text-2xl md:text-3xl lg:text-5xl font-lora font-bold text-white">
+            <h1 className="text-section-title font-brand text-white">
               Open Opportunities
             </h1>
           </div>
@@ -57,7 +57,7 @@ function OpenOpportunitiesContent() {
               <div className="w-full md:w-1/4 space-y-6">
                 {/* Experience Level */}
                 <div>
-                  <h3 className="text-lg font-lora font-bold text-primary mb-4">Experience Level</h3>
+                  <h3 className="text-lg font-lora  text-primary mb-4">Experience Level</h3>
                   <div className="space-y-2">
                     {experienceLevels.map(level => (
                       <label key={level} className="flex items-center cursor-pointer">
@@ -75,7 +75,7 @@ function OpenOpportunitiesContent() {
 
                 {/* Role Type */}
                 {/* <div>
-                  <h3 className="text-lg font-lora font-bold text-primary mb-4">Role Type</h3>
+                  <h3 className="text-lg font-lora  text-primary mb-4">Role Type</h3>
                   <div className="space-y-2">
                     {roleTypes.map(role => (
                       <label key={role} className="flex items-center cursor-pointer">
@@ -93,7 +93,7 @@ function OpenOpportunitiesContent() {
 
                 {/* Office Location */}
                 <div>
-                  <h3 className="text-lg font-lora font-bold text-primary mb-4">Office Location</h3>
+                  <h3 className="text-lg font-lora  text-primary mb-4">Office Location</h3>
                   <div className="space-y-2">
                     {locations.map(location => (
                       <label key={location} className="flex items-center cursor-pointer">
@@ -134,7 +134,7 @@ function OpenOpportunitiesContent() {
                   {filteredJobs.map(job => (
                     <div key={job.id} className="card-hover border-l-2 border-gold p-6 bg-tertiary">
                       <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-xl md:text-2xl font-lora font-bold text-primary">
+                        <h3 className="text-xl md:text-2xl font-lora  text-primary">
                           {job.title}
                         </h3>
                         <span className="text-xs font-raleway text-secondary">{job.posted}</span>

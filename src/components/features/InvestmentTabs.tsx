@@ -115,8 +115,8 @@ export default function InvestmentTabs() {
                 key={i}
                 ref={(el) => { tabRefs.current[i] = el; }}
                 onClick={() => setActiveTab(i)}
-                className={`px-4 py-3 text-left text-sm font-medium whitespace-nowrap border-b-4 md:border-b-0 md:border-l-4 transition ${
-                  activeTab === i ? 'border-gold bg-gold/10 text-gold' : 'border-transparent hover:border-gold/50 text-main'
+                className={`px-4 py-3 text-left text-sm m whitespace-nowrap border-b-4 md:border-b-0 md:border-l-4 transition ${
+                  activeTab === i ? 'border-green-700 bg-gradient-to-r from-green-900/20 to-green-700/10 text-primary' : 'border-transparent hover:border-green-500/50 hover:bg-gradient-to-r hover:from-green-900/10 hover:to-green-700/5 text-main'
                 }`}
               >
                 {tab.label}
@@ -135,7 +135,7 @@ export default function InvestmentTabs() {
             }}
           >
           {/* Overview */}
-          <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed mb-8 md:mb-12">
+          <p className="text-stat-disc color-grey leading-relaxed mb-8 md:mb-12">
             {tabs[activeTab].overview}
           </p>
 
@@ -143,10 +143,10 @@ export default function InvestmentTabs() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {tabs[activeTab].columns.map((column, i) => (
               <div key={i} className="border-l-2 border-gold pl-4 md:pl-6">
-                <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">
+                <h3 className="font-brand text-section-content text-primary mb-3 md:mb-4">
                   {column.title}
                 </h3>
-                <p className="text-sm md:text-base text-charcoal leading-relaxed">
+                <p className="text-stat-disc color-grey leading-relaxed">
                   {column.text}
                 </p>
               </div>

@@ -66,7 +66,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-8" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
             <Link 
               href="/who-we-are" 
-              className="text-charcoal py-2 text-nav font-medium transition-colors duration-200 no-underline"
+              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
               style={{ color: usePathname()?.startsWith('/who-we-are') ? '#127749' : '#000' }}
               onMouseEnter={(e) => { setHoveredTab('Who We Are'); e.currentTarget.style.color = '#127749'; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
@@ -75,7 +75,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/what-we-do" 
-              className="text-charcoal py-2 text-nav font-medium transition-colors duration-200 no-underline"
+              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
               style={{ color: usePathname()?.startsWith('/what-we-do') ? '#127749' : '#000' }}
               onMouseEnter={(e) => { setHoveredTab('What We Do'); e.currentTarget.style.color = '#127749'; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
@@ -84,7 +84,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/news" 
-              className="text-charcoal py-2 text-nav font-medium transition-colors duration-200 no-underline"
+              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
               style={{ color: usePathname()?.startsWith('/news') ? '#127749' : '#000' }}
               onMouseEnter={(e) => { setHoveredTab('News'); e.currentTarget.style.color = '#127749'; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
@@ -93,7 +93,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/career" 
-              className="text-charcoal py-2 text-nav font-medium transition-colors duration-200 no-underline"
+              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
               style={{ color: usePathname()?.startsWith('/career') ? '#127749' : '#000' }}
               onMouseEnter={(e) => { setHoveredTab('Career'); e.currentTarget.style.color = '#127749'; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
@@ -106,7 +106,7 @@ export default function Header() {
           <div className="hidden lg:block" onMouseEnter={() => setHoveredTab(null)} style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
             <Link 
               href="/contact" 
-              className="px-6 py-2.5 text-sm font-medium transition-all duration-200 inline-block border-1 border-primary text-white"
+              className="px-6 py-2.5 text-sm m transition-all duration-200 inline-block border-1 border-primary text-white"
               style={{
                 backgroundColor: '#1B5E20'
               }}
@@ -173,10 +173,10 @@ export default function Header() {
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex gap-4 relative z-10">
               <div className="flex-shrink-0 flex flex-col items-start pt-8 w-84">
-                <h2 className="text-3xl font-bold text-charcoal mb-6">{hoveredTab}</h2>
+                <h2 className="text-3xl text-charcoal mb-6">{hoveredTab}</h2>
                 <Link
                   href={`/${hoveredTab?.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="px-4 py-2 text-sm font-medium transition-all duration-200 inline-block border border-primary bg-primary text-white"
+                  className="px-4 py-2 text-sm m transition-all duration-200 inline-block border border-primary bg-primary text-white"
                   onClick={() => setHoveredTab(null)}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = 'transparent';
@@ -256,7 +256,7 @@ export default function Header() {
                   <div className="flex items-center justify-between">
                     <Link 
                       href={`/${tab.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="text-xl sm:text-2xl font-medium text-charcoal hover:text-gold transition-colors duration-200 flex-1"
+                      className="text-xl sm:text-2xl m text-charcoal hover:text-gold transition-colors duration-200 flex-1"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {tab}
@@ -309,7 +309,7 @@ export default function Header() {
             <div className="pt-6 border-t border-tertiary">
               <Link 
                 href="/contact" 
-                className="block text-center bg-primary hover:bg-gold text-white hover:text-charcoal px-6 py-3 text-sm font-medium transition-all duration-200 border-2 border-primary hover:border-gold"
+                className="block text-center bg-primary hover:bg-gold text-white hover:text-charcoal px-6 py-3 text-sm m transition-all duration-200 border-2 border-primary hover:border-gold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact Us

@@ -23,7 +23,7 @@ export default function InTheMedia() {
         {/* Hero Section */}
         <section className="relative overflow-visible mb-8 md:mb-16">
           <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 pt-12 md:pt-16 lg:pt-20 ml-0 md:ml-4 lg:ml-8">
-            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">
+            <h1 className="text-section-title font-brand text-white">
               Featured In
             </h1>
           </div>
@@ -41,7 +41,7 @@ export default function InTheMedia() {
                     setSelectedYear(e.target.value);
                     setShowMore(false);
                   }}
-                  className="appearance-none bg-white border-2 border-primary text-primary font-bold px-6 py-3 pr-12 text-base md:text-lg cursor-pointer hover:bg-tertiary transition"
+                  className="appearance-none bg-white border-2 border-primary text-primary  px-6 py-3 pr-12 text-base md:text-lg cursor-pointer hover:bg-tertiary transition"
                 >
                   <option value="2024">2024</option>
                   <option value="2023">2023</option>
@@ -69,7 +69,7 @@ export default function InTheMedia() {
                         {item.source && <> | {item.source}</>}
                       </p>
                     )}
-                    <h3 className="text-base md:text-lg font-bold text-primary group-hover:underline">
+                    <h3 className="text-base md:text-lg  text-primary group-hover:underline">
                       {item.title}
                     </h3>
                   </div>

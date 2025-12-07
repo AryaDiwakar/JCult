@@ -47,7 +47,7 @@ export default function News() {
         {/* Hero Section */}
         <section className="relative overflow-visible mb-8 md:mb-16">
           <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 pt-12 md:pt-16 lg:pt-20 ml-0 md:ml-4 lg:ml-8">
-            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">
+            <h1 className="font-brand text-section-title text-white">
               News
             </h1>
           </div>
@@ -58,10 +58,10 @@ export default function News() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="w-full md:w-1/3 mb-6 md:mb-0 md:pr-8 lg:pr-16">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+                <h2 className="font-brand text-section-title text-primary mb-4">
                   Latest Updates
                 </h2>
-                <p className="text-sm md:text-base text-charcoal leading-relaxed mb-6">
+                <p className="text-section-content color-grey leading-relaxed mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <a href="/news/featured-in">
@@ -89,7 +89,7 @@ export default function News() {
                             {item.source && <> | {item.source}</>}
                           </p>
                         )}
-                        <h3 className="text-base md:text-lg font-bold text-primary group-hover:underline">
+                        <h3 className="text-base md:text-lg  text-primary group-hover:underline">
                           {item.title}
                         </h3>
                       </div>
@@ -107,7 +107,7 @@ export default function News() {
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-center">
               <div className="flex-1 mb-4 md:mb-0">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl  text-white">
                   Stay Informed
                 </h2>
               </div>
@@ -133,7 +133,7 @@ export default function News() {
                 </button>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl  text-primary">
                   Media Resources
                 </h2>
               </div>
@@ -150,7 +150,7 @@ export default function News() {
                 <button
                   key={i}
                   onClick={() => setActiveTab(i)}
-                  className={`px-4 md:px-8 py-3 text-xs md:text-sm font-medium border-r last:border-r-0 transition ${
+                  className={`px-4 md:px-8 py-3 text-xs md:text-sm m border-r last:border-r-0 transition ${
                     activeTab === i ? "bg-primary text-white" : "text-charcoal hover:bg-tertiary"
                   }`}
                 >
@@ -162,7 +162,7 @@ export default function News() {
             {/* Tab Content */}
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-6 md:mb-0 md:pr-8 lg:pr-16 md:border-r border-gray-300">
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4">
+                <h3 className="text-xl md:text-2xl lg:text-3xl  text-primary mb-4">
                   {tabs[activeTab].title}
                 </h3>
                 <p className="text-sm md:text-base text-charcoal leading-relaxed">
@@ -172,7 +172,7 @@ export default function News() {
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <ul className="space-y-3">
                   {tabs[activeTab].content.map((item, i) => (
-                    <li key={i} className="text-sm md:text-base text-primary font-medium">
+                    <li key={i} className="text-sm md:text-base text-primary m">
                       • {item}
                     </li>
                   ))}

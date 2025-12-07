@@ -28,7 +28,7 @@ export default function CultureTabs({ tabs }: { tabs: TabItem[] }) {
               key={i}
               onClick={() => setActiveIndex(i)}
               className={`
-                px-8 py-3 text-sm font-medium border-r last:border-r-0 
+                px-8 py-3 text-sm m border-r last:border-r-0 
                 transition
                 ${active ? "bg-primary text-white" : "text-charcoal hover:bg-tertiary"}
               `}

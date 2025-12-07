@@ -22,14 +22,14 @@ export default function OurCulture() {
                 <div className="flex flex-col justify-between h-full">
                   <div>
                   <FadeLeft>
-                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                    <h1 className="text-hero-title font-brand  text-white mb-4">
                       Our Culture
                     </h1>
                     </FadeLeft>
                   </div>
                   <div className="mt-auto">
                   <FadeLeft delay={200}>
-                  <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-md">
+                  <p className="text-white text-hero-subtitle leading-relaxed max-w-md">
                    Powered by our most impactful ideas, we’re always pushing toward what’s next.
                     </p>
                     </FadeLeft>
@@ -37,7 +37,7 @@ export default function OurCulture() {
                 </div>
               </div>
             
-              <div className="flex-1 relative min-h-[300px] md:min-h-0">
+              <div className="flex-1 relative min-h-[300px] md:min-h-0 md:mb-[-5rem] lg:mb-[-8rem]">
                 <img 
                   src="/images/group disscusion 2.JPG"
                   alt="Our Culture"
@@ -53,7 +53,7 @@ export default function OurCulture() {
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
+                  <h2 className="text-section-title leading-[53px] font-primary  font-brand text-primary">
                     Insight Over Hierarchy
                   </h2>
                 </FadeLeft>
@@ -61,16 +61,16 @@ export default function OurCulture() {
               
               <div className="flex-1 md:pl-8 lg:pl-16 space-y-4 md:space-y-6">
                 <FadeLeft delay={200}>
-                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                <p className="leading-[28px] opacity-75 text-section-content color-grey">
                   From the moment you arrive, your thinking has influence. You are invited to share your
 ideas openly, and your contribution is valued regardless of your position or experience.
                 </p>
-                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                <p className="leading-[28px] opacity-75 text-section-content color-grey">
                   We encourage one another to look beyond what is familiar and to search for the next
 breakthrough. A wide range of viewpoints strengthens our creativity and sharpens our
 position in the industry.
                 </p>
-                <p className="text-[20px] leading-[28px] opacity-75 text-main">
+                <p className="leading-[28px] opacity-75 text-section-content color-grey">
                   We explore ideas through open dialogue, strengthening them through challenge and
 improvement, always aiming to exceed prior achievements. Those who bring energy and
 initiative find even greater opportunities ahead, creating a level of growth that few places
@@ -88,7 +88,7 @@ can offer.
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-                <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
+                <h2 className="text-2xl md:text-3xl lg:text-5xl  text-primary">
                   Culture in Action
                 </h2>
               </div>
@@ -217,7 +217,7 @@ can offer.
         
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16 bg-tertiary">
           <div className="flex-1 mb-6 md:mb-0">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary">
+            <h2 className="text-3xl md:text-5xl  text-primary">
               Join Our Journey
             </h2>
           </div>
@@ -314,7 +314,7 @@ can offer.
         <section className="flex flex-col md:flex-row items-start px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 mb-6 md:mb-0">
             <FadeLeft>
-              <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary">
+              <h2 className="text-[48px] leading-[53px]  font-brand text-primary">
                 A Headquarters Built for Collaboration
               </h2>
             </FadeLeft>
@@ -322,12 +322,12 @@ can offer.
           
           <div className="flex-1 md:pl-16">
             <FadeLeft delay={200}>
-            <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
+            <p className="text-[20px] leading-[28px] color-grey text-section-content mb-6">
               Our workspace is meticulously designed to foster real-time teamwork, rigorous discussion,
 and debate. We have created an environment where physical barriers are removed to
 ensure constant intellectual exchange.
             </p>
-            <p className="text-[20px] leading-[28px] opacity-75 text-main mb-6">
+            <p className="text-[20px] leading-[28px] color-grey text-section-content mb-6">
               Unified in our mission to achieve what no individual could alone.
             </p>
             <a href="/who-we-are/our-global-base">
@@ -365,7 +365,7 @@ ensure constant intellectual exchange.
         
         <section className="flex flex-col md:flex-row items-center px-4 md:px-8 py-8 md:py-16">
           <div className="flex-1 md:pr-16 mb-6 md:mb-0">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-3xl md:text-5xl  text-primary mb-6">
               Experience Excellence
             </h2>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
@@ -385,22 +385,22 @@ ensure constant intellectual exchange.
           </div>
         </section> */}
         
-        <ExploreMore />
+        {/* <ExploreMore /> */}
         {/* <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
-            <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-[48px] leading-[53px] font-primary  text-primary mb-8 md:mb-10 lg:mb-12">
               Explore Our Offices
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <div className="border-l border-secondary pl-4 md:pl-6">
-                <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
+                <h3 className="text-lg md:text-xl  text-main mb-3 md:mb-4">
                   Lorem Ipsum
                 </h3>
                 <p className="text-sm md:text-base text-secondary leading-relaxed mb-4 md:mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform text-sm md:text-base">
+                <a href="#" className="inline-flex items-center text-primary m hover:translate-x-2 transition-transform text-sm md:text-base">
                   Virtual Tour
                   <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -414,13 +414,13 @@ ensure constant intellectual exchange.
               </div>
               
               <div className="border-l border-secondary pl-4 md:pl-6">
-                <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
+                <h3 className="text-lg md:text-xl  text-main mb-3 md:mb-4">
                   Lorem Ipsum
                 </h3>
                 <p className="text-sm md:text-base text-secondary leading-relaxed mb-4 md:mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform text-sm md:text-base">
+                <a href="#" className="inline-flex items-center text-primary m hover:translate-x-2 transition-transform text-sm md:text-base">
                   Learn More
                   <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -434,13 +434,13 @@ ensure constant intellectual exchange.
               </div>
               
               <div className="border-l border-secondary pl-4 md:pl-6">
-                <h3 className="text-lg md:text-xl font-bold text-main mb-3 md:mb-4">
+                <h3 className="text-lg md:text-xl  text-main mb-3 md:mb-4">
                   Lorem Ipsum
                 </h3>
                 <p className="text-sm md:text-base text-secondary leading-relaxed mb-4 md:mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <a href="#" className="inline-flex items-center text-primary font-medium hover:translate-x-2 transition-transform text-sm md:text-base">
+                <a href="#" className="inline-flex items-center text-primary m hover:translate-x-2 transition-transform text-sm md:text-base">
                   Contact Us
                   <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

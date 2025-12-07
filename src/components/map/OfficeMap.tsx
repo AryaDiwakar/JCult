@@ -55,7 +55,7 @@ export default function OfficeMap({ locations }: OfficeMapProps) {
       >
         <Popup autoClose={false} closeOnClick={false}>
           <div className="p-2">
-            <h3 className="font-bold text-base mb-2 text-primary">Dubai</h3>
+            <h3 className=" text-base mb-2 text-primary">Dubai</h3>
             <p className="text-sm text-gray-700 leading-relaxed">
               DSO-IFZA, IFZA Properties<br />
               Dubai Silicon Oasis<br />

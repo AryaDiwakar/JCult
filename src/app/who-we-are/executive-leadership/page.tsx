@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FadeUp from '@/components/animation/FadeUp';
 import FadeLeft from '@/components/animation/FadeLeft';
+import LuxuryButton from '@/components/ui/LuxuryButton';
 
 export default function LeadershipTeam() {
   const teamMembers = [
@@ -22,7 +23,7 @@ export default function LeadershipTeam() {
           <FadeUp>
             <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 pt-12 md:pt-16 lg:pt-20 ml-0 md:ml-4 lg:ml-8">
               <FadeLeft>
-                <h1 className="text-2xl md:text-3xl lg:text-5xl font-lora font-bold text-white">
+                <h1 className="text-hero-title font-brand text-white">
                   Executive Leadership
                 </h1>
               </FadeLeft>
@@ -30,12 +31,12 @@ export default function LeadershipTeam() {
           </FadeUp>
         </section>
         
-        <section className="py-6 md:py-8 lg:py-16">
+        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight text-primary">
+                  <h2 className="text-section-title font-brand text-primary">
                     Defining Strategic Direction
                   </h2>
                 </FadeLeft>
@@ -43,7 +44,7 @@ export default function LeadershipTeam() {
               
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                <p className="text-base md:text-lg lg:text-xl font-raleway leading-relaxed opacity-75 text-main">
+                <p className="text-section-content color-grey">
                   Our executive leadership establishes the firm’s overarching mandate. They are responsible
                   for synthesizing our ambition into a clear, actionable strategy, providing the governance
                   required to align our exceptional talent with the firm's long-term trajectory.
@@ -57,7 +58,7 @@ export default function LeadershipTeam() {
         <section className="py-6 md:py-8 lg:py-16">
           <div className="container-responsive">
             <FadeLeft>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight text-primary mb-8 md:mb-10 lg:mb-12">
+              <h2 className="text-section-title font-brand text-primary mb-8 md:mb-10 lg:mb-12">
                 Our Team
               </h2>
             </FadeLeft>
@@ -66,10 +67,10 @@ export default function LeadershipTeam() {
               {teamMembers.map((member, index) => (
                 <FadeLeft key={index} delay={index * 200}>
                   <div className="border-l-2 border-secondary pl-4 md:pl-6">
-                  <h3 className="text-lg md:text-xl font-lora font-bold text-primary mb-2">
+                  <h3 className="text-section-content font-brand text-primary mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-sm md:text-base font-raleway text-main mb-3 md:mb-4">
+                  <p className="text-button text-main mb-3 md:mb-4 color-grey">
                     {member.title}
                   </p>
                   <img 
@@ -96,7 +97,7 @@ export default function LeadershipTeam() {
               </div>
               
               <div className="flex-1 md:pl-8 lg:pl-16">
-                <h2 className="text-[48px] leading-[53px] font-primary font-bold text-primary mb-4 md:mb-6">
+                <h2 className="text-[48px] leading-[53px] font-primary  text-primary mb-4 md:mb-6">
                   Driving Ideas Into Real Impact  
                 </h2>
                 <button className="btn-primary px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
@@ -120,12 +121,14 @@ export default function LeadershipTeam() {
             </div>
             <div className="flex-1 md:pl-8 lg:pl-16 container-responsive">
               <FadeLeft delay={200}>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-lora font-bold leading-tight text-primary mb-4 md:mb-6">
+              <h2 className="text-section-title font-brand text-primary mb-4 md:mb-6">
                 Driving Ideas Into Real Impact 
               </h2>
-                <button className="bg-primary text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-raleway">
-                   Explore What We Do
-                </button>
+                <a href="/what-we-do">
+                <LuxuryButton>
+                    Explore What We Do
+                </LuxuryButton>
+                  </a>
               </FadeLeft>
             </div>
           </div>

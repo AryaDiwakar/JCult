@@ -41,7 +41,7 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
         {title && (
           <div className="flex flex-col md:flex-row mb-6 md:mb-8 lg:mb-16">
             <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
-              <h2 className="text-[46px] md:text-[66px] lg:text-[75px] font-bold text-primary">{title}</h2>
+              <h2 className="text-[46px] md:text-[66px] lg:text-[75px]  text-primary">{title}</h2>
             </div>
           </div>
         )}
@@ -52,7 +52,7 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
               <div className="absolute left-0 top-0 bg-grey transition-all duration-1000 ease-out" 
                    style={{ width: '0.25px', height: isVisible ? '100%' : '0%', transitionDelay: `${index * 200}ms` }}>
               </div>
-              <div className={`text-stats-number font-bold text-primary mb-4 md:mb-5 lg:mb-10 font-brand transition-all duration-1000 ${
+              <div className={`text-stats-number  text-primary mb-4 md:mb-5 lg:mb-10 font-brand transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
               }`} style={{ transitionDelay: `${500 + index * 200}ms` }}>
                 {stat.number.split('').map((char, i) => 

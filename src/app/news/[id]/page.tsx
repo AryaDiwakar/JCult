@@ -21,7 +21,7 @@ export default function NewsArticlePage() {
     return (
       <div className="min-h-screen bg-main pt-20">
         <div className="container-responsive py-16">
-          <h1 className="text-4xl font-lora font-bold text-primary mb-4">Article Not Found</h1>
+          <h1 className="text-4xl font-lora  text-primary mb-4">Article Not Found</h1>
           <Link href="/news" className="text-gold hover:underline">
             Back to News
           </Link>
@@ -34,7 +34,7 @@ export default function NewsArticlePage() {
     return (
       <div className="min-h-screen bg-main pt-20">
         <div className="container-responsive py-16 text-center">
-          <h1 className="text-2xl font-lora font-bold text-primary mb-4">Redirecting...</h1>
+          <h1 className="text-2xl font-lora  text-primary mb-4">Redirecting...</h1>
           <p className="font-raleway text-secondary">If you are not redirected, <a href={article.externalLink} className="text-gold hover:underline">click here</a></p>
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function NewsArticlePage() {
                 )}
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold text-green-700 mb-4 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-lora  text-green-700 mb-4 leading-tight">
                 {article.title}
               </h1>
 
@@ -73,7 +73,7 @@ export default function NewsArticlePage() {
               {article.sections?.map((section, index) => (
                 <div key={index} className="mb-8">
                   {section.subtitle && (
-                    <h2 className="text-2xl md:text-3xl font-lora font-bold text-primary mb-6">
+                    <h2 className="text-2xl md:text-3xl font-lora  text-primary mb-6">
                       {section.subtitle}
                     </h2>
                   )}
@@ -134,7 +134,7 @@ export default function NewsArticlePage() {
         <FadeUp delay={100}>
           <section className="py-8 md:py-12 bg-tertiary">
             <div className="container-responsive max-w-4xl">
-              <h2 className="text-2xl md:text-3xl font-lora font-bold text-primary mb-6">
+              <h2 className="text-2xl md:text-3xl font-lora  text-primary mb-6">
                 Related Articles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -150,7 +150,7 @@ export default function NewsArticlePage() {
                       <span className="text-xs font-raleway font-semibold tracking-wider uppercase text-gold mb-2 block">
                         {relatedArticle.category}
                       </span>
-                      <h3 className="text-lg font-lora font-bold text-primary mb-2">
+                      <h3 className="text-lg font-lora  text-primary mb-2">
                         {relatedArticle.title}
                       </h3>
                       <p className="text-sm font-raleway text-secondary">

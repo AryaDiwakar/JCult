@@ -13,9 +13,9 @@ export default function Commodities() {
       <main className="pt-20">
         {/* Hero Section - Blue background sticking to right with gap on left */}
         <section className="relative overflow-visible mb-8 md:mb-16">
-          <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 py-6 md:py-8 lg:py-16 ml-0 md:ml-4 lg:ml-8">
+          <div className="bg-primary min-h-[60vh] md:min-h-[70vh] flex items-start px-4 md:px-8 py-6 md:py-8 lg:py-16 ml-0 md:ml-4">
             <FadeLeft>
-              <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">
+              <h1 className="font-brand text-hero-title text-white">
                 Asset Management
               </h1>
             </FadeLeft>
@@ -23,19 +23,19 @@ export default function Commodities() {
         </section>
 
         {/* Title left, paragraph right */}
-        <section className="py-6 md:py-8 lg:py-16">
+        <section className="py-6 md:py-8 lg:py-16 bg-tertiary">
           <div className="container-responsive">
             <div className="flex flex-col md:flex-row items-start">
               <div className="flex-1 mb-4 md:mb-6 lg:mb-0">
                 <FadeLeft>
-                  <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary">
+                  <h2 className="font-brand text-section-title text-primary">
                     Overview
                   </h2>
                 </FadeLeft>
               </div>
               <div className="flex-1 md:pl-8 lg:pl-16">
                 <FadeLeft delay={200}>
-                <p className="text-sm md:text-base lg:text-lg text-main leading-relaxed">
+                <p className="text-section-content color-grey leading-relaxed">
                   We are a newly established asset management firm built on disciplined insight and a
                   structured approach to diversified portfolio management. Through both Discretionary and
                   Non Discretionary PMS services, we aim to deliver well constructed strategies that reflect
@@ -67,7 +67,7 @@ export default function Commodities() {
                       </div>
                       <div className="flex-1 md:pl-8 lg:pl-16 text-center md:text-left">
                         <FadeLeft delay={200}>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
+                        <h2 className="font-brand text-section-title leading-tight text-primary mb-4 md:mb-6">
                          In Pursuit of Minds That Redefine Possibility
                         </h2>
                         <a href="/career">

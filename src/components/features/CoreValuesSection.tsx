@@ -49,11 +49,11 @@ export default function CoreValuesSection() {
 
         {/* Right heading */}
         <FadeLeft delay={200}>
-          <div>
-          <h2 className="text-4xl md:text-5xl leading-tight">
+          <div className="font-brand ">
+          <h2 className="text-section-title leading-tight">
             Led by
           </h2>
-          <h3 className="text-4xl md:text-5xl text-green-300 mt-2">
+          <h3 className="text-section-title leading-tight text-green-300">
             Our Foundational Principles
           </h3>
           </div>
@@ -70,8 +70,8 @@ export default function CoreValuesSection() {
               <div className="relative pr-6 border-l-1 border-white/20 pl-4">
                 {/* Vertical Divider */}
                 
-                <h4 className="font-serif text-2xl mb-4">{value.title}</h4>
-                <p className="text-sm leading-relaxed text-white/90">{value.text}</p>
+                <h4 className="text-2xl mb-4">{value.title}</h4>
+                <p className="text-button leading-relaxed text-white/90">{value.text}</p>
               </div>
             </FadeLeft>
           ))}
