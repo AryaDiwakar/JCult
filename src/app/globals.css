@@ -195,6 +195,7 @@ body {
 /* Hero Title */
 .text-hero-title {
   font-size: 40px;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .text-hero-title { font-size: 48px; }
@@ -206,11 +207,13 @@ body {
 /* Hero Subtitle */
 .text-hero-subtitle {
   font-size: 20px;
+  font-weight: 400;
 }
 
 /* Section Label (Who We Are) */
 .text-section-label {
   font-size: 18px;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .text-section-label { font-size: 16px; }
@@ -222,6 +225,7 @@ body {
 /* Section Paragraph */
 .text-section-para {
   font-size: 24px;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .text-section-para { font-size: 24px; }
@@ -233,6 +237,7 @@ body {
 /* Stats Number */
 .text-stats-number {
   font-size: 46px;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .text-stats-number { font-size: 66px; }
@@ -244,6 +249,7 @@ body {
 /* Stats Text */
 .text-stats-desc {
   font-size: 16px;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .text-stats-desc { font-size: 16px; }
@@ -255,6 +261,7 @@ body {
 /* Section Title (Pioneering) */
 .text-section-title {
   font-size: 40px;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .text-section-title { font-size: 40px; }
@@ -266,16 +273,18 @@ body {
 /* Section Content */
 .text-section-content {
   font-size: 20px;
+  font-weight: 400;
 }
-
 /* Button Text */
 .text-button {
   font-size: 16px;
+  font-weight: 400;
 }
 
 /* Navigation Text (Header & Footer) */
 .text-nav {
   font-size: 18px !important;
+  font-weight: 400 !important;
 }
 
 /* ========================================
