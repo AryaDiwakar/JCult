@@ -237,7 +237,7 @@ body {
 /* Stats Number */
 .text-stats-number {
   font-size: 46px;
-  font-weight: 600;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .text-stats-number { font-size: 66px; }
