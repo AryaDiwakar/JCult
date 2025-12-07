@@ -52,21 +52,21 @@ export default function Stats({ stats, title, className = "" }: StatsProps) {
               <div className="absolute left-0 top-0 bg-grey transition-all duration-1000 ease-out" 
                    style={{ width: '0.25px', height: isVisible ? '100%' : '0%', transitionDelay: `${index * 200}ms` }}>
               </div>
-              <div className={`text-3xl lg:text-[75px] font-bold text-primary mb-4 md:mb-5 lg:mb-10 font-primary transition-all duration-1000 ${
+              <div className={`text-stats-number font-bold text-primary mb-4 md:mb-5 lg:mb-10 font-brand transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
               }`} style={{ transitionDelay: `${500 + index * 200}ms` }}>
                 {stat.number.split('').map((char, i) => 
                   (char === '$' || char === '+') ? <sup key={i}>{char}</sup> : char
                 )}
               </div>
-              <p className={`text-xs md:text-sm lg:text-base mb-1 transition-all duration-1000 ${
+              <p className={`text-stats-desc mb-1 transition-all duration-1000 color-grey ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-              }`} style={{ color: '#68717a', transitionDelay: `${700 + index * 200}ms` }}>
+              }`} style={{ transitionDelay: `${700 + index * 200}ms` }}>
                 {stat.description}
               </p>
-              <p className={`text-base lg:text-lg transition-all duration-1000 ${
+              <p className={`text-base lg:text-lg transition-all duration-1000 color-grey ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-              }`} style={{ color: '#68717a', transitionDelay: `${900 + index * 200}ms` }}>
+              }`} style={{ transitionDelay: `${900 + index * 200}ms` }}>
                 {stat.subtitle}
               </p>
             </div>

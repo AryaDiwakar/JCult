@@ -39,12 +39,12 @@ function AnimatedTalentSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight mb-3 md:mb-4 lg:mb-8 text-primary">Engage With Elite Talent</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight mb-3 md:mb-4 lg:mb-8 text-primary text-section-title">Engage With Elite Talent</h2>
           </div>
           <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed text-main opacity-75">
+            <p className="text-base md:text-lg lg:text-xl font-raleway mb-4 md:mb-6 lg:mb-8 leading-relaxed color-grey opacity-75 text-section-content">
               Here, the collective fuels your growth. People learn side by side, sharpening each other's
               skills and building extraordinary careers together.
             </p>
@@ -89,14 +89,14 @@ function AnimatedMeritocraticSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-10'
           }`}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight text-primary">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-lora font-bold leading-tight text-primary text-section-title">
               The Meritocratic Code That Shapes Our Collective
             </h2>
           </div>
           <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-10'
           }`}>
-            <p className="text-base md:text-lg lg:text-xl font-raleway leading-relaxed opacity-75 text-main">
+            <p className="text-base md:text-lg lg:text-xl font-raleway leading-relaxed opacity-75 text-section-content color-grey">
               A culture where every perspective strengthens our purpose. From seasoned experts to
               rising talent, each member fuels the intelligence that drives our performance. United, we
               achieve what others consider out of reach.
@@ -136,12 +136,13 @@ function AnimatedGreenSection() {
           <div className={`flex-1 mb-4 md:mb-6 lg:mb-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <h2 className="font-primary text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 lg:mb-8">Pioneering the Future of Finance</h2>
+            <h2 className="font-brand text-section-title font-bold leading-tight">Pioneering the</h2>
+            <h2 className="font-brand text-section-title font-bold leading-tight mb-3 md:mb-4 lg:mb-8 text-green-500">Future of Finance</h2>
           </div>
           <div className={`flex-1 md:pl-8 lg:pl-16 transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed mb-4 md:mb-6 lg:mb-8">
+            <p className="text-section-content leading-relaxed mb-4 md:mb-6 lg:mb-8">
               Innovation is the core of our competitive advantage. We tirelessly reimagine our approach
               to the markets, systematically enhancing our trading models and execution capabilities to
               generate outsized returns in an ever-changing landscape.
@@ -167,11 +168,11 @@ function AnimatedSection() {
       <div className="container-responsive">
         <div className="flex flex-col lg:flex-row items-stretch">
           <div className="flex-1 flex flex-col items-start mb-2 md:mb-4 lg:mb-0 md:pr-8 lg:pr-12 relative">
-            <h3 className="text-[16px] lg:text-[18px] tracking-wider uppercase text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
+            <h3 className="text-section-label tracking-wider uppercase text-primary mb-3 md:mb-4 lg:mb-8">Who We Are</h3>
           </div>
           <div className="flex-3 pl-2 relative">
             <div className="absolute left-0 top-0 bottom-0 w-[0.25px] bg-grey"></div>
-            <p className="text-primary text-[24px] lg:text-[32px] font-primary leading-tight pl-4 lg:pl-8">
+            <p className="text-primary text-section-para font-brand leading-tight pl-4 lg:pl-8">
               We aspire to establish an unprecedented legacy as the premier investment entity in
               history. Our mandate is to rigorously discern optimal capital allocation strategies,
               thereby delivering exceptional, sustainable value to an elite clientele of private

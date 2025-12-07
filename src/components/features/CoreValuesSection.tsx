@@ -50,10 +50,10 @@ export default function CoreValuesSection() {
         {/* Right heading */}
         <FadeLeft delay={200}>
           <div>
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+          <h2 className="text-4xl md:text-5xl leading-tight">
             Led by
           </h2>
-          <h3 className="text-4xl md:text-5xl font-serif text-green-300 mt-2">
+          <h3 className="text-4xl md:text-5xl text-green-300 mt-2">
             Our Foundational Principles
           </h3>
           </div>
