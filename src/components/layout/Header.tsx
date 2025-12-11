@@ -8,313 +8,342 @@ import { usePathname } from 'next/navigation';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
-  const [showDropdown, setShowDropdown] = useState(false);
   const [mobileExpandedTabs, setMobileExpandedTabs] = useState<string[]>([]);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hasLoaded, setHasLoaded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const pathname = usePathname();
+  const HEADER_HEIGHT = 120;
+
   useEffect(() => {
     setHasLoaded(true);
-    
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 50);
-      setIsVisible(currentScrollY < 100);
-      setLastScrollY(currentScrollY);
+      const current = window.scrollY;
+      setIsScrolled(current > 50);
+      setIsVisible(current < 100);
+      setLastScrollY(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const tabContent = {
-    'Who We Are': ['Our Culture','Executive Leadership','Our Global Base'],
+  const tabContent: Record<string, string[]> = {
+    'Who We Are': ['Our Culture', 'Executive Leadership', 'Our Global Base'],
     'What We Do': ['Asset Management'],
     'News': ['Featured In'],
     'Career': ['Open Opportunities']
   };
 
+  const navItems = ['Who We Are', 'What We Do', 'News', 'Career'];
+
+  const linkFor = (label: string) =>
+    `/${label.toLowerCase().replace(/\s+/g, '-')}`;
+
+  const isActive = (href: string) => {
+    if (!pathname) return false;
+    return pathname.startsWith(href);
+  };
+
   return (
-    <header 
-      className={`w-full fixed left-0 right-0 z-50 transition-all duration-500 ${
-        hoveredTab ? 'top-0' : (isVisible ? 'top-0' : '-top-32')
-      } ${isScrolled ? 'border-b border-white/10' : ''}`}
+    <header
+      className={`w-full fixed left-0 right-0 z-[100] transition-all duration-500 ${
+        isVisible ? 'top-0' : '-top-[140px]'
+      }`}
       style={{
         backgroundColor: '#FFFFFF',
-        borderBottom: isScrolled ? '1px solid #E0E0E0' : 'none'
+        borderBottom: isScrolled ? '1px solid #E8E8E8' : 'none'
       }}
-      onClick={() => setHoveredTab(null)}
+      onMouseLeave={() => setHoveredTab(null)}
     >
-      {/* <div className="text-red-500 sm:text-orange-500 md:text-yellow-500 lg:text-blue-500 xl:text-green-500">hello</div> */}
-      <div className="relative z-10 max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8 h-22 lg:h-[140px] overflow-hidden">
-        <div className="flex justify-between items-center h-full">
-          {/* Brand Logo */}
-          <div className="flex-shrink-0" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
-            <Link href="/">
-              <Image 
-                src="/Final Logos/Transparent/Base Logo/Primary/Transparent Primary.svg" 
-                alt="JCULT" 
-                width={120} 
-                height={32}
-                className="w-24 sm:w-28 lg:w-32 h-auto"
+      {/* TOP HEADER */}
+      <div
+        className="relative max-w-[1600px] mx-auto px-4 lg:px-12 xl:px-16"
+        style={{ height: `${HEADER_HEIGHT}px` }}
+      >
+        <div className="flex items-center justify-between h-full">
+          {/* LOGO */}
+          <div className="flex-1 flex items-center">
+            <Link href="/" aria-label="Home">
+              <Image
+                src="/Final Logos/Transparent/Base Logo/Primary/Transparent Primary.svg"
+                alt="JCULT"
+                width={140}
+                height={90}
+                className="w-28 lg:w-32 h-auto"
               />
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 pt-2 md:pt-4 lg:pt-6" style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
-            <Link 
-              href="/who-we-are" 
-              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
-              style={{ color: usePathname()?.startsWith('/who-we-are') ? '#127749' : '#000' }}
-              onMouseEnter={(e) => { setHoveredTab('Who We Are'); e.currentTarget.style.color = '#127749'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
-            >
-              Who We Are
-            </Link>
-            <Link 
-              href="/what-we-do" 
-              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
-              style={{ color: usePathname()?.startsWith('/what-we-do') ? '#127749' : '#000' }}
-              onMouseEnter={(e) => { setHoveredTab('What We Do'); e.currentTarget.style.color = '#127749'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
-            >
-              What We Do
-            </Link>
-            <Link 
-              href="/news" 
-              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
-              style={{ color: usePathname()?.startsWith('/news') ? '#127749' : '#000' }}
-              onMouseEnter={(e) => { setHoveredTab('News'); e.currentTarget.style.color = '#127749'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
-            >
-              News
-            </Link>
-            <Link 
-              href="/career" 
-              className="text-charcoal py-2 text-nav m transition-colors duration-200 no-underline"
-              style={{ color: usePathname()?.startsWith('/career') ? '#127749' : '#000' }}
-              onMouseEnter={(e) => { setHoveredTab('Career'); e.currentTarget.style.color = '#127749'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
-            >
-              Career
-            </Link>
+          {/* DESKTOP CENTER NAV */}
+          <nav className="hidden lg:flex flex-1 justify-center">
+            <ul className="flex items-center space-x-10">
+              {navItems.map((label) => {
+                const href = linkFor(label);
+                const active = isActive(href);
+                const hovered = hoveredTab === label;
+
+                return (
+                  <li key={label} className="relative">
+                    <Link
+                      href={href}
+                      className="inline-block whitespace-nowrap no-underline text-[15px] tracking-wide transition-colors duration-200"
+                      style={{ color: active ? '#127749' : '#000' }}
+                      onMouseEnter={() => setHoveredTab(label)}
+                    >
+                      {label}
+
+                      {/* underline animation */}
+                      <span
+                        className={`absolute left-0 -bottom-0 h-[1px] bg-[#127749] transition-all duration-300 ${
+                          active || hovered ? 'w-full' : 'w-0'
+                        }`}
+                      />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </nav>
 
-          {/* Desktop Contact Us */}
-          <div className="hidden lg:block pt-2 md:pt-4 lg:pt-6" onMouseEnter={() => setHoveredTab(null)} style={{ animation: hasLoaded ? 'slideUpContent 0.5s ease-out' : 'none' }}>
-            <Link 
-              href="/contact" 
-              className="px-6 py-2.5 text-sm m transition-all duration-200 inline-block border-1 border-primary text-white"
+          {/* CONTACT US BUTTON */}
+          <div className="flex-1 flex justify-end">
+            <Link
+              href="/contact"
+              className="px-6 py-2.5 text-sm no-underline transition-all duration-200"
               style={{
-                backgroundColor: '#1B5E20'
+                backgroundColor: '#1B5E20',
+                border: '1px solid #1B5E20',
+                color: '#FFFFFF'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#FFFFFF';
-                e.currentTarget.style.borderColor = '#1B5E20';
-                e.currentTarget.style.color = '#1B5E20';
+                const el = e.currentTarget;
+                el.style.backgroundColor = '#FFFFFF';
+                el.style.color = '#1B5E20';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#1B5E20';
-                e.currentTarget.style.borderColor = '#1B5E20';
-                e.currentTarget.style.color = '#FFFFFF';
+                const el = e.currentTarget;
+                el.style.backgroundColor = '#1B5E20';
+                el.style.color = '#FFFFFF';
               }}
             >
               Contact Us
             </Link>
           </div>
 
-          {/* Mobile Hamburger Menu */}
+          {/* MOBILE MENU BUTTON */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-charcoal hover:text-gold focus:outline-none p-2"
+              className="p-2"
               aria-label="Toggle menu"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                  d={
+                    isMenuOpen
+                      ? 'M6 18L18 6M6 6l12 12'
+                      : 'M4 6h16M4 12h16M4 18h16'
+                  }
                 />
               </svg>
             </button>
           </div>
         </div>
-
       </div>
-      
-      {/* Overlay */}
+
+      {/* OVERLAY (behind dropdown) */}
       {hoveredTab && (
-        <div 
-          className="hidden lg:block fixed inset-0 bg-black/30 z-0"
-          style={{ top: isScrolled ? '96px' : '120px' }}
+        <div
+          className="hidden lg:block fixed inset-0 bg-black/20"
+          style={{
+            top: `${HEADER_HEIGHT}px`,
+            zIndex: 50
+          }}
+          onMouseEnter={() => setHoveredTab(hoveredTab)}
           onClick={() => setHoveredTab(null)}
         />
       )}
-      
-      {/* Desktop Dropdown */}
+
+      {/* DESKTOP DROPDOWN */}
       {hoveredTab && (
-        <div 
-          className="hidden lg:block fixed left-0 right-0 bg-main shadow-lg z-10"
-          style={{ 
-            top: isScrolled ? '96px' : '120px',
-            height: '470px',
-            animation: 'fadeInFromTop 0.3s ease-out'
+        <div
+          className="hidden lg:block fixed left-0 right-0 bg-white z-[60]"
+          style={{
+            top: `${HEADER_HEIGHT}px`,
+            minHeight: '430px',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.08)'
           }}
           onMouseEnter={() => setHoveredTab(hoveredTab)}
-          onMouseLeave={() => setHoveredTab(null)}
         >
-          <div className="h-full overflow-hidden relative">
-            {/* Grey background extending to right edge - starts from subtabs section */}
-            <div className="absolute top-0 bottom-0 bg-tertiary" style={{ left: 'calc(50% - 770px + 336px + 2rem + 1px + 1rem)', right: 0 }}></div>
-            
-            <div className="max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex gap-4 relative z-10">
-              <div className="flex-shrink-0 flex flex-col items-start pt-8 w-84">
-                <h2 className="text-4xl text-charcoal mb-6">{hoveredTab}</h2>
-                <Link
-                  href={`/${hoveredTab?.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="px-6 py-4 text-sm m transition-all duration-200 inline-block border border-primary bg-primary text-white"
-                  onClick={() => setHoveredTab(null)}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'transparent';
-                    e.currentTarget.style.color = '#1B5E20';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#1B5E20';
-                    e.currentTarget.style.color = '#FFFFFF';
-                  }}
-                >
-                  Learn More
-                </Link>
-              </div>
-              
-              
-              <div className="flex-1 p-7 h-full relative">
-                <button
-                  onClick={() => setHoveredTab(null)}
-                  className="absolute top-4 right-4 text-charcoal transition-colors duration-200"
-                  onMouseEnter={(e) => { e.currentTarget.style.color = '#127749'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
-                  aria-label="Close menu"
-                >
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-                
-                <div className="space-y-4">
-                  {tabContent[hoveredTab as keyof typeof tabContent]?.map((item, index) => {
-                    const slug = item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-                    const basePath = hoveredTab?.toLowerCase().replace(/\s+/g, '-');
+          {/* GREY RIGHT SIDE PANEL — RESPONSIVE */}
+          <div
+            className="absolute top-0 bottom-0 bg-[#F4F4F4]"
+            style={{
+              left: '460px',
+              right: 0
+            }}
+          />
+
+          {/* DROPDOWN CONTENT */}
+          <div className="relative max-w-[1600px] mx-auto px-10 h-full flex gap-10 pt-12 pb-16">
+
+            {/* LEFT COLUMN */}
+            <div className="w-[380px]">
+              <h2 className="text-4xl font-normal text-[#1A1A1A] mb-6">
+                {hoveredTab}
+              </h2>
+
+              <Link
+                href={linkFor(hoveredTab)}
+                className="inline-block px-7 py-3 bg-[#1B5E20] border border-[#1B5E20] text-white no-underline transition-all"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'white';
+                  e.currentTarget.style.color = '#1B5E20';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#1B5E20';
+                  e.currentTarget.style.color = 'white';
+                }}
+              >
+                Learn More
+              </Link>
+            </div>
+
+            {/* RIGHT COLUMN LINKS */}
+            <div className="flex-1 pl-6 pt-2 relative z-[10]">
+              <div className="space-y-6">
+                {(tabContent[hoveredTab as keyof typeof tabContent] || []).map(
+                  (item, index) => {
+                    const base = linkFor(hoveredTab);
+                    const slug = item.toLowerCase().replace(/\s+/g, '-');
+                    const href = `${base}/${slug}`;
+
                     return (
-                      <Link 
-                        key={`${hoveredTab}-${index}`} 
-                        href={`/${basePath}/${slug}`}
-                        className="block text-charcoal text-nav transition-colors duration-200 no-underline"
-                        onMouseEnter={(e) => { e.currentTarget.style.color = '#127749'; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.color = '#000'; }}
-                        style={{ 
-                          animation: `slideInFromLeft 0.3s ease-out ${index * 0.1}s both`,
+                      <Link
+                        key={index}
+                        href={href}
+                        className="block text-[20px] text-[#1A1A1A] no-underline hover:text-[#127749] transition-colors"
+                        style={{
+                          animation: `slideInFromLeft 0.35s ease-out ${
+                            index * 0.1
+                          }s both`,
                           opacity: 0
                         }}
-                        onClick={() => setHoveredTab(null)}
                       >
                         {item}
                       </Link>
                     );
-                  })}
-                </div>
+                  }
+                )}
               </div>
             </div>
           </div>
         </div>
       )}
-      
-      {/* Mobile Menu */}
+
+      {/* MOBILE MENU (UNCHANGED) */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-main z-50" style={{ animation: 'fadeIn 0.2s ease-out' }}>
-          <div className="flex flex-col h-full p-6">
-            <div className="flex justify-end mb-8">
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="text-charcoal hover:text-gold p-2"
-                aria-label="Close menu"
+        <div className="lg:hidden fixed inset-0 bg-white z-[200] p-6">
+          <div className="flex justify-end mb-6">
+            <button onClick={() => setIsMenuOpen(false)}>
+              <svg
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            
-            <div className="space-y-6 flex-1 overflow-y-auto">
-              {Object.keys(tabContent).map((tab) => (
-                <div key={tab}>
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      href={`/${tab.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="text-xl sm:text-2xl m text-charcoal hover:text-gold transition-colors duration-200 flex-1"
-                      onClick={() => setIsMenuOpen(false)}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div className="space-y-6">
+            {Object.keys(tabContent).map((tab) => (
+              <div key={tab}>
+                <div className="flex justify-between items-center">
+                  <Link
+                    href={linkFor(tab)}
+                    className="text-2xl no-underline text-black"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {tab}
+                  </Link>
+
+                  {/* Expand toggle */}
+                  <button
+                    onClick={() =>
+                      setMobileExpandedTabs((prev) =>
+                        prev.includes(tab)
+                          ? prev.filter((t) => t !== tab)
+                          : [...prev, tab]
+                      )
+                    }
+                  >
+                    <svg
+                      className={`h-5 w-5 transition-transform ${
+                        mobileExpandedTabs.includes(tab) ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                     >
-                      {tab}
-                    </Link>
-                    <button
-                      onClick={() => {
-                        if (mobileExpandedTabs.includes(tab)) {
-                          setMobileExpandedTabs(mobileExpandedTabs.filter(t => t !== tab));
-                        } else {
-                          setMobileExpandedTabs([...mobileExpandedTabs, tab]);
-                        }
-                      }}
-                      className="ml-2 p-2"
-                      aria-label={`Toggle ${tab} submenu`}
-                    >
-                      <svg 
-                        className={`h-5 w-5 text-charcoal transform transition-transform duration-200 ${
-                          mobileExpandedTabs.includes(tab) ? 'rotate-180' : ''
-                        }`} 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                  </div>
-                  {mobileExpandedTabs.includes(tab) && (
-                    <div className="mt-3 ml-4 space-y-2" style={{ animation: 'slideDown 0.2s ease-out' }}>
-                      {tabContent[tab as keyof typeof tabContent]?.map((item, index) => {
-                        const slug = item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-                        const basePath = tab.toLowerCase().replace(/\s+/g, '-');
-                        return (
-                          <Link 
-                            key={index} 
-                            href={`/${basePath}/${slug}`} 
-                            className="block text-base sm:text-lg text-charcoal hover:text-gold transition-colors duration-200"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {item}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
                 </div>
-              ))}
-            </div>
-            
-            <div className="pt-6 border-t border-tertiary">
-              <Link 
-                href="/contact" 
-                className="block text-center bg-primary hover:bg-gold text-white hover:text-charcoal px-6 py-3 text-sm m transition-all duration-200 border-2 border-primary hover:border-gold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact Us
-              </Link>
-            </div>
+
+                {/* Mobile sublinks */}
+                {mobileExpandedTabs.includes(tab) && (
+                  <div className="ml-4 mt-3 space-y-2">
+                    {tabContent[tab].map((item, index) => {
+                      const slug = item.toLowerCase().replace(/\s+/g, '-');
+                      const href = `${linkFor(tab)}/${slug}`;
+                      return (
+                        <Link
+                          key={index}
+                          href={href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="block text-lg no-underline text-black"
+                        >
+                          {item}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-6 border-t mt-6">
+            <Link
+              href="/contact"
+              className="block text-center bg-[#1B5E20] text-white px-6 py-3 no-underline"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       )}

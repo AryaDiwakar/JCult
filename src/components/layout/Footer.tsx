@@ -11,8 +11,8 @@ export default function Footer() {
             <Image 
               src="/Final Logos/Transparent/Base Logo/Primary/Transparent Primary.svg" 
               alt="JCULT" 
-              width={120} 
-              height={32}
+              width={150} 
+              height={62}
               className="w-24 sm:w-28 lg:w-32 h-auto"
             />
           </div>
